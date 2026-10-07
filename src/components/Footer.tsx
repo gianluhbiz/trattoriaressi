@@ -17,17 +17,17 @@ export function Footer() {
             })}
           </p>
         </div>
-        <div className="flex flex-col gap-2 text-[0.95rem]">
-          <a href={MAPS_URL} target="_blank" rel="noreferrer" className="hover:text-saffron">{ADDRESS}</a>
-          <a href={`tel:${PHONE_TEL}`} className="tabular hover:text-saffron">Tel. {PHONE_DISPLAY}</a>
-          <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noreferrer" className="hover:text-saffron">WhatsApp</a>
-          <a href={`mailto:${EMAIL}`} className="hover:text-saffron">{EMAIL}</a>
+        <div className="flex flex-col gap-2 text-[0.95rem] text-cream/80">
+          <a href={MAPS_URL} target="_blank" rel="noreferrer" className="hover:text-cream hover:underline">{ADDRESS}</a>
+          <a href={`tel:${PHONE_TEL}`} className="tabular hover:text-cream hover:underline">Tel. {PHONE_DISPLAY}</a>
+          <a href={`https://wa.me/${WHATSAPP}`} target="_blank" rel="noreferrer" className="hover:text-cream hover:underline">WhatsApp</a>
+          <a href={`mailto:${EMAIL}`} className="hover:text-cream hover:underline">{EMAIL}</a>
         </div>
-        <div className="flex flex-col gap-2 text-[0.95rem]">
-          <Link to="/menu" className="hover:text-saffron">Menu</Link>
-          <Link to="/#orari" className="hover:text-saffron">{t({ it: 'Orari', en: 'Opening hours' })}</Link>
-          <a href={TRIPADVISOR_URL} target="_blank" rel="noreferrer" className="hover:text-saffron">TripAdvisor</a>
-          <a href="https://www.facebook.com/TrattoriaRessi/" target="_blank" rel="noreferrer" className="hover:text-saffron">Facebook</a>
+        <div className="flex flex-col gap-2 text-[0.95rem] text-cream/80">
+          <Link to="/menu" className="hover:text-cream hover:underline">Menu</Link>
+          <Link to="/#orari" className="hover:text-cream hover:underline">{t({ it: 'Orari', en: 'Opening hours' })}</Link>
+          <a href={TRIPADVISOR_URL} target="_blank" rel="noreferrer" className="hover:text-cream hover:underline">TripAdvisor</a>
+          <a href="https://www.facebook.com/TrattoriaRessi/" target="_blank" rel="noreferrer" className="hover:text-cream hover:underline">Facebook</a>
         </div>
       </div>
       <div className="mx-auto mt-14 flex max-w-[1400px] flex-col gap-2 border-t border-cream/12 px-4 pt-6 text-sm text-muted sm:flex-row sm:justify-between sm:px-6 lg:px-10">
