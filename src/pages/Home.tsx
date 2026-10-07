@@ -19,7 +19,7 @@ import {
   WEEKDAYS,
 } from '../lib/info'
 import { PLATES, TICINUM } from '../lib/menu'
-import { scrollSmooth, spring, springSnappy, springSoft } from '../lib/motion'
+import { scrollSmooth, spring, springSlide, springSnappy, springSoft } from '../lib/motion'
 
 const H2 = 'font-display text-[clamp(2.4rem,5vw,4.5rem)] leading-[1.02] font-semibold tracking-[-0.035em] text-balance'
 
@@ -187,19 +187,25 @@ function ParallaxImage({ src, alt, className = '' }: { src: string; alt: string;
 function Story() {
   const { t } = useLang()
   const facts = [
-    { it: 'Il riso è Carnaroli della Cascina Alberona, coltivato in provincia.', en: 'The rice is Carnaroli from Cascina Alberona, grown in the province.' },
+    {
+      it: 'Il riso è Carnaroli della Cascina Alberona, coltivato in provincia.',
+      en: 'The rice is Carnaroli from Cascina Alberona, grown in the province.',
+    },
     { it: 'Pane, focaccia, pasta e dolci si fanno ogni giorno in casa.', en: 'Bread, focaccia, pasta and desserts are made in house every day.' },
-    { it: 'Più di cento etichette in cantina, quasi tutte dell’Oltrepò Pavese.', en: 'Over a hundred wines in the cellar, mostly from the Oltrepò Pavese.' },
+    {
+      it: 'Più di cento etichette in cantina, quasi tutte dell’Oltrepò Pavese.',
+      en: 'Over a hundred wines in the cellar, mostly from the Oltrepò Pavese.',
+    },
   ]
   return (
     <section id="storia" className="mx-auto max-w-[1400px] px-4 py-24 sm:px-6 md:py-36 lg:px-10">
       <div className="grid grid-cols-1 gap-14 md:grid-cols-12 md:gap-10">
         <div className="md:col-span-7 lg:col-span-7">
-          <Reveal>
+          <Reveal focus>
             <p className="font-display text-[clamp(1.9rem,3.4vw,3.1rem)] leading-[1.14] font-medium tracking-[-0.03em] text-balance">
               {t({
-                it: 'Una trattoria pavese a conduzione familiare, con una tradizione di oltre ottant’anni. ',
-                en: 'A family-run Pavese trattoria with a tradition of over eighty years. ',
+                it: 'Una trattoria di famiglia, una sala sola, la stessa cucina di stagione. ',
+                en: 'A family trattoria, a single room, the same seasonal cooking. ',
               })}
               <span className="text-muted">
                 {t({
@@ -209,13 +215,13 @@ function Story() {
               </span>
             </p>
           </Reveal>
-          <ul className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6">
-            {facts.map((f, i) => (
-              <Reveal as="li" key={f.it} delay={i * 0.1} className="border-t border-cream/15 pt-5 leading-relaxed text-cream/85">
+          <Reveal as="ul" delay={0.1} className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6">
+            {facts.map((f) => (
+              <li key={f.it} className="border-t border-cream/15 pt-5 leading-relaxed text-cream/85">
                 {t(f)}
-              </Reveal>
+              </li>
             ))}
-          </ul>
+          </Reveal>
         </div>
         <Reveal className="md:col-span-5 md:col-start-8" y={40}>
           <figure>
@@ -246,7 +252,7 @@ function Kitchen() {
     <section id="cucina" className="pb-24 md:pb-36">
       <div className="mx-auto flex max-w-[1400px] flex-col gap-6 px-4 sm:px-6 md:flex-row md:items-end md:justify-between lg:px-10">
         <div>
-          <Reveal>
+          <Reveal focus>
             <h2 className={`max-w-[16ch] ${H2}`}>{t({ it: 'La cucina segue le stagioni.', en: 'The kitchen follows the seasons.' })}</h2>
           </Reveal>
           <Reveal delay={0.08}>
@@ -275,13 +281,13 @@ function Kitchen() {
         </div>
       </div>
 
-      <div
-        ref={track}
-        className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-4 sm:px-6 lg:px-10 scroll-px-4 sm:scroll-px-6 lg:scroll-px-10 xl:px-[max(2.5rem,calc((100vw_-_1400px)/2_+_2.5rem))] xl:scroll-px-[max(2.5rem,calc((100vw_-_1400px)/2_+_2.5rem))]"
-      >
-        {PLATES.map((p, i) => (
-          <Reveal key={p.src} delay={i * 0.06} y={30} className="shrink-0 snap-start">
-            <figure className="group w-[78vw] sm:w-[44vw] lg:w-[30vw] xl:w-[400px]">
+      <Reveal y={24}>
+        <div
+          ref={track}
+          className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-4 sm:px-6 lg:px-10 scroll-px-4 sm:scroll-px-6 lg:scroll-px-10 xl:px-[max(2.5rem,calc((100vw_-_1400px)/2_+_2.5rem))] xl:scroll-px-[max(2.5rem,calc((100vw_-_1400px)/2_+_2.5rem))]"
+        >
+          {PLATES.map((p) => (
+            <figure key={p.src} className="group w-[78vw] shrink-0 snap-start sm:w-[44vw] lg:w-[30vw] xl:w-[400px]">
               <div className="aspect-[4/5] overflow-hidden rounded-md bg-char">
                 <img
                   src={p.src}
@@ -294,9 +300,9 @@ function Kitchen() {
               </div>
               <figcaption className="mt-4 font-display text-xl font-medium tracking-[-0.02em]">{t(p.name)}</figcaption>
             </figure>
-          </Reveal>
-        ))}
-      </div>
+          ))}
+        </div>
+      </Reveal>
 
       <div className="mx-auto mt-10 max-w-[1400px] px-4 sm:px-6 lg:px-10">
         <MenuLink />
@@ -324,7 +330,7 @@ function Ticinum() {
     <section className="bg-[var(--band)]">
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-12 px-4 py-24 sm:px-6 md:grid-cols-12 md:py-32 lg:px-10">
         <div className="md:col-span-5">
-          <Reveal>
+          <Reveal focus>
             <h2 className={H2}>{t({ it: 'Menu Ticinum', en: 'The Ticinum menu' })}</h2>
           </Reveal>
           <Reveal delay={0.08}>
@@ -336,24 +342,31 @@ function Ticinum() {
             </p>
             <p className="mt-10 font-display text-6xl font-semibold tracking-[-0.035em] tabular">
               €{TICINUM.price}
-              <span className="ml-3 align-middle font-sans text-base font-normal tracking-normal text-muted">{t({ it: 'a persona', en: 'per person' })}</span>
+              <span className="ml-3 align-middle font-sans text-base font-normal tracking-normal text-muted">
+                {t({ it: 'a persona', en: 'per person' })}
+              </span>
             </p>
             <p className="mt-3 text-sm text-muted">
               {t({ it: 'Per tutto il tavolo, non cumulabile con altre offerte.', en: 'For the whole table, not combinable with other offers.' })}
             </p>
           </Reveal>
         </div>
-        <ol className="md:col-span-7 md:col-start-6 lg:col-span-6 lg:col-start-7">
-          {TICINUM.courses.map((c, i) => (
-            <Reveal as="li" key={c.name} delay={i * 0.1} className="grid grid-cols-[6.5rem_1fr] items-baseline gap-4 border-b border-cream/10 py-6 first:pt-0 sm:grid-cols-[8rem_1fr]">
-              <span className="text-sm text-muted">{t(c.course)}</span>
-              <span className="font-display text-[clamp(1.35rem,2.3vw,1.9rem)] leading-snug font-medium tracking-[-0.02em]">{c.name}</span>
-            </Reveal>
-          ))}
-          <Reveal className="mt-10">
+        <Reveal className="md:col-span-7 md:col-start-6 lg:col-span-6 lg:col-start-7">
+          <ol>
+            {TICINUM.courses.map((c) => (
+              <li
+                key={c.name}
+                className="grid grid-cols-[6.5rem_1fr] items-baseline gap-4 border-b border-cream/10 py-6 first:pt-0 sm:grid-cols-[8rem_1fr]"
+              >
+                <span className="text-sm text-muted">{t(c.course)}</span>
+                <span className="font-display text-[clamp(1.35rem,2.3vw,1.9rem)] leading-snug font-medium tracking-[-0.02em]">{c.name}</span>
+              </li>
+            ))}
+          </ol>
+          <div className="mt-10">
             <MenuLink />
-          </Reveal>
-        </ol>
+          </div>
+        </Reveal>
       </div>
     </section>
   )
@@ -370,9 +383,16 @@ const ROOMS = [
 function Room() {
   const { t } = useLang()
   const [active, setActive] = useState(0)
+  const hoverTimer = useRef<number | undefined>(undefined)
+  // Cambia foto solo se il puntatore si ferma: passarci sopra non fa scattare tutto.
+  const intent = (i: number) => {
+    window.clearTimeout(hoverTimer.current)
+    hoverTimer.current = window.setTimeout(() => setActive(i), 140)
+  }
+  useEffect(() => () => window.clearTimeout(hoverTimer.current), [])
   return (
     <section id="sala" className="mx-auto max-w-[1400px] px-4 py-24 sm:px-6 md:py-36 lg:px-10">
-      <Reveal>
+      <Reveal focus>
         <h2 className={`max-w-[18ch] ${H2}`}>{t({ it: 'Quaranta coperti, una sala sola.', en: 'Forty seats, a single room.' })}</h2>
       </Reveal>
 
@@ -382,18 +402,19 @@ function Room() {
             key={r.src}
             type="button"
             layout
-            onMouseEnter={() => setActive(i)}
+            onPointerEnter={() => intent(i)}
+            onPointerLeave={() => window.clearTimeout(hoverTimer.current)}
             onFocus={() => setActive(i)}
             onClick={() => setActive(i)}
             aria-label={t(r.alt)}
             aria-pressed={active === i}
-            transition={spring}
-            style={{ flexGrow: active === i ? 5 : 1, flexBasis: 0 }}
-            className="relative overflow-hidden rounded-md"
+            transition={springSlide}
+            style={{ flexGrow: active === i ? 5 : 1, flexBasis: 0, borderRadius: 6 }}
+            className="relative overflow-hidden"
           >
             <motion.img
               layout
-              transition={spring}
+              transition={springSlide}
               src={r.src}
               alt=""
               loading="lazy"
@@ -423,31 +444,38 @@ function Room() {
 function Reviews() {
   const { t } = useLang()
   return (
-    <section className="mx-auto max-w-[1100px] px-4 pb-24 text-center sm:px-6 md:pb-36">
-      <Reveal>
-        <h2 className="font-display text-[clamp(2.6rem,6vw,5.5rem)] leading-[1] font-semibold tracking-[-0.035em] text-balance">
-          {t({ it: 'Il risotto, prima di tutto.', en: 'The risotto, first of all.' })}
-        </h2>
+    <section className="mx-auto grid max-w-[1400px] grid-cols-1 gap-12 px-4 pb-24 sm:px-6 md:grid-cols-12 md:items-center md:gap-10 md:pb-36 lg:px-10">
+      <Reveal className="md:col-span-5" y={32}>
+        <ParallaxImage
+          src="/img/risotto-zafferano.webp"
+          alt={t({ it: 'Risotto con cernia, zafferano e arancia', en: 'Risotto with grouper, saffron and orange' })}
+          className="aspect-[4/5]"
+        />
       </Reveal>
-      <Reveal delay={0.08}>
-        <p className="mx-auto mt-6 max-w-[58ch] text-lg leading-relaxed text-cream/80">
-          {t({
-            it: 'È il piatto che gli ospiti citano più spesso nelle circa 340 recensioni su TripAdvisor, dove la trattoria ha 4,2 su 5. Poi il pane e i dolci fatti in casa, la sala, il servizio cortese.',
-            en: 'It is the dish guests mention most in around 340 TripAdvisor reviews, where the trattoria holds 4.2 out of 5. Then the house bread and desserts, the room, the courteous service.',
-          })}
-        </p>
-      </Reveal>
-      <Reveal delay={0.14} className="mt-8">
-        <a
-          href={TRIPADVISOR_URL}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-2 font-medium underline decoration-cream/40 transition-colors duration-300 hover:decoration-cream"
-        >
-          {t({ it: 'Leggi le recensioni su TripAdvisor', en: 'Read the reviews on TripAdvisor' })}
-          <ArrowUpRight aria-hidden size="1.1em" />
-        </a>
-      </Reveal>
+      <div className="md:col-span-6 md:col-start-7">
+        <Reveal focus>
+          <h2 className={H2}>{t({ it: 'Il risotto, prima di tutto.', en: 'The risotto, first of all.' })}</h2>
+        </Reveal>
+        <Reveal delay={0.08}>
+          <p className="mt-6 max-w-[52ch] text-lg leading-relaxed text-cream/80">
+            {t({
+              it: 'Nelle circa 340 recensioni su TripAdvisor, dove la trattoria ha 4,2 su 5, molti ospiti citano il risotto. E poi il pane e i dolci fatti in casa, la sala, il servizio cortese.',
+              en: 'In around 340 TripAdvisor reviews, where the trattoria holds 4.2 out of 5, many guests mention the risotto. Then the house bread and desserts, the room, the courteous service.',
+            })}
+          </p>
+        </Reveal>
+        <Reveal delay={0.14} className="mt-8">
+          <a
+            href={TRIPADVISOR_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 font-medium underline decoration-cream/40 transition-colors duration-300 hover:decoration-cream"
+          >
+            {t({ it: 'Leggi le recensioni su TripAdvisor', en: 'Read the reviews on TripAdvisor' })}
+            <ArrowUpRight aria-hidden size="1.1em" />
+          </a>
+        </Reveal>
+      </div>
     </section>
   )
 }
@@ -460,7 +488,7 @@ function Hours() {
     <section id="orari" className="bg-[var(--band)]">
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-14 px-4 py-24 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-10 lg:py-32">
         <div className="lg:col-span-5">
-          <Reveal>
+          <Reveal focus>
             <h2 className={H2}>{t({ it: 'Orari e dove trovarci', en: 'Hours and how to find us' })}</h2>
           </Reveal>
           <Reveal delay={0.06} className="mt-6">

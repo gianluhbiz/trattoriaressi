@@ -39,12 +39,19 @@ function Tabs({ active }: { active: string }) {
   useEffect(() => {
     const container = bar.current
     const el = container?.querySelector<HTMLElement>(`[data-id="${active}"]`)
-    if (container && el) container.scrollTo({ left: el.offsetLeft - container.offsetLeft - container.clientWidth / 2 + el.clientWidth / 2, behavior: 'smooth' })
+    if (container && el)
+      container.scrollTo({ left: el.offsetLeft - container.offsetLeft - container.clientWidth / 2 + el.clientWidth / 2, behavior: 'smooth' })
   }, [active])
 
   return (
     <div className="sticky top-[68px] z-20 -mx-4 bg-[var(--ground)]/95 px-4 py-3 backdrop-blur-md sm:-mx-6 sm:px-6 lg:-mx-10 lg:px-10">
-      <div ref={bar} className="no-scrollbar flex gap-1 overflow-x-auto" role="navigation" aria-label={t({ it: 'Sezioni del menu', en: 'Menu sections' })}>
+      <motion.div
+        layoutScroll
+        ref={bar}
+        className="no-scrollbar flex gap-1 overflow-x-auto"
+        role="navigation"
+        aria-label={t({ it: 'Sezioni del menu', en: 'Menu sections' })}
+      >
         {SECTIONS.map((s) => (
           <a
             key={s.id}
@@ -56,15 +63,17 @@ function Tabs({ active }: { active: string }) {
               history.replaceState(null, '', `#${s.id}`)
             }}
             aria-current={active === s.id ? 'true' : undefined}
-            className={`relative shrink-0 rounded-full px-4 py-2 text-[0.95rem] font-medium transition-colors ${
+            className={`relative isolate shrink-0 rounded-full px-4 py-2 text-[0.95rem] font-medium transition-colors ${
               active === s.id ? 'text-ink' : 'text-cream/80 hover:text-cream'
             }`}
           >
-            {active === s.id && <motion.span layoutId="menu-tab" transition={springSnappy} className="absolute inset-0 rounded-full bg-cream" />}
-            <span className="relative">{t(s.title)}</span>
+            {active === s.id && (
+              <motion.span layoutId="menu-tab" transition={springSnappy} className="absolute inset-0 -z-10 rounded-full bg-cream" />
+            )}
+            {t(s.title)}
           </a>
         ))}
-      </div>
+      </motion.div>
     </div>
   )
 }
@@ -106,67 +115,70 @@ export default function Menu() {
         {COURSES.map((c) => (
           <section key={c.id} id={c.id} className="grid grid-cols-1 gap-6 border-t border-cream/15 py-14 md:grid-cols-12 md:gap-10 md:py-20">
             <div className="md:col-span-4">
-              <Reveal>
+              <Reveal focus>
                 <h2 className="font-display text-[clamp(2.2rem,4vw,3.5rem)] leading-none font-semibold tracking-[-0.035em]">{t(c.title)}</h2>
                 {c.note && <p className="mt-3 text-muted">{t(c.note)}</p>}
               </Reveal>
             </div>
-            <ul className="md:col-span-8">
-              {c.dishes.map((d, i) => (
-                <Reveal as="li" key={d.name} delay={i * 0.05} y={18} className="group py-5 first:pt-0">
+            <Reveal as="ul" delay={0.06} className="md:col-span-8">
+              {c.dishes.map((d) => (
+                <li key={d.name} className="group py-5 first:pt-0">
                   <div className="flex items-baseline gap-4">
                     <h3 className="font-display text-[clamp(1.3rem,2.1vw,1.75rem)] leading-tight font-medium tracking-[-0.02em]">{d.name}</h3>
-                    <span aria-hidden className="mb-1.5 min-w-6 flex-1 border-b border-dotted border-cream/30 transition-colors group-hover:border-cream/50" />
+                    <span
+                      aria-hidden
+                      className="mb-1.5 min-w-6 flex-1 border-b border-dotted border-cream/30 transition-colors group-hover:border-cream/50"
+                    />
                     <span className="shrink-0 font-display text-[clamp(1.2rem,1.9vw,1.5rem)] font-medium tabular">
                       {d.price ? euro(d.price) : <span className="font-sans text-sm text-muted">{t({ it: 'di stagione', en: 'seasonal' })}</span>}
                     </span>
                   </div>
                   {d.desc && <p className="mt-1.5 max-w-[56ch] text-cream/80">{t(d.desc)}</p>}
-                </Reveal>
+                </li>
               ))}
-            </ul>
+            </Reveal>
           </section>
         ))}
 
-        <section id="ticinum" className="relative -mx-4 overflow-hidden bg-[var(--band)] px-4 py-16 sm:-mx-6 sm:px-6 md:py-24 lg:mx-0 lg:rounded-2xl lg:px-10">
-          <div className="mx-auto max-w-[760px] text-center">
-            <Reveal>
-              <h2 className="font-display text-[clamp(2.6rem,6vw,5rem)] leading-none font-semibold tracking-[-0.035em]">
-                {t({ it: 'Menu Ticinum', en: 'Ticinum menu' })}
-              </h2>
-              <p className="mt-4 text-muted">
-                {t({ it: 'Quattro portate, anche in versione vegetariana', en: 'Four courses, also in a vegetarian version' })}
-              </p>
-            </Reveal>
-            <ol className="mx-auto mt-12 flex max-w-[620px] flex-col text-left">
-              {TICINUM.courses.map((c, i) => (
-                <Reveal
-                  as="li"
+        <section id="ticinum" className="-mx-4 bg-[var(--band)] px-4 sm:-mx-6 sm:px-6 lg:-mx-10 lg:px-10">
+          <div className="grid grid-cols-1 gap-6 py-16 md:grid-cols-12 md:gap-10 md:py-24">
+            <div className="md:col-span-4">
+              <Reveal focus>
+                <h2 className="font-display text-[clamp(2.2rem,4vw,3.5rem)] leading-none font-semibold tracking-[-0.035em]">
+                  {t({ it: 'Menu Ticinum', en: 'Ticinum menu' })}
+                </h2>
+                <p className="mt-3 text-muted">
+                  {t({ it: 'Quattro portate, anche in versione vegetariana', en: 'Four courses, also in a vegetarian version' })}
+                </p>
+                <p className="mt-8 font-display text-6xl font-semibold tracking-[-0.04em] tabular">{euro(TICINUM.price)}</p>
+                <p className="mt-3 max-w-[30ch] text-sm text-muted">
+                  {t({
+                    it: 'A persona. Per tutto il tavolo, non cumulabile con altre offerte.',
+                    en: 'Per person. For the whole table, not combinable with other offers.',
+                  })}
+                </p>
+              </Reveal>
+            </div>
+            <Reveal as="ul" delay={0.08} className="md:col-span-8">
+              {TICINUM.courses.map((c) => (
+                <li
                   key={c.name}
-                  delay={i * 0.08}
-                  className="grid grid-cols-[5.5rem_1fr] items-baseline gap-4 border-b border-cream/15 py-5 sm:grid-cols-[7rem_1fr]"
+                  className="grid grid-cols-[5.5rem_1fr] items-baseline gap-4 border-b border-cream/10 py-5 first:pt-0 sm:grid-cols-[7rem_1fr]"
                 >
-                  <span className="text-sm font-semibold text-muted">{t(c.course)}</span>
-                  <span className="font-display text-[clamp(1.35rem,2.4vw,1.85rem)] leading-snug font-medium tracking-[-0.02em]">{c.name}</span>
-                </Reveal>
+                  <span className="text-sm text-muted">{t(c.course)}</span>
+                  <span className="font-display text-[clamp(1.3rem,2.1vw,1.75rem)] leading-snug font-medium tracking-[-0.02em]">{c.name}</span>
+                </li>
               ))}
-            </ol>
-            <Reveal className="mt-12">
-              <p className="font-display text-6xl font-semibold tracking-[-0.04em] tabular">{euro(TICINUM.price)}</p>
-              <p className="mt-3 text-muted">
-                {t({
-                  it: 'A persona. Per tutto il tavolo, non cumulabile con altre offerte.',
-                  en: 'Per person. For the whole table, not combinable with other offers.',
-                })}
-              </p>
             </Reveal>
           </div>
         </section>
 
         <section id="vini" className="grid grid-cols-1 gap-6 py-16 md:grid-cols-12 md:gap-10 md:py-24">
           <div className="md:col-span-4">
-            <Reveal>
-              <h2 className="font-display text-[clamp(2.2rem,4vw,3.5rem)] leading-none font-semibold tracking-[-0.035em]">{t({ it: 'Vini', en: 'Wine' })}</h2>
+            <Reveal focus>
+              <h2 className="font-display text-[clamp(2.2rem,4vw,3.5rem)] leading-none font-semibold tracking-[-0.035em]">
+                {t({ it: 'Vini', en: 'Wine' })}
+              </h2>
             </Reveal>
           </div>
           <Reveal className="md:col-span-8">
@@ -202,7 +214,7 @@ export default function Menu() {
       </div>
 
       <section id="prenota" className="grid grid-cols-1 gap-10 border-t border-cream/15 py-20 md:py-28 lg:grid-cols-12">
-        <Reveal className="lg:col-span-5">
+        <Reveal focus className="lg:col-span-5">
           <h2 className="font-display text-[clamp(2.4rem,5vw,4.25rem)] leading-[1.02] font-semibold tracking-[-0.035em]">
             {t({ it: 'Vi teniamo un tavolo?', en: 'Shall we keep you a table?' })}
           </h2>

@@ -3,6 +3,8 @@ import type { Transition } from 'framer-motion'
 /** Spring senza rimbalzo: arrivano morbide e si fermano senza oscillare. */
 export const spring: Transition = { type: 'spring', duration: 1.1, bounce: 0 }
 export const springSoft: Transition = { type: 'spring', duration: 1.6, bounce: 0 }
+/** Per i pannelli che si allargano (fisarmonica della sala). */
+export const springSlide: Transition = { type: 'spring', duration: 0.8, bounce: 0 }
 export const springSnappy: Transition = { type: 'spring', duration: 0.5, bounce: 0 }
 
 /** Smorzamento per i valori legati allo scroll. */

@@ -24,8 +24,7 @@ function nextDays(lang: 'it' | 'en', count = 10): Day[] {
   })
 }
 
-const pill =
-  'relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-35'
+const pill = 'relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-35'
 
 /**
  * Prenotazione reale: compone un messaggio WhatsApp con giorno, servizio, orario e coperti
@@ -70,7 +69,7 @@ export function BookingComposer({ compact = false }: { compact?: boolean }) {
     >
       <fieldset className="min-w-0">
         <legend className="mb-2 text-xs font-semibold text-muted">{t({ it: 'Giorno', en: 'Day' })}</legend>
-        <div className="no-scrollbar -mx-1 flex gap-1.5 overflow-x-auto px-1 pb-1">
+        <motion.div layoutScroll className="no-scrollbar -mx-1 flex gap-1.5 overflow-x-auto px-1 pb-1">
           {days.map((d, i) => {
             const closed = d.services.length === 0
             const active = i === dayIdx
@@ -92,7 +91,7 @@ export function BookingComposer({ compact = false }: { compact?: boolean }) {
               </button>
             )
           })}
-        </div>
+        </motion.div>
       </fieldset>
 
       <div className="mt-3 grid grid-cols-[1fr_auto] items-end gap-3">
@@ -117,7 +116,6 @@ export function BookingComposer({ compact = false }: { compact?: boolean }) {
             })}
           </div>
         </fieldset>
-
 
         <fieldset className="min-w-0">
           <legend className="mb-2 text-xs font-semibold text-muted">{t({ it: 'Persone', en: 'Guests' })}</legend>
@@ -147,7 +145,7 @@ export function BookingComposer({ compact = false }: { compact?: boolean }) {
       </div>
 
       <div className="mt-3">
-      <fieldset className="min-w-0">
+        <fieldset className="min-w-0">
           <legend className="mb-2 text-xs font-semibold text-muted">{t({ it: 'Orario', en: 'Time' })}</legend>
           <div className="flex flex-wrap gap-1.5">
             <AnimatePresence mode="popLayout" initial={false}>

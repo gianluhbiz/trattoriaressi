@@ -1,374 +1,445 @@
 ---
 name: Trattoria Ressi
-description: A Pavese trattoria site whose page is the room itself, a red-brick barrel vault lit by one saffron action.
+description: An evening in a Pavese family trattoria, the warm room photographed in the dark; photos lead, the interface recedes, one saffron action books the table.
 colors:
-  brick-950: "#2b0d08"
-  brick-900: "#3d140d"
-  brick-800: "#5a1e13"
-  brick-700: "#7a2b1b"
-  brick-dusk: "#6a2517"
-  brick-500: "#b04a2b"
-  mortar: "#f1e7d6"
-  mortar-dim: "#d9bfae"
+  ink: "#0d0a08"
+  coal: "#15110e"
+  char: "#1f1915"
+  ember: "#2b231d"
+  cream: "#efe6da"
+  muted: "#a8998a"
   saffron: "#f0b429"
 typography:
-  display-xl:
-    fontFamily: "'Bodoni Moda Variable', 'Bodoni 72', Didot, serif"
+  display-menu:
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
     fontSize: "clamp(3.6rem, 9vw, 6rem)"
-    fontWeight: 500
+    fontWeight: 600
     lineHeight: 0.95
+    letterSpacing: "-0.04em"
+  display-hero:
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(2.9rem, 6.2vw, 5.75rem)"
+    fontWeight: 600
+    lineHeight: 0.98
     letterSpacing: "-0.03em"
-  display:
-    fontFamily: "'Bodoni Moda Variable', 'Bodoni 72', Didot, serif"
-    fontSize: "clamp(2.75rem, 4.9vw, 4.6rem)"
-    fontWeight: 500
-    lineHeight: 1.02
-    letterSpacing: "-0.025em"
+  display-room:
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(2.6rem, 7vw, 6rem)"
+    fontWeight: 600
+    lineHeight: 1
+    letterSpacing: "-0.035em"
+  display-reviews:
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(2.6rem, 6vw, 5.5rem)"
+    fontWeight: 600
+    lineHeight: 1
+    letterSpacing: "-0.035em"
+  display-band:
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(2.6rem, 6vw, 5rem)"
+    fontWeight: 600
+    lineHeight: 1
+    letterSpacing: "-0.035em"
   headline:
-    fontFamily: "'Bodoni Moda Variable', 'Bodoni 72', Didot, serif"
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(2.4rem, 5vw, 4.5rem)"
+    fontWeight: 600
+    lineHeight: 1.02
+    letterSpacing: "-0.035em"
+  headline-booking:
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
     fontSize: "clamp(2.4rem, 5vw, 4.25rem)"
-    fontWeight: 500
-    lineHeight: 1.04
-    letterSpacing: "-0.02em"
-  headline-sm:
-    fontFamily: "'Bodoni Moda Variable', 'Bodoni 72', Didot, serif"
+    fontWeight: 600
+    lineHeight: 1.02
+    letterSpacing: "-0.035em"
+  headline-course:
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
     fontSize: "clamp(2.2rem, 4vw, 3.5rem)"
-    fontWeight: 500
+    fontWeight: 600
     lineHeight: 1
-    letterSpacing: "-0.02em"
-  lede:
-    fontFamily: "'Bodoni Moda Variable', 'Bodoni 72', Didot, serif"
-    fontSize: "clamp(1.9rem, 3.6vw, 3.25rem)"
-    fontWeight: 400
-    lineHeight: 1.16
-    letterSpacing: "-0.015em"
-  title:
-    fontFamily: "'Bodoni Moda Variable', 'Bodoni 72', Didot, serif"
-    fontSize: "clamp(1.35rem, 2.2vw, 1.85rem)"
-    fontWeight: 400
-    lineHeight: 1.25
+    letterSpacing: "-0.035em"
   numeral:
-    fontFamily: "'Bodoni Moda Variable', 'Bodoni 72', Didot, serif"
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
     fontSize: "3.75rem"
-    fontWeight: 500
+    fontWeight: 600
     lineHeight: 1
+    letterSpacing: "-0.035em"
     fontFeature: "'tnum', 'lnum'"
+  lede:
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(1.9rem, 3.4vw, 3.1rem)"
+    fontWeight: 500
+    lineHeight: 1.14
+    letterSpacing: "-0.03em"
+  lede-sm:
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(1.6rem, 2.8vw, 2.4rem)"
+    fontWeight: 500
+    lineHeight: 1.18
+    letterSpacing: "-0.03em"
+  menu-link:
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "1.875rem"
+    fontWeight: 600
+    lineHeight: 1.2
+    letterSpacing: "-0.03em"
+  title-course:
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(1.35rem, 2.3vw, 1.9rem)"
+    fontWeight: 500
+    lineHeight: 1.375
+    letterSpacing: "-0.02em"
+  title-course-menu:
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(1.35rem, 2.4vw, 1.85rem)"
+    fontWeight: 500
+    lineHeight: 1.375
+    letterSpacing: "-0.02em"
+  title-dish:
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(1.3rem, 2.1vw, 1.75rem)"
+    fontWeight: 500
+    lineHeight: 1.25
+    letterSpacing: "-0.02em"
+  price:
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "clamp(1.2rem, 1.9vw, 1.5rem)"
+    fontWeight: 500
+    lineHeight: 1.33
+    fontFeature: "'tnum', 'lnum'"
+  wordmark:
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "1.3rem"
+    fontWeight: 600
+    lineHeight: 1
+    letterSpacing: "-0.03em"
+  caption-plate:
+    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "1.25rem"
+    fontWeight: 500
+    lineHeight: 1.4
+    letterSpacing: "-0.02em"
   body-lg:
-    fontFamily: "'Schibsted Grotesk Variable', ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "'Geist Variable', ui-sans-serif, system-ui, sans-serif"
     fontSize: "1.125rem"
     fontWeight: 400
     lineHeight: 1.625
-    fontFeature: "'ss01'"
   body:
-    fontFamily: "'Schibsted Grotesk Variable', ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "'Geist Variable', ui-sans-serif, system-ui, sans-serif"
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.5
-    fontFeature: "'ss01'"
+  body-nav:
+    fontFamily: "'Geist Variable', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "0.95rem"
+    fontWeight: 400
+    lineHeight: 1.5
   label:
-    fontFamily: "'Schibsted Grotesk Variable', ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "'Geist Variable', ui-sans-serif, system-ui, sans-serif"
     fontSize: "0.875rem"
-    fontWeight: 600
+    fontWeight: 500
     lineHeight: 1.43
-    fontFeature: "'ss01'"
   legend:
-    fontFamily: "'Schibsted Grotesk Variable', ui-sans-serif, system-ui, sans-serif"
+    fontFamily: "'Geist Variable', ui-sans-serif, system-ui, sans-serif"
     fontSize: "0.75rem"
     fontWeight: 600
     lineHeight: 1.33
+  micro:
+    fontFamily: "'Geist Variable', ui-sans-serif, system-ui, sans-serif"
+    fontSize: "0.7rem"
+    fontWeight: 600
+    lineHeight: 1.43
 rounded:
-  pill: "9999px"
-  arch: "999px 999px 0 0"
-  panel: "28px"
-  tile: "16px"
+  photo: "6px"
   focus: "6px"
+  panel: "16px"
+  pill: "9999px"
 spacing:
-  gutter-sm: "16px"
-  gutter-md: "24px"
-  gutter-lg: "40px"
-  hairline-gap: "12px"
-  stack: "20px"
-  grid-gap: "40px"
-  grid-gap-lg: "56px"
+  hairline-gap: "4px"
+  control-gap: "6px"
+  sm: "8px"
+  md: "16px"
+  lg: "24px"
+  xl: "40px"
+  2xl: "64px"
+  gutter-mobile: "16px"
+  gutter-tablet: "24px"
+  gutter-desktop: "40px"
   section: "96px"
-  band-lg: "128px"
-  section-lg: "144px"
+  section-band: "128px"
+  section-open: "144px"
   nav-height: "68px"
   container: "1400px"
 components:
   button-primary:
     backgroundColor: "{colors.saffron}"
-    textColor: "{colors.brick-900}"
+    textColor: "{colors.ink}"
     typography: "{typography.body}"
     rounded: "{rounded.pill}"
     padding: "14px 24px"
   button-primary-hover:
-    backgroundColor: "{colors.mortar}"
-    textColor: "{colors.brick-900}"
+    backgroundColor: "{colors.cream}"
+    textColor: "{colors.ink}"
   button-primary-nav:
     backgroundColor: "{colors.saffron}"
-    textColor: "{colors.brick-900}"
+    textColor: "{colors.ink}"
     typography: "{typography.label}"
     rounded: "{rounded.pill}"
     padding: "10px 20px"
-  button-secondary:
-    textColor: "{colors.mortar}"
-    typography: "{typography.body}"
-    rounded: "{rounded.pill}"
-    padding: "14px 20px"
-  button-outline-link:
-    textColor: "{colors.mortar}"
+  button-outline:
+    backgroundColor: "transparent"
+    textColor: "{colors.cream}"
     typography: "{typography.body}"
     rounded: "{rounded.pill}"
     padding: "12px 24px"
-  button-outline-link-hover:
-    textColor: "{colors.saffron}"
-  tab:
-    textColor: "{colors.mortar}"
+  button-outline-hover:
+    backgroundColor: "{colors.cream}"
+    textColor: "{colors.ink}"
+  button-icon-round:
+    backgroundColor: "transparent"
+    textColor: "{colors.cream}"
     rounded: "{rounded.pill}"
-    padding: "8px 16px"
-  tab-active:
-    backgroundColor: "{colors.mortar}"
-    textColor: "{colors.brick-900}"
+    size: "48px"
+  segmented-selected:
+    backgroundColor: "{colors.cream}"
+    textColor: "{colors.ink}"
+    typography: "{typography.label}"
     rounded: "{rounded.pill}"
-    padding: "8px 16px"
-  booking-panel:
-    backgroundColor: "{colors.brick-900}"
-    textColor: "{colors.mortar}"
+    padding: "8px 14px"
+  segmented-trough:
+    backgroundColor: "{colors.ink}"
+    rounded: "{rounded.pill}"
+    padding: "4px"
+  chip-day:
+    backgroundColor: "transparent"
+    textColor: "{colors.cream}"
     rounded: "{rounded.panel}"
-    padding: "20px"
-  day-tile:
-    textColor: "{colors.mortar}"
-    rounded: "{rounded.tile}"
     padding: "8px 10px"
     width: "64px"
-  day-tile-active:
-    backgroundColor: "{colors.mortar}"
-    textColor: "{colors.brick-900}"
-    rounded: "{rounded.tile}"
-  time-chip:
-    textColor: "{colors.mortar}"
+  chip-day-selected:
+    backgroundColor: "{colors.cream}"
+    textColor: "{colors.ink}"
+  chip-time:
+    backgroundColor: "transparent"
+    textColor: "{colors.cream}"
     typography: "{typography.label}"
     rounded: "{rounded.pill}"
     padding: "8px 12px"
-  time-chip-active:
-    backgroundColor: "{colors.mortar}"
-    textColor: "{colors.brick-900}"
-    rounded: "{rounded.pill}"
-  arch-frame:
-    backgroundColor: "{colors.brick-800}"
-    rounded: "{rounded.arch}"
+  chip-time-selected:
+    backgroundColor: "{colors.cream}"
+    textColor: "{colors.ink}"
+  booking-panel:
+    backgroundColor: "{colors.char}"
+    textColor: "{colors.cream}"
+    rounded: "{rounded.panel}"
+    padding: "20px"
+    width: "560px"
   nav-bar:
-    textColor: "{colors.mortar}"
-    height: "68px"
-  nav-bar-solid:
-    backgroundColor: "{colors.brick-900}"
-    textColor: "{colors.mortar}"
+    backgroundColor: "{colors.coal}"
+    textColor: "{colors.cream}"
+    typography: "{typography.body-nav}"
     height: "68px"
   mobile-bar:
-    backgroundColor: "{colors.brick-900}"
+    backgroundColor: "{colors.char}"
+    textColor: "{colors.cream}"
     padding: "12px 16px"
+  photo-frame:
+    backgroundColor: "{colors.char}"
+    rounded: "{rounded.photo}"
 ---
 
 # Design System: Trattoria Ressi
 
 ## Overview
 
-**Creative North Star: "La volta in mattoni"**
+**Creative North Star: "Scuro e caldo"** (dark and warm: the trattoria at dinner time)
 
-The page is the room. Trattoria Ressi is one 40-seat room under an exposed red-brick barrel vault, and the site is built from that room's materials, not from a trattoria template: fired brick is the whole ground, never an accent; lime mortar is the text and the hairline joints; one warm saffron (the colour of risotto allo zafferano) marks the act of booking. A fixed, barely-there brick-course texture (mortar joints at 5.5% opacity) sits behind everything, so every section reads as more of the same wall.
+The site is the room after dark. Every ground is a warm near-black with a brown cast, so the real photographs of the room, the street and the plates carry all the colour and the interface steps back like a waiter between courses. Cream type sits on those grounds with very high contrast, a single saffron fill marks the one thing to do (book), and nothing else competes. It replaces both the cream-and-serif rustic trattoria template and the earlier brick-and-arch world: there are no arches, no domes, no paper textures, no serif display face.
 
-The vault's geometry is the shape language. Every photograph stands inside an arch-topped frame, every control is a full pill, and there are no cards. Bodoni Moda, a Didone with roots in Po-valley Italian printing, carries every headline, dish name and price; Schibsted Grotesk carries everything a visitor reads to act. Depth comes from brick tones (ground, darker soot-fired bands, troughs) rather than from shadows.
+Density is low and confident: one 1400px container, a 12-column grid used asymmetrically (7/5, 5/7, 4/8), large sections with 96 to 144px of vertical air, full-bleed photography where the story needs the room. Type is a tight, optically sized grotesque for display (Bricolage Grotesque, semibold, negative tracking) over a neutral grotesque for reading (Geist). Shapes are plain rectangles with a barely softened 6px corner for photos, one 16px panel for booking, and full pills for every control.
 
-Motion is physical and springy: content settles into place on spring curves, selection indicators slide between options, and the signature moment is scroll-linked: the arch onto the dining room widens until it becomes the full-bleed room ("Entrate dall'arco"). Everything degrades to static, fully visible content under reduced motion.
+Motion is quiet and physical. Every spring arrives with zero bounce and settles without oscillating; reveals fade, rise and come into focus from a slight blur; scroll-linked values pass through a smoothing spring so parallax never jitters. The signature moment is the room photo opening from an inset rectangle to full bleed as the visitor scrolls.
 
 **Key Characteristics:**
-- Drenched brick ground (`brick-700`), darker brick bands (`brick-900`) for alternating sections, footer included
-- Mortar (`mortar`, `mortar-dim`) for all text and every hairline; mortar alpha ladder for joints and washes
-- Saffron is the one accent: primary actions, their hover and focus, text selection
-- Arch-topped frame (`999px 999px 0 0`) is the only photo shape; pills for every control
-- Bodoni Moda display (weight 500, negative tracking, optical sizing auto) over Schibsted Grotesk body (`ss01`)
-- Tonal depth; only two soft shadows exist, both dark-brick tinted
-- Three named springs from `src/lib/motion.ts`; layout-animated indicators; one scroll-linked vault opening
-- Bilingual IT/EN at every string; booking within one tap on every screen (sticky mobile bar)
-
-**Page rhythm:** ground hero → scroll-linked vault (full-bleed photo) → ground story and kitchen → `brick-900` band (Ticinum) → ground room and reviews → `brick-900` band (hours + map) → `brick-900` footer. Bands are the darker courses of the wall.
+- Warm near-black grounds in four steps (ink, coal, char, ember); never a light page.
+- Cream text at very high contrast; muted warm grey for secondary text.
+- Saffron is the only accent and fills only the booking actions.
+- Real photography leads every section; the UI is scrims, type and hairlines.
+- Bricolage Grotesque display, semibold, tracked tight (-0.02em to -0.04em); Geist body.
+- Rectangles (6px photos, 16px booking panel) and pills; no cards, no arches.
+- Zero-bounce duration springs (0.5s, 1.1s, 1.6s); blur-to-focus reveals; spring-smoothed scroll.
 
 ## Colors
 
-A single family of fired brick from soot-dark to brick-light, a lime-mortar pair for type and joints, and one saffron accent.
+A warm-dark monochrome of brown-cast blacks and creams, with one saturated saffron reserved for action.
 
 ### Primary
-- **Saffron Risotto** (`saffron`): the only accent. Fill of every primary action ("Prenota su WhatsApp", nav "Prenota", mobile-bar "Prenota", skip link), hover colour of text links and outline buttons, the focus ring (2px, 3px offset) and `::selection`. Brick-900 text on saffron reads 8.64:1.
+- **Saffron** (`saffron`): the risotto-alla-milanese yellow. Fills the primary booking actions only: the "Prenota su WhatsApp" submit in the booking composer, the "Prenota" pill in the nav, the "Prenota" button in the mobile bar and the skip link. Text on it is always ink (10.6:1). Also used, without fill, as the 2px focus ring and the text-selection background.
 
-### Neutral (the brick ground)
-- **Soot-Fired Brick** (`brick-950`): the deepest course. Band colour under dark colour-scheme preference; photo scrims (`/90 → /25-30 → transparent`, bottom-up); recessed troughs inside the booking panel (`/50`).
-- **Vault Shadow Brick** (`brick-900`): bands (Ticinum, Hours, footer), solid nav (`/92`), mobile sheet, mobile bar (`/95`), booking panel (`/70`), and the text colour on any mortar or saffron fill.
-- **Unfired Clay** (`brick-800`): placeholder fill inside arch frames while photos and the map load.
-- **Vault Brick** (`brick-700`): the page ground and the browser `theme-color`. Mortar on it reads 7.83:1, mortar-dim 5.49:1.
-- **Dusk Brick** (`brick-dusk`): the ground under `prefers-color-scheme: dark`; the whole world deepens one course (band becomes `brick-950`). `color-scheme: dark` is always declared; there is no light theme.
-- **Kiln-Light Brick** (`brick-500`): scrollbar thumb only (track `brick-900`).
-
-### Neutral (the mortar)
-- **Lime Mortar** (`mortar`): all primary text, headlines, active selection fills (tabs, day tile, time chip, language switch), logo plaque.
-- **Weathered Mortar** (`mortar-dim`): captions, legends, course labels, secondary meta, the italic second clause of the story lede, closed-state text.
-
-### Mortar alpha ladder (joints and washes)
-| Alpha | Role |
-|---|---|
-| `mortar / 10` | hover wash on ghost controls (nav links, stepper, day tiles) |
-| `mortar / 12` | quietest joints: footer rule, hours-table rows, mobile-menu rows, mobile-bar top |
-| `mortar / 15` | section rules on Menu, Ticinum course rows, booking-panel border |
-| `mortar / 20-25` | chip borders, language-switch border, menu button, story fact rules |
-| `mortar / 30-35` | secondary and outline button borders, dotted price leaders (`/30`) |
-| `mortar / 80-90` | body copy tiers (descriptions `/80`, ledes `/85`, list text `/90`) |
+### Neutral
+- **Ink** (`ink`): the deepest black. Text and icon colour on saffron and cream fills; the trough behind segmented controls (at 60% opacity); the scrim colour over the room-reveal photograph; the scrollbar track.
+- **Coal** (`coal`): the page ground (`--ground`) and browser `theme-color`. The hero scrims fade into it, and the nav turns coal at 85% with a blur once the page scrolls.
+- **Char** (`char`): the banded ground (`--band`) for alternating full-width sections (Ticinum, Hours, Footer, the Menu page Ticinum band), the booking panel (at 95%), the mobile menu sheet and the mobile booking bar; also the placeholder behind loading photographs.
+- **Ember** (`ember`): the lightest ground, used sparingly: the scrollbar thumb and the frame behind the map embed.
+- **Cream** (`cream`): all primary text (15.2:1 on coal), the selected state of every segmented control and chip, and the hover fill of outline buttons. Applied as a translucent ladder for structure: 10-15% for hairlines and row dividers, 20-30% for control borders, 80-90% for secondary reading text over grounds and photos.
+- **Muted** (`muted`): secondary text (6.8:1 on coal): form legends, captions, course labels, footer meta, closed states, the second clause of the story lede.
 
 ### Named Rules
-**The Brick Is The Ground Rule.** Brick is never an accent on a light page. Every surface is a brick tone; contrast between sections comes from moving one course darker (`brick-700` → `brick-900` → `brick-950`), never from introducing a new hue.
+**The One Saffron Rule.** Saffron fills only booking actions. If an element does not start a reservation, it is not saffron. The one built exception is the footer contact and link list, whose links warm to saffron on hover; do not extend that to any other surface.
 
-**The One Saffron Rule.** Saffron belongs to booking and to the interaction states of actions (hover, focus ring) plus the text-selection highlight. It is never a fill for decoration, a heading colour or a background.
+**The Warm Black Rule.** Grounds are never neutral grey or pure black. Every dark step carries the brown cast of the existing four (hue around 56-59 in OKLCH); new surfaces reuse ink, coal, char or ember, never a new hex.
 
-**The Mortar Joint Rule.** Every divider is a 1px mortar hairline at 12-35% alpha. No other line colour exists.
+**The Cream Ladder Rule.** Structure is drawn with cream at fixed opacities (10, 12, 15, 20, 25, 30%), not with new border colours.
 
 ## Typography
 
-**Display Font:** Bodoni Moda Variable (with Bodoni 72, Didot, serif), optical sizing `auto`, roman and italic
-**Body Font:** Schibsted Grotesk Variable (with ui-sans-serif, system-ui, sans-serif), stylistic set `ss01` on body
+**Display Font:** Bricolage Grotesque Variable, optical-size axis on (`font-optical-sizing: auto`), with ui-sans-serif, system-ui fallback
+**Body Font:** Geist Variable, with ui-sans-serif, system-ui fallback
 
-**Character:** a high-contrast Italian Didone for everything that is named (the trattoria, the rooms, the dishes, the prices) against a sturdy, warm newspaper grotesk for everything that informs or acts. Bodoni sets at weight 500 with tight negative tracking at size; it never appears in all caps.
+**Character:** A warm, slightly quirky grotesque that tightens up at large optical sizes, paired with a neutral, legible sans. The display face carries the voice of the house; the body face just gets the facts across: hours, prices, addresses.
 
 ### Hierarchy
-| Role | Face / weight | Size | Line height | Tracking | Where |
-|---|---|---|---|---|---|
-| Display XL | Bodoni 500 | `clamp(3.6rem, 9vw, 6rem)` | 0.95 | -0.03em | Menu page title |
-| Display | Bodoni 500 | `clamp(2.75rem, 4.9vw, 4.6rem)` | 1.02 | -0.025em | Home hero h1, `text-wrap: balance` |
-| Display (stage) | Bodoni 500 | `clamp(2.6rem, 7vw, 6rem)` | 1.02 | -0.02em | Copy that lands over the opened vault; reviews heading (italic, to `5.25rem`) |
-| Headline | Bodoni 500 | `clamp(2.4rem, 5vw, 4.25rem)` | 1.04 | -0.02em | Section h2 (kitchen, room, hours, Menu booking), Ticinum to `4.75rem` |
-| Headline S | Bodoni 500 | `clamp(2.2rem, 4vw, 3.5rem)` | 1 | -0.02em | Menu course headings (Antipasti, Primi...) |
-| Lede | Bodoni 400 | `clamp(1.9rem, 3.6vw, 3.25rem)` | 1.16 | -0.015em | Story paragraph; second clause italic in `mortar-dim`. Wine statement at `clamp(1.6rem, 2.8vw, 2.4rem)` / 1.2 |
-| Title | Bodoni 400 | `clamp(1.35rem, 2.2vw, 1.85rem)` | 1.25-1.375 | normal | Dish names, Ticinum courses (to `2rem` on Home), plate captions at `1.25rem`, mobile menu links at `1.875rem` |
-| Numeral | Bodoni 500, tabular lining | `3.75rem` | 1 | normal | Ticinum price; dish prices at `clamp(1.25rem, 2vw, 1.6rem)` |
-| Body L | Grotesk 400 | `1.125rem` | 1.625 | normal | Ledes under headings; measure 40-58ch |
-| Body | Grotesk 400 | `1rem` (list text `1.05rem`, nav `0.95rem`) | 1.5-1.625 | normal | Descriptions (max 56ch), facts, footer |
-| Label | Grotesk 600 | `0.875rem` | 1.43 | normal | Course labels in Ticinum, captions (400), time chips (500) |
-| Legend | Grotesk 600 | `0.75rem` | 1.33 | normal | Booking-form fieldset legends, language switch |
 
-All numbers that line up (hours, prices, phone, dates, guest count) use `font-variant-numeric: tabular-nums lining-nums`.
+Every literal size used in the code is a step below; there is no size outside this list. Display roles are all Bricolage semibold (600) or medium (500); reading roles are Geist.
+
+| Role | Token | Size | Weight | Line height | Tracking | Where |
+|---|---|---|---|---|---|---|
+| Display, Menu | `display-menu` | clamp(3.6rem, 9vw, 6rem) | 600 | 0.95 | -0.04em | Menu page h1 "Il menu" |
+| Display, Hero | `display-hero` | clamp(2.9rem, 6.2vw, 5.75rem) | 600 | 0.98 | -0.03em | Home h1, max 13ch, two lines |
+| Display, Room | `display-room` | clamp(2.6rem, 7vw, 6rem) | 600 | 1 | -0.035em | "Accomodatevi." over the room reveal |
+| Display, Reviews | `display-reviews` | clamp(2.6rem, 6vw, 5.5rem) | 600 | 1 | -0.035em | Centred reviews statement |
+| Display, Band | `display-band` | clamp(2.6rem, 6vw, 5rem) | 600 | 1 | -0.035em | Menu page Ticinum band title |
+| Headline | `headline` | clamp(2.4rem, 5vw, 4.5rem) | 600 | 1.02 | -0.035em | Home section h2 (Kitchen, Ticinum, Room, Hours), balanced |
+| Headline, Booking | `headline-booking` | clamp(2.4rem, 5vw, 4.25rem) | 600 | 1.02 | -0.035em | Menu page closing booking h2 |
+| Headline, Course | `headline-course` | clamp(2.2rem, 4vw, 3.5rem) | 600 | 1 | -0.035em | Menu course and wine h2 |
+| Numeral | `numeral` | 3.75rem | 600 | 1 | -0.035em (-0.04em on Menu) | Ticinum price, tabular lining figures |
+| Lede | `lede` | clamp(1.9rem, 3.4vw, 3.1rem) | 500 | 1.14 | -0.03em | Home story statement, second clause in muted |
+| Lede, small | `lede-sm` | clamp(1.6rem, 2.8vw, 2.4rem) | 500 | 1.18 | -0.03em | Menu wine statement |
+| Menu link | `menu-link` | 1.875rem | 600 | 1.2 | -0.03em | Mobile menu sheet links |
+| Title, Course | `title-course` | clamp(1.35rem, 2.3vw, 1.9rem) | 500 | 1.375 | -0.02em | Home Ticinum course names |
+| Title, Course (Menu) | `title-course-menu` | clamp(1.35rem, 2.4vw, 1.85rem) | 500 | 1.375 | -0.02em | Menu Ticinum course names |
+| Title, Dish | `title-dish` | clamp(1.3rem, 2.1vw, 1.75rem) | 500 | 1.25 | -0.02em | Menu dish names (h3) |
+| Price | `price` | clamp(1.2rem, 1.9vw, 1.5rem) | 500 | 1.33 | normal | Menu dish prices, tabular |
+| Wordmark | `wordmark` | 1.3rem | 600 | 1 | -0.03em | "Trattoria Ressi" beside the sign |
+| Plate caption | `caption-plate` | 1.25rem | 500 | 1.4 | -0.02em | Dish names under carousel photos; guest count |
+| Body, large | `body-lg` | 1.125rem | 400 | 1.625 | normal | Section intros, hero subtext, 40-58ch |
+| Body | `body` | 1rem | 400 | 1.5 | normal | Default text, buttons, dish descriptions (56ch) |
+| Body, nav | `body-nav` | 0.95rem | 400 (500 in Menu tabs) | 1.5 | normal | Nav links, Menu tabs, status line, footer link lists |
+| Label | `label` | 0.875rem | 500 (600 on nav CTA) | 1.43 | normal | Captions, course labels, segmented options, time chips, footer meta |
+| Legend | `legend` | 0.75rem | 600 | 1.33 | normal | Booking-form legends, language switch, "oggi" badge, "Pavia" under the wordmark |
+| Micro | `micro` | 0.7rem | 600 | 1.43 | normal, uppercase | Weekday label inside the day chips only |
 
 ### Named Rules
-**The Named-Things-In-Bodoni Rule.** If it is a name (the trattoria, a room, a dish, a course, a price), it is set in Bodoni. If it is an instruction, a label or a fact, it is Schibsted Grotesk.
+**The Tight Display Rule.** Display and headline steps are always Bricolage at 600 with line height at or below 1.02 and tracking between -0.03em and -0.04em; titles below 2rem relax to 500 and -0.02em. Never track display type positively.
 
-**The Balanced Headline Rule.** Display and headline text uses `text-wrap: balance` or a `max-width` of 16-18ch so headlines break into two or three even lines, never one long line with a widow.
+**The Tabular Facts Rule.** Every number a guest compares (prices, hours, dates, the phone number, guest count) is set with tabular lining figures.
+
+**The No Kicker Rule.** Headlines stand alone; there are no small uppercase labels above them. Uppercase exists only in the day-chip weekday and the language switch.
 
 ## Layout
 
-- **Container:** `1400px` max, centred; side gutters `16px` → `24px` (≥640px) → `40px` (≥1024px). Reviews narrow to `1100px`; the Menu Ticinum block to `760px` (list `620px`).
-- **Grid:** 12 columns from `md`/`lg`. Hero splits 6/6 (text left, arch right); story 8/4 with the arch dropped `96px` below the lede; Ticinum 5/6 offset; hours 5/7 with the map arch filling the tall column; Menu courses 4/8 (heading left, dishes right).
-- **Vertical rhythm:** sections `96px` top and bottom, `144px` from `md`; brick bands `96px` → `128px`. Grid gaps `40px` and `56px`; arch galleries `12px` apart; masonry plates `20px`.
-- **Nav:** fixed, `68px` tall; content clears it with `84px`/`104px` hero top padding and `scroll-padding-top: 88px` for anchors.
-- **Mobile:** single column; the hero arch moves above the headline at `34svh`, max `26rem` wide; the room accordion becomes a horizontal snap scroller of 78%-wide arches; a fixed bottom bar holds Prenota, call and Menu, and page bottoms reserve `112px` for it.
-- **Breakpoints:** Tailwind defaults (`640`, `768`, `1024`, `1280px`).
+One centred container, max 1400px, with gutters of 16px (mobile), 24px (from 640px) and 40px (from 1024px). Content lives on a 12-column grid used asymmetrically: hero 7/5, story 7/5 with the photo starting at column 8, Ticinum 5/6, hours 5/7, Menu courses 4/8. The Reviews section narrows to 1100px and centres; the Menu Ticinum band narrows its content to 760px.
+
+Vertical rhythm is generous: open sections take 96px top and bottom, 144px from 768px; banded (char) sections take 96px, 128px from 768px. Inside sections, gaps run 24, 40, 56 and 64px. Reading measures are capped in ch (13ch display, 16-18ch headlines, 38-58ch body).
+
+Breakpoints are Tailwind's defaults (640, 768, 1024, 1280px). The hero is the biggest responsive change: on desktop it fills 100dvh with the photo behind and content anchored to the bottom; on mobile the photo is 60svh and the headline overlaps its lower third (negative 26svh), with the booking composer stacked below. Below 640px a fixed bottom bar keeps booking one tap away and the page reserves 112px under the footer for it. The nav is 68px; anchors land with 88px of scroll padding. The plates carousel and the mobile room gallery bleed to the viewport edge with scroll-snap, aligned to the container gutter.
+
+Scrolling is native; there is no smooth-scroll library. The room reveal is a 230vh section with a sticky 100dvh stage.
 
 ## Elevation & Depth
 
-The system is tonal. Depth is a darker course of brick: bands sit one course below the ground, troughs inside the booking panel one more (`brick-950 / 50`), and unloaded media show unfired clay (`brick-800`). A fixed brick-course SVG (72 × 56px tile, 2px mortar joints at 5.5% opacity) lies behind all content and never scrolls with it. Glass is used only where content slides beneath a fixed layer: solid nav, sticky Menu tabs (`ground / 95`) and the mobile bar, each with a 12px backdrop blur.
+Depth comes from light, not lift. The page is flat; layers are told apart by stepping between the warm blacks (coal ground, char bands and panels, ember frames) and by photographs sitting under gradient scrims. Only two shadows exist, both soft, long and dark, made for elements that float over photography.
+
+| Level | Treatment | Use |
+|---|---|---|
+| Ground | coal, flat | Page |
+| Band | char, flat, full width | Alternating sections, footer |
+| Scrim | gradient from coal or ink to transparent | Over every photo that carries text |
+| Floating | translucent coal or char with 12px backdrop blur | Scrolled nav, mobile bar, sticky Menu tabs |
+| Panel | char 95% with the panel shadow | The booking composer only |
 
 ### Shadow Vocabulary
-- **Vault lift** (`box-shadow: 0 30px 60px -30px rgba(20,4,2,0.8)`): the booking panel only; a long, low, brick-black pool under the one working object on the page.
-- **Nav settle** (`box-shadow: 0 10px 30px -12px rgba(20,4,2,0.6)`): appears with the solid nav background once the page has scrolled past 24px.
+- **Nav lift** (`box-shadow: 0 10px 30px -12px rgba(0,0,0,0.6)`): appears with the solid nav once the page scrolls past 24px, so the bar separates from photos.
+- **Panel shadow** (`box-shadow: 0 30px 70px -30px rgba(0,0,0,0.75)`): under the booking composer, made for its place on the hero photograph and kept when the composer repeats on the Menu page.
 
 ### Named Rules
-**The Darker Course Rule.** To separate or recess, go one brick tone darker. Shadows are reserved for the booking panel and the scrolled nav; both are tinted brick-black (`rgba(20,4,2,…)`), never grey.
+**The Light Not Lift Rule.** The two shadows belong to the scrolled nav and the booking panel (which keeps its shadow wherever it is placed); nothing else gets one. Separate everything else with a ground step or a cream hairline.
 
-**The Scrim-Only Gradient Rule.** The only gradient is a bottom-up `brick-950` scrim (`/90` → `/25-30` → transparent) that lets mortar type sit on a full-bleed photograph.
+**The Scrim Rule.** Text over a photograph always gets a scrim in the page's own black (coal or ink), never a coloured overlay or a text shadow. Inactive photos dim with brightness 0.55 and saturation 0.8 rather than an overlay.
 
 ## Shapes
 
-- **Arch** (`999px 999px 0 0`): a semicircular top on a straight-sided, flat-bottomed frame. Every photograph uses it (hero entrance, via Ressi, plates, room accordion and scroller, the map iframe), as do the logo plaque and, on large screens, the top of the Menu page's Ticinum band. The hero arch reveals by animating a `clip-path: inset(... round 999px 999px 0 0)` from the bottom.
-- **Pill** (`9999px`): every button, link-button, tab, toggle, chip and stepper control.
-- **Panel** (`28px`): the booking composer, the single rounded-rectangle container in the system. Day tiles inside it use `16px`.
-- **Joints:** 1px mortar hairlines (top or bottom borders, never boxes) divide lists, tables and sections; the Menu uses a dotted mortar leader between dish name and price.
-- **Focus:** 2px saffron outline, 3px offset, `6px` radius.
+Plain rectangles and pills. Photographs and the map sit in rectangles with a barely softened 6px corner; the booking composer is the single 16px-rounded panel (the day chips inside it share that radius, and the Menu Ticinum band takes it from 1024px). Every control (buttons, segmented options, time chips, the language switch, icon buttons, tabs) is a full pill. The logo is the existing shop sign in a cream circle with a cream 20% ring. Lines are 1px cream hairlines; the only patterned line is the dotted leader between a dish and its price.
+
+During the room reveal the photo's clip-path animates from an inset of 14% vertical and 16% horizontal with a 10px corner to a full-bleed, square-cornered frame.
 
 ### Named Rules
-**The Arch Rule.** A photograph is never shown in a rectangle, circle or card. It stands in an arch, or (only in the vault opening, at full scroll) fills the viewport edge to edge.
+**The No Arch Rule.** No arches, domes, vaults or curved-top frames anywhere: the client rejected them. A photograph that happens to show the arched window is content, not a frame.
 
-**The No-Card Rule.** Content groups are separated by space and mortar hairlines, not by boxed containers. The booking panel is the one exception because it is a working instrument.
+**The No Card Rule.** Content is never boxed in bordered or filled cards. Lists are rows divided by hairlines; the booking composer is the only panel.
 
 ## Components
 
 ### Buttons
-Tactile and round, like a stone worn smooth.
-- **Shape:** full pill (`9999px`).
-- **Primary (booking):** saffron fill, `brick-900` semibold text, `14px 24px`, WhatsApp glyph at 1.15em. Nav variant `10px 20px` at label size; mobile-bar variant fills the row at `12px` vertical.
-- **Hover / Press:** fill turns `mortar`; framer-motion lifts `y: -2` on hover and presses to `scale: 0.97` on `springSnappy`. Nav variant uses CSS `active:scale(0.97)` with `ease-out-expo` 300ms.
-- **Secondary (call):** transparent, `mortar / 30` border, `mortar` text, `14px 20px`; hover border to full `mortar` and a `mortar / 10` wash; same lift and press.
-- **Outline link ("Vedi il menu", "Indicazioni stradali"):** `mortar / 35` border, `12px 24px`; hover turns border and text saffron; the menu link also slides `x: 4` on `springSnappy`.
-- **Text links:** underline offset `0.22em`, thickness 1px, `mortar / 40` decoration; hover text and underline saffron.
+Tactile and calm: pills that rise 2px on hover and press to 97% on tap, all on the snappy spring.
+- **Shape:** full pill (`rounded.pill`).
+- **Primary (booking):** saffron fill, ink text, semibold, 14px by 24px; hover fills cream. A WhatsApp or phone glyph at 1.15em sits before the label. The nav version is smaller (10px by 20px, label size).
+- **Outline:** transparent, cream text, 1px cream border at 25-30%, medium weight, 12px by 24px; hover fills cream with ink text over 500ms on the expo ease, and a trailing arrow nudges 4px right. Used for "Vedi il menu", "Indicazioni stradali" and the phone action.
+- **Round icon:** 44-48px circles with a cream 20-25% border; hover brightens the border to 60% and adds a cream 5% wash (carousel arrows, mobile menu toggle).
+- **Text link:** cream with a 1px underline at 40% opacity that firms to full cream on hover; offset 0.22em.
 
-### Selection controls (tabs, toggles, chips)
-- **Sliding indicator:** a single absolutely positioned pill shared across options via framer-motion `layoutId` (`menu-tab`, `lang-pill`, `day-pill`, `svc-pill`), moving on `springSnappy`. Selected text becomes `brick-900`.
-- **Menu tabs:** sticky under the nav (`top: 68px`), on `ground / 95` with blur; pills `8px 16px` at 0.95rem medium; active fill `mortar`; the bar auto-scrolls the active tab to centre.
-- **Language switch:** `mortar / 25` bordered pill with 2px inset; uppercase `IT`/`EN` at 0.75rem semibold; active fill `mortar`.
-- **Time chips:** `mortar / 20` border, `8px 12px`, tabular; active `mortar` fill and border; chips enter and exit with `scale 0.9 → 1` and `popLayout`.
+### Chips and Segmented Controls
+- **Segmented control:** a pill trough (ink 60%, 4px inset) holding pill options. The selected option is a cream pill that slides between options with a shared-layout spring (0.5s, no bounce); its label turns ink. Used for service (lunch/dinner), guest stepper container, language switch (cream 25% border instead of trough) and the Menu section tabs.
+- **Day chip:** 64px-min vertical chip, 16px corners: uppercase 0.7rem weekday over a tabular date. Selected uses the same sliding cream fill. Closed days (Wednesday) drop to cream 35% with the date struck through and cannot be chosen.
+- **Time chip:** pill with a 1px cream 20% border, tabular label; hover border 50%; selected is solid cream with ink text. Slots enter and exit with a 0.9 scale and fade when the service changes.
 
 ### Booking Composer (signature)
-The working instrument that turns a choice of day, service, time and guests into a pre-written WhatsApp message.
-- **Panel:** `28px` radius, `mortar / 15` border, `brick-900 / 70` fill, `16px` (`20px` from 640px) padding, vault-lift shadow, max `560px` except in the compact Menu variant.
-- **Day strip:** horizontally scrolling tiles, min `64px`, `16px` radius, two lines (0.7rem uppercase semibold day, tabular date). Closed days are disabled, `mortar / 35` and struck through.
-- **Service toggle and guest stepper:** sit in `brick-950 / 50` pill troughs with 4px inset; stepper buttons are 36px circles with `mortar / 10` hover, count in Bodoni 600 at 1.25rem.
-- **Actions:** saffron primary plus secondary call button, stacked on mobile, in a row from 640px.
-
-### Arch Frame (signature)
-- **Shape:** `999px 999px 0 0`, `overflow: hidden`, `brick-800` behind the image while it loads.
-- **Proportions in use:** 3/4, 4/5, 1/1 in the plates masonry; 3/4 for story and mobile room; 4/5 → 5/4 → full column height for the map.
-- **Hover:** the image inside scales (1.06 on `springSoft` for plates; 1.05 over 1.4s `ease-out-expo` for the story photo); the frame itself never moves.
-- **Room accordion (desktop):** five arches in a `68vh` row (min `460px`); the hovered or focused one grows to `flex-grow: 5` on `spring` via layout animation; caption below updates live.
-
-### Vault Opening (signature)
-A `240vh` scroll track with a sticky full-viewport stage. The room photo starts inside an arch inset 12% from the top and 22% from each side; by 64% of the scroll the inset reaches zero. The corner radius stays at half the frame's width (a true semicircle) until 48%, then flattens to square by 64%. The photo de-zooms from 1.22 to 1 by 70%; the copy fades and rises (`y: 40 → 0`) between 50% and 78%. Under reduced motion it is a static `90dvh` full-bleed photo with the scrim and copy.
+The working reservation panel: it composes a WhatsApp message from day, service, time and guests for the official number.
+- **Panel:** char at 95%, 1px cream 10% border, 16px corners, 16px padding (20px from 640px), max 560px, panel shadow.
+- **Structure:** legend-labelled fieldsets in order day, service plus guests, time; actions at the bottom (saffron WhatsApp submit filling the row, outline phone action beside it on wider screens).
+- **Guest stepper:** minus and plus 36px round buttons around a tabular semibold display numeral at 1.25rem.
 
 ### Navigation
-- **Bar:** fixed, `68px`, transparent over the hero; past 24px of scroll it becomes `brick-900 / 92` with 12px blur and the nav-settle shadow (500ms `ease-out-expo`).
-- **Links:** pill `8px 14px`, 0.95rem, `mortar / 85`; hover `mortar / 10` wash and full mortar.
-- **Logo:** a `40 × 48px` mortar arch plaque holding the sign artwork, beside "Trattoria Ressi" in Bodoni 600 at 1.45rem and "Pavia" in 0.72rem `mortar-dim`; the plaque lifts 2px on hover.
-- **Mobile:** a 44px circular menu button opens a full-height `brick-900` sheet under the bar; links in Bodoni at 1.875rem with `mortar / 12` rules, staggered 0.05s on `spring`; body scroll locks while open.
+- **Bar:** 68px, fixed, transparent over the hero; after 24px of scroll it turns coal 85% with 12px backdrop blur and the nav lift shadow (500ms transition).
+- **Links:** body-nav size, cream 85%, pill hover wash of cream 10%; the active Menu link is underlined at cream 60%.
+- **Right cluster:** language switch, saffron "Prenota" pill, and below 1024px a round menu toggle.
+- **Mobile sheet:** full-height char sheet under the bar; links are 1.875rem display semibold rows divided by cream 12% hairlines, each with an up-right arrow in muted, staggering in from the left (0.05s).
+- **Mobile bar (below 640px):** fixed bottom, char 95% with blur and a cream 12% top hairline: saffron "Prenota" fills the row, then a round phone button and a "Menu" outline pill; respects the safe-area inset.
 
-### Mobile Bar
-Fixed to the bottom under 640px: `brick-900 / 95` with blur and a `mortar / 12` top joint, safe-area padding; saffron "Prenota" fills the row, beside a 56px-wide outline call pill and an outline "Menu" pill (hidden on the Menu page).
+### Menu Rows
+- **Dish row:** dish name in display medium, a dotted cream 30% leader that grows to fill the gap (50% on row hover), then the price in display medium tabular; description below in cream 80%, max 56ch. A missing price reads "di stagione" in muted label size.
+- **Course row (Ticinum):** a two-column row, muted label on the left (5.5-8rem column), course name in display medium on the right, divided by cream 10-15% hairlines.
+- **Section tabs:** sticky under the nav on a ground-coloured, blurred strip; the active tab is the sliding cream pill and auto-centres in the scroller.
 
-### Menu Dish Row
-Dish name in Bodoni title size, a dotted `mortar / 30` leader filling the gap, price in Bodoni tabular; a 56ch `mortar / 80` description below. Undated prices read "di stagione" in small grotesk `mortar-dim`.
+### Photography
+- **Hero:** full-bleed daylight room, slow 1.6s fade-in, gentle spring-smoothed parallax (moves 18% and scales from 1.04 to 1.14 over the hero's exit), coal scrims from the left and bottom on desktop and from the bottom on mobile.
+- **Room reveal (signature):** a sticky full-viewport stage where the room photo opens from an inset rounded rectangle to full bleed while scaling from 1.25 to 1; the "Accomodatevi." copy fades and rises in over the last part of the scroll.
+- **Plates carousel:** 4:5 photos at 78vw / 44vw / 30vw / 400px, snap-start, 20px gap; photos scale to 1.05 over 1.2s on hover.
+- **Room accordion (from 768px):** five photos in a row at 64vh; the hovered or focused one grows to five shares on a 1.1s spring while the others dim. On mobile it becomes a snap-centred 3:4 gallery with captions.
+- **Map:** the Google embed is inverted and warmed (invert 0.9, hue-rotate 180deg, saturate 0.55, brightness 0.95, sepia 0.15) to sit in the dark world, in a 6px ember frame.
 
 ### Motion
-| Token | Parameters | Used for |
-|---|---|---|
-| `spring` | stiffness 140, damping 22, mass 0.9 | Entrances (hero, scroll reveals, page transitions, mobile sheet), room accordion layout |
-| `springSoft` | stiffness 90, damping 20 | Image zoom inside arches on hover |
-| `springSnappy` | stiffness 420, damping 32 | Sliding indicators, button lift/press, time chips, link nudge |
-| hero arch reveal | spring, stiffness 60, damping 18, delay 0.1s | Bottom-up clip of the hero arch |
-| hero image settle | spring, stiffness 40, damping 20 | Entrance photo de-zoom 1.06 → 1 |
-| `ease-out-expo` | `cubic-bezier(0.16, 1, 0.3, 1)` | CSS transitions: nav background (500ms), logo lift and nav button (300ms), story image (1.4s) |
-
-Scroll reveals rise `28px` by default (up to `60px` for arches), fire once at 25% visibility and stagger list items by 0.05-0.09s. Page transitions rise `24px` in and drop `12px` out (0.18s). `MotionConfig reducedMotion="user"` plus explicit `useReducedMotion` checks render everything in place, and smooth scrolling turns off.
+- **Springs:** `spring` (duration 1.1s, bounce 0) for reveals, page transitions and layout; `springSoft` (1.6s, bounce 0) for the hero photo fade; `springSnappy` (0.5s, bounce 0) for pills, chips and button press; `scrollSmooth` (stiffness 90, damping 28, mass 0.6) smoothing every scroll-linked value.
+- **CSS transitions:** colour, background and filter changes use the expo ease `cubic-bezier(0.16, 1, 0.3, 1)` at 300, 500, 700 or 1200ms.
+- **Reveal:** opacity 0, 24px down (18-40px by context) and 6px blur, to rest on entering view (once, at 20% visible); siblings stagger 0.05-0.1s.
+- **Reduced motion:** honoured globally; parallax, room reveal and reveals fall back to static frames.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** set every surface in a brick tone: ground `brick-700` (`brick-dusk` under dark preference), bands `brick-900` (`brick-950` under dark preference).
-- **Do** use saffron for the booking action and for the hover/focus state of actions; set `brick-900` text on it.
-- **Do** frame every photograph in the arch (`999px 999px 0 0`) with a `brick-800` loading fill, and keep hover motion inside the frame.
-- **Do** make every button, tab, toggle and chip a full pill, and move a single-choice indicator between options with a shared `layoutId` on `springSnappy`.
-- **Do** set names, dishes and prices in Bodoni Moda 500 with negative tracking; set instructions and facts in Schibsted Grotesk; use tabular lining numerals for any number in a column.
-- **Do** divide with 1px mortar hairlines at 12-35% alpha and with space; recess with a darker brick course.
-- **Do** keep booking one tap away: nav "Prenota", hero composer and the mobile bar on every route.
-- **Do** ship a reduced-motion path for every animated element that leaves content visible and in place.
+- **Do** build every new surface on coal, with char for a banded section and cream text; reuse the seven colour tokens only.
+- **Do** reserve saffron fills for actions that start a booking, with ink text on them.
+- **Do** lead sections with a real photograph of the room, street or plates, behind a coal or ink scrim when text sits on it.
+- **Do** set display type in Bricolage Grotesque semibold with tracking between -0.03em and -0.04em, choosing an existing step from the hierarchy table.
+- **Do** use full pills for controls, 6px corners for photographs, and the sliding cream pill for any selected state.
+- **Do** animate with the zero-bounce springs (0.5s, 1.1s, 1.6s) and pass scroll-linked values through the smoothing spring.
+- **Do** set prices, hours, dates and the phone number in tabular figures.
 
 ### Don't:
-- **Don't** put brick on a cream or white page, or add a second accent hue; the contrast comes from brick courses.
-- **Don't** show a photograph in a rectangle, rounded card or circle.
-- **Don't** wrap content groups in cards; the 28px booking panel is the one container.
-- **Don't** use grey or black shadows; the two shadows are brick-black and belong to the booking panel and the scrolled nav.
-- **Don't** use gradients except the bottom-up `brick-950` scrim under type on a full-bleed photo.
-- **Don't** set Bodoni in all caps or as body copy.
-- **Don't** introduce tween easings for entrances; entrances use the named springs.
+- **Don't** use arches, domes, vaults or curved-top frames; the arch-framed brick world was rejected.
+- **Don't** introduce a light or cream page ground, paper textures or a serif display face; that is the rustic trattoria template this world refuses.
+- **Don't** use saffron for decoration, headings, icons or non-booking links.
+- **Don't** box content in cards; divide rows with cream hairlines and keep the booking composer as the only panel.
+- **Don't** add shadows beyond the nav lift and the booking panel, or use bouncing springs.
+- **Don't** add small uppercase kickers or eyebrows above headlines.
+- **Don't** add a smooth-scroll library; scrolling stays native.
