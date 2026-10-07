@@ -10,7 +10,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 px-4 pt-16 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr] lg:px-10">
         <div>
           <Logo />
-          <p className="mt-5 max-w-[38ch] text-mortar-dim">
+          <p className="mt-5 max-w-[38ch] text-muted">
             {t({
               it: 'Trattoria pavese a conduzione familiare, a due passi dal Comune e dalla Basilica di San Michele.',
               en: 'Family-run Pavese trattoria, a short walk from the town hall and the Basilica of San Michele.',
@@ -30,7 +30,7 @@ export function Footer() {
           <a href="https://www.facebook.com/TrattoriaRessi/" target="_blank" rel="noreferrer" className="hover:text-saffron">Facebook</a>
         </div>
       </div>
-      <div className="mx-auto mt-14 flex max-w-[1400px] flex-col gap-2 border-t border-mortar/12 px-4 pt-6 text-sm text-mortar-dim sm:flex-row sm:justify-between sm:px-6 lg:px-10">
+      <div className="mx-auto mt-14 flex max-w-[1400px] flex-col gap-2 border-t border-cream/12 px-4 pt-6 text-sm text-muted sm:flex-row sm:justify-between sm:px-6 lg:px-10">
         <span>© {new Date().getFullYear()} Trattoria Ressi, Pavia</span>
         <span>{t({ it: 'Mercoledì chiuso. Domenica solo pranzo.', en: 'Closed Wednesdays. Sunday lunch only.' })}</span>
       </div>

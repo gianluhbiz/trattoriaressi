@@ -16,17 +16,17 @@ const LINKS: { to: string; label: L }[] = [
 export function LangSwitch({ className = '' }: { className?: string }) {
   const { lang, setLang } = useLang()
   return (
-    <div role="group" aria-label="Lingua / Language" className={`relative flex rounded-full border border-mortar/25 p-0.5 text-xs font-semibold ${className}`}>
+    <div role="group" aria-label="Lingua / Language" className={`relative flex rounded-full border border-cream/25 p-0.5 text-xs font-semibold ${className}`}>
       {(['it', 'en'] as const).map((l) => (
         <button
           key={l}
           type="button"
           onClick={() => setLang(l)}
           aria-pressed={lang === l}
-          className={`relative z-10 rounded-full px-2.5 py-1 uppercase transition-colors ${lang === l ? 'text-brick-900' : 'text-mortar-dim hover:text-mortar'}`}
+          className={`relative z-10 rounded-full px-2.5 py-1 uppercase transition-colors ${lang === l ? 'text-ink' : 'text-muted hover:text-cream'}`}
         >
           {lang === l && (
-            <motion.span layoutId="lang-pill" transition={springSnappy} className="absolute inset-0 -z-10 rounded-full bg-mortar" />
+            <motion.span layoutId="lang-pill" transition={springSnappy} className="absolute inset-0 -z-10 rounded-full bg-cream" />
           )}
           {l}
         </button>
@@ -57,7 +57,7 @@ export function Nav() {
     <header className="fixed inset-x-0 top-0 z-40">
       <div
         className={`transition-[background-color,box-shadow,backdrop-filter] duration-500 ease-out-expo ${
-          solid || open ? 'bg-brick-900/92 shadow-[0_10px_30px_-12px_rgba(20,4,2,0.6)] backdrop-blur-md' : 'bg-transparent'
+          solid || open ? 'bg-coal/85 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.6)] backdrop-blur-md' : 'bg-transparent'
         }`}
       >
         <nav className="mx-auto flex h-[68px] max-w-[1400px] items-center justify-between gap-6 px-4 sm:px-6 lg:px-10" aria-label="Principale">
@@ -65,7 +65,7 @@ export function Nav() {
           <ul className="hidden items-center gap-1 lg:flex">
             {LINKS.map((l) => (
               <li key={l.to}>
-                <Link to={l.to} className="rounded-full px-3.5 py-2 text-[0.95rem] text-mortar/85 transition-colors hover:bg-mortar/10 hover:text-mortar">
+                <Link to={l.to} className="rounded-full px-3.5 py-2 text-[0.95rem] text-cream/85 transition-colors hover:bg-cream/10 hover:text-cream">
                   {t(l.label)}
                 </Link>
               </li>
@@ -74,7 +74,7 @@ export function Nav() {
               <NavLink
                 to="/menu"
                 className={({ isActive }) =>
-                  `rounded-full px-3.5 py-2 text-[0.95rem] transition-colors hover:bg-mortar/10 ${isActive ? 'text-mortar underline decoration-mortar/60' : 'text-mortar/85 hover:text-mortar'}`
+                  `rounded-full px-3.5 py-2 text-[0.95rem] transition-colors hover:bg-cream/10 ${isActive ? 'text-cream underline decoration-cream/60' : 'text-cream/85 hover:text-cream'}`
                 }
               >
                 Menu
@@ -85,7 +85,7 @@ export function Nav() {
             <LangSwitch className="hidden sm:flex" />
             <Link
               to="#prenota"
-              className="hidden rounded-full bg-saffron px-5 py-2.5 text-sm font-semibold text-brick-900 transition-[transform,background-color] duration-300 ease-out-expo hover:bg-mortar active:scale-[0.97] sm:inline-flex"
+              className="hidden rounded-full bg-saffron px-5 py-2.5 text-sm font-semibold text-ink transition-[transform,background-color] duration-300 ease-out-expo hover:bg-cream active:scale-[0.97] sm:inline-flex"
             >
               {t({ it: 'Prenota', en: 'Book' })}
             </Link>
@@ -95,7 +95,7 @@ export function Nav() {
               aria-expanded={open}
               aria-controls="menu-mobile"
               aria-label={open ? t({ it: 'Chiudi menu', en: 'Close menu' }) : t({ it: 'Apri menu', en: 'Open menu' })}
-              className="grid h-11 w-11 place-items-center rounded-full border border-mortar/25 text-xl lg:hidden"
+              className="grid h-11 w-11 place-items-center rounded-full border border-cream/25 text-xl lg:hidden"
             >
               {open ? <X aria-hidden size="1.2em" /> : <List aria-hidden size="1.2em" />}
             </button>
@@ -111,7 +111,7 @@ export function Nav() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
             transition={spring}
-            className="fixed inset-x-0 top-[68px] bottom-0 overflow-y-auto bg-brick-900 px-4 pt-6 pb-28 sm:px-6 lg:hidden"
+            className="fixed inset-x-0 top-[68px] bottom-0 overflow-y-auto bg-char px-4 pt-6 pb-28 sm:px-6 lg:hidden"
           >
             <motion.ul
               initial="hidden"
@@ -123,11 +123,11 @@ export function Nav() {
                 <motion.li
                   key={l.to}
                   variants={{ hidden: { opacity: 0, x: reduce ? 0 : -18 }, show: { opacity: 1, x: 0, transition: spring } }}
-                  className="border-b border-mortar/12"
+                  className="border-b border-cream/12"
                 >
-                  <Link to={l.to} className="flex items-center justify-between py-4 font-display text-3xl">
+                  <Link to={l.to} className="flex items-center justify-between py-4 font-display text-3xl font-semibold tracking-[-0.03em]">
                     {t(l.label)}
-                    <ArrowUpRight aria-hidden size="1.15em" weight="regular" className="text-xl text-mortar-dim" />
+                    <ArrowUpRight aria-hidden size="1.15em" weight="regular" className="text-xl text-muted" />
                   </Link>
                 </motion.li>
               ))}

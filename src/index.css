@@ -1,21 +1,19 @@
 @import 'tailwindcss';
-@import '@fontsource-variable/bodoni-moda/opsz.css';
-@import '@fontsource-variable/bodoni-moda/opsz-italic.css';
-@import '@fontsource-variable/schibsted-grotesk';
+@import '@fontsource-variable/bricolage-grotesque/opsz.css';
+@import '@fontsource-variable/geist';
 
 @theme {
-  --font-display: 'Bodoni Moda Variable', 'Bodoni 72', Didot, serif;
-  --font-sans: 'Schibsted Grotesk Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
 
-  /* Mattoni della volta: dal più cotto al più chiaro */
-  --color-brick-950: #2b0d08;
-  --color-brick-900: #3d140d;
-  --color-brick-800: #5a1e13;
-  --color-brick-700: #7a2b1b;
-  --color-brick-500: #b04a2b;
-  /* Malta di calce (testo e giunti) */
-  --color-mortar: #f1e7d6;
-  --color-mortar-dim: #d9bfae;
+  /* Sera in trattoria: fondi caldi quasi neri, dal più profondo al più chiaro */
+  --color-ink: #0d0a08;
+  --color-coal: #15110e;
+  --color-char: #1f1915;
+  --color-ember: #2b231d;
+  /* Testo: crema calda e tono secondario */
+  --color-cream: #efe6da;
+  --color-muted: #a8998a;
   /* Zafferano: unico accento, solo per le azioni */
   --color-saffron: #f0b429;
 
@@ -23,53 +21,29 @@
 }
 
 :root {
-  --ground: var(--color-brick-700);
-  --band: var(--color-brick-900);
+  --ground: var(--color-coal);
+  --band: var(--color-char);
   color-scheme: dark;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ground: #6a2517;
-    --band: var(--color-brick-950);
-  }
 }
 
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 88px;
   -webkit-text-size-adjust: 100%;
+  scrollbar-color: var(--color-ember) var(--color-ink);
 }
 
 body {
   background-color: var(--ground);
-  color: var(--color-mortar);
+  color: var(--color-cream);
   font-family: var(--font-sans);
-  font-feature-settings: 'ss01';
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-/* Corsi di mattoni: trama fissa, mai su contenitori che scorrono */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.055;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='56'%3E%3Cg fill='%23f1e7d6'%3E%3Crect y='26' width='72' height='2'/%3E%3Crect y='54' width='72' height='2'/%3E%3Crect width='2' height='26'/%3E%3Crect x='36' y='28' width='2' height='26'/%3E%3C/g%3E%3C/svg%3E");
-  background-size: 72px 56px;
-}
-
-#root {
-  position: relative;
-  z-index: 1;
-}
-
 ::selection {
   background: var(--color-saffron);
-  color: var(--color-brick-900);
+  color: var(--color-ink);
 }
 
 :focus-visible {
@@ -83,20 +57,12 @@ a {
   text-decoration-thickness: 1px;
 }
 
-html {
-  scrollbar-color: var(--color-brick-500) var(--color-brick-900);
-}
-
 .font-display {
   font-optical-sizing: auto;
 }
 
 .tabular {
   font-variant-numeric: tabular-nums lining-nums;
-}
-
-.arch {
-  border-radius: 999px 999px 0 0;
 }
 
 .no-scrollbar {

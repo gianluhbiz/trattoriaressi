@@ -4,16 +4,16 @@ import { spring } from '../lib/motion'
 
 type Props = { children: ReactNode; delay?: number; y?: number; className?: string; as?: 'div' | 'li' | 'section' }
 
-/** Entrata su scroll: il contenuto è sempre visibile senza JS e con motion ridotto. */
-export function Reveal({ children, delay = 0, y = 28, className, as = 'div' }: Props) {
+/** Entrata su scroll morbida: sale, si mette a fuoco, nessun rimbalzo. */
+export function Reveal({ children, delay = 0, y = 24, className, as = 'div' }: Props) {
   const reduce = useReducedMotion()
   const Comp = motion[as]
   return (
     <Comp
       className={className}
-      initial={reduce ? false : { opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.25 }}
+      initial={reduce ? false : { opacity: 0, y, filter: 'blur(6px)' }}
+      whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ ...spring, delay }}
     >
       {children}
