@@ -1,75 +1,28 @@
-# React + TypeScript + Vite
+# Trattoria Ressi · sito
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sito della Trattoria Ressi (Via Adeodato Ressi 8, Pavia): home e pagina Menu separata.
 
-Currently, two official plugins are available:
+**Stack:** Vite + React 19 + TypeScript, Tailwind CSS v4, framer-motion (transizioni spring), react-router (`/` e `/menu`), icone Phosphor, font self-hosted (Bricolage Grotesque, Geist).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev      # sviluppo
+npm run build    # produzione in dist/
+npm run lint
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Cosa c'è
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- **Home:** hero a tutto schermo con la sala e un compositore di prenotazione funzionante (giorno, servizio, orario, persone → messaggio WhatsApp precompilato al 320 188 3636, o chiamata). Mercoledì e domenica sera non sono selezionabili. Stato "aperto/chiuso" in tempo reale sull'ora di Pavia.
+- **Interazione firma:** allo scroll la foto della sala si apre da riquadro a tutto schermo.
+- Storia, cucina (foto dei piatti), menu Ticinum, la sala, recensioni (TripAdvisor 4,2/5, ~340 recensioni), orari con il giorno corrente evidenziato, mappa.
+- **/menu:** carta per portate con linguette sticky e indicatore animato, menu Ticinum, vini, note su allergeni e opzioni vegetariane/senza glutine, prenotazione.
+- Italiano / inglese (scelta salvata nel browser), `prefers-reduced-motion` rispettato, dati strutturati schema.org `Restaurant`.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Dati
 
-```
+Contenuti presi da trattoriaressi.com (menu, chi siamo, contatti), TripAdvisor e Google Maps. I prezzi sono quelli pubblicati sulla carta ufficiale; i piatti citati senza prezzo sono indicati "di stagione". Da verificare con la trattoria prima della pubblicazione: orari (le fonti online non concordano), prezzi correnti.
+
+Le foto originali sono in `public/images/` (`node scripts/fetch-images.mjs` le riscarica); le versioni ottimizzate WebP usate dal sito sono in `public/img/`.
+
+Dove modificare: orari e contatti in `src/lib/info.ts`, menu e piatti in `src/lib/menu.ts`.

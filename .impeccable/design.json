@@ -1,0 +1,429 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-07T19:51:40+00:00",
+  "title": "Design System: Trattoria Ressi",
+  "extensions": {
+    "colorMeta": {
+      "saffron": {
+        "role": "primary",
+        "displayName": "Saffron",
+        "canonical": "oklch(80.4% 0.156 82.5)",
+        "tonalRamp": [
+          "#120900",
+          "#302100",
+          "#533b00",
+          "#795702",
+          "#a07504",
+          "#c99412",
+          "#f5b931",
+          "#ffeccb"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(14.8% 0.007 57.6)",
+        "tonalRamp": [
+          "#0d0a08",
+          "#272321",
+          "#433f3c",
+          "#615d5a",
+          "#817c79",
+          "#a29d9a",
+          "#c8c3c0",
+          "#f2edea"
+        ]
+      },
+      "coal": {
+        "role": "neutral",
+        "displayName": "Coal",
+        "canonical": "oklch(18.1% 0.009 59.0)",
+        "tonalRamp": [
+          "#0e0a08",
+          "#272320",
+          "#433f3b",
+          "#625c59",
+          "#817c78",
+          "#a39d99",
+          "#c9c3be",
+          "#f3ede9"
+        ]
+      },
+      "char": {
+        "role": "neutral",
+        "displayName": "Char",
+        "canonical": "oklch(21.9% 0.012 55.7)",
+        "tonalRamp": [
+          "#0f0a07",
+          "#29231e",
+          "#453e3a",
+          "#635c57",
+          "#837c76",
+          "#a59d97",
+          "#cbc2bd",
+          "#f5ede7"
+        ]
+      },
+      "ember": {
+        "role": "neutral",
+        "displayName": "Ember",
+        "canonical": "oklch(26.3% 0.016 58.8)",
+        "tonalRamp": [
+          "#100905",
+          "#2a221c",
+          "#473e37",
+          "#655c55",
+          "#857b74",
+          "#a79c95",
+          "#cdc2ba",
+          "#f7ece4"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream",
+        "canonical": "oklch(92.9% 0.019 75.3)",
+        "tonalRamp": [
+          "#100a04",
+          "#29231a",
+          "#463f35",
+          "#645c52",
+          "#847c71",
+          "#a59d92",
+          "#cbc3b7",
+          "#f6ede1"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "oklch(69.2% 0.028 67.3)",
+        "tonalRamp": [
+          "#130901",
+          "#2d2115",
+          "#4a3d30",
+          "#695b4d",
+          "#897a6c",
+          "#ab9c8c",
+          "#d1c1b1",
+          "#fcebdb"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display-menu": {
+        "displayName": "Display, Menu",
+        "purpose": "Menu page h1 only."
+      },
+      "display-hero": {
+        "displayName": "Display, Hero",
+        "purpose": "Home h1 over the room photo, max 13ch."
+      },
+      "display-room": {
+        "displayName": "Display, Room",
+        "purpose": "Copy over the room-reveal photograph."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Home section h2s, including Reviews."
+      },
+      "headline-booking": {
+        "displayName": "Headline, Booking",
+        "purpose": "Menu page closing booking h2."
+      },
+      "headline-course": {
+        "displayName": "Headline, Course",
+        "purpose": "Menu course, Ticinum and wine h2s."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Ticinum price, tabular lining figures."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Home story statement."
+      },
+      "lede-sm": {
+        "displayName": "Lede, small",
+        "purpose": "Menu wine statement."
+      },
+      "menu-link": {
+        "displayName": "Menu link",
+        "purpose": "Mobile menu sheet links."
+      },
+      "title-course": {
+        "displayName": "Title, Course",
+        "purpose": "Home Ticinum course names."
+      },
+      "title-dish": {
+        "displayName": "Title, Dish",
+        "purpose": "Menu dish names and Menu Ticinum course names."
+      },
+      "price": {
+        "displayName": "Price",
+        "purpose": "Menu dish prices, tabular."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "Trattoria Ressi beside the sign."
+      },
+      "caption-plate": {
+        "displayName": "Plate caption",
+        "purpose": "Dish names under carousel photos; guest count."
+      },
+      "body-lg": {
+        "displayName": "Body, large",
+        "purpose": "Section intros and hero subtext."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Default text, buttons, dish descriptions."
+      },
+      "body-nav": {
+        "displayName": "Body, nav",
+        "purpose": "Nav links, Menu tabs, status line, footer links."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Captions, course labels, segmented options, time chips."
+      },
+      "legend": {
+        "displayName": "Legend",
+        "purpose": "Booking-form legends, language switch, badges."
+      },
+      "micro": {
+        "displayName": "Micro",
+        "purpose": "Uppercase weekday inside the day chips only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "nav-lift",
+        "value": "0 10px 30px -12px rgba(0,0,0,0.6)",
+        "purpose": "Scrolled nav bar, separating it from photographs."
+      },
+      {
+        "name": "panel",
+        "value": "0 30px 70px -30px rgba(0,0,0,0.75)",
+        "purpose": "Booking composer only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "spring",
+        "value": "{ type: 'spring', duration: 1.1, bounce: 0 }",
+        "purpose": "Reveals, page transitions, mobile menu."
+      },
+      {
+        "name": "springSoft",
+        "value": "{ type: 'spring', duration: 1.6, bounce: 0 }",
+        "purpose": "Hero photograph fade-in."
+      },
+      {
+        "name": "springSlide",
+        "value": "{ type: 'spring', duration: 0.8, bounce: 0 }",
+        "purpose": "Room accordion panels widening (after a 140ms hover intent)."
+      },
+      {
+        "name": "springSnappy",
+        "value": "{ type: 'spring', duration: 0.5, bounce: 0 }",
+        "purpose": "Sliding selected pills, chips, button hover lift and press."
+      },
+      {
+        "name": "scrollSmooth",
+        "value": "{ stiffness: 90, damping: 28, mass: 0.6 }",
+        "purpose": "useSpring smoothing for every scroll-linked value (hero parallax, room reveal, photo parallax)."
+      },
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "CSS transitions for colour, background, filter and transform at 300 / 500 / 700 / 1200ms."
+      },
+      {
+        "name": "reveal",
+        "value": "from { opacity: 0; y: 16px } on spring, once at 20% in view; headings add filter: blur(6px) to blur(0)",
+        "purpose": "Default entrance; lists, menu rows and the carousel reveal as one block; heading, text and link follow with 0.06-0.18s delays."
+      },
+      {
+        "name": "page-transition",
+        "value": "enter y 24px -> 0 on spring; exit opacity 0, y -12px in 0.18s",
+        "purpose": "Route change between Home and Menu."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Booking Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Saffron pill that starts a reservation; the only saffron fill in the system.",
+      "html": "<button class=\"ds-btn-primary\"><svg aria-hidden=\"true\" width=\"18\" height=\"18\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z\"/></svg>Prenota su WhatsApp</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--color-saffron); color: var(--color-ink); font-family: var(--font-sans); font-weight: 600; font-size: 1rem; padding: 14px 24px; border: none; border-radius: 9999px; cursor: pointer; transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-primary:hover { background: var(--color-cream); transform: translateY(-2px); } .ds-btn-primary:active { transform: scale(0.97); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 3px; }"
+    },
+    {
+      "name": "Outline Pill Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action (see the menu, directions, phone); fills cream on hover, arrow nudges right.",
+      "html": "<a href=\"#\" class=\"ds-btn-outline\">Vedi il menu<span class=\"ds-btn-outline__icon\"><svg aria-hidden=\"true\" width=\"17\" height=\"17\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z\"/></svg></span></a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 8px; color: var(--color-cream); background: transparent; border: 1px solid color-mix(in oklab, var(--color-cream) 25%, transparent); border-radius: 9999px; padding: 12px 24px; font-family: var(--font-sans); font-weight: 500; font-size: 1rem; text-decoration: none; transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-outline__icon { display: inline-flex; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-outline:hover { background: var(--color-cream); border-color: var(--color-cream); color: var(--color-ink); } .ds-btn-outline:hover .ds-btn-outline__icon { transform: translateX(4px); } .ds-btn-outline:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 3px; border-radius: 9999px; }"
+    },
+    {
+      "name": "Round Icon Button",
+      "kind": "button",
+      "refersTo": "button-icon-round",
+      "description": "Carousel arrows and the mobile menu toggle.",
+      "html": "<button class=\"ds-btn-round\" aria-label=\"Piatti successivi\"><svg aria-hidden=\"true\" width=\"18\" height=\"18\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z\"/></svg></button>",
+      "css": ".ds-btn-round { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 9999px; border: 1px solid color-mix(in oklab, var(--color-cream) 20%, transparent); background: transparent; color: var(--color-cream); cursor: pointer; transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-round:hover { border-color: color-mix(in oklab, var(--color-cream) 60%, transparent); background: color-mix(in oklab, var(--color-cream) 5%, transparent); } .ds-btn-round:active { transform: scale(0.95); } .ds-btn-round:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 3px; }"
+    },
+    {
+      "name": "Segmented Control",
+      "kind": "chip",
+      "refersTo": "segmented-selected",
+      "description": "Pill trough with a sliding cream pill for the selected option (service, language, Menu tabs).",
+      "html": "<div class=\"ds-seg\" role=\"group\"><button class=\"ds-seg__opt is-on\" aria-pressed=\"true\">Cena</button><button class=\"ds-seg__opt\" aria-pressed=\"false\">Pranzo</button></div>",
+      "css": ".ds-seg { display: inline-flex; padding: 4px; border-radius: 9999px; background: color-mix(in oklab, var(--color-ink) 60%, transparent); } .ds-seg__opt { border: none; background: transparent; color: var(--color-cream); font-family: var(--font-sans); font-size: 0.875rem; font-weight: 500; padding: 8px 14px; border-radius: 9999px; cursor: pointer; transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.5s cubic-bezier(0.16, 1, 0.3, 1); } .ds-seg__opt.is-on { background: var(--color-cream); color: var(--color-ink); } .ds-seg__opt:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 3px; }"
+    },
+    {
+      "name": "Day Chip",
+      "kind": "chip",
+      "refersTo": "chip-day",
+      "description": "Booking-composer day picker: uppercase weekday over a tabular date; closed days struck through.",
+      "html": "<div class=\"ds-days\"><button class=\"ds-day is-on\" aria-pressed=\"true\"><span class=\"ds-day__w\">Oggi</span><span class=\"ds-day__d\">7 ott</span></button><button class=\"ds-day\" disabled><span class=\"ds-day__w\">Mer</span><span class=\"ds-day__d\">8 ott</span></button><button class=\"ds-day\"><span class=\"ds-day__w\">Gio</span><span class=\"ds-day__d\">9 ott</span></button></div>",
+      "css": ".ds-days { display: flex; gap: 6px; } .ds-day { display: flex; flex-direction: column; align-items: center; min-width: 64px; padding: 8px 10px; border: none; border-radius: 16px; background: transparent; color: var(--color-cream); font-family: var(--font-sans); cursor: pointer; transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-day__w { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; } .ds-day__d { font-size: 0.875rem; font-variant-numeric: tabular-nums lining-nums; } .ds-day:hover { background: color-mix(in oklab, var(--color-cream) 10%, transparent); } .ds-day.is-on { background: var(--color-cream); color: var(--color-ink); } .ds-day:disabled { color: color-mix(in oklab, var(--color-cream) 35%, transparent); cursor: not-allowed; background: transparent; } .ds-day:disabled .ds-day__d { text-decoration: line-through; } .ds-day:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 3px; }"
+    },
+    {
+      "name": "Time Chip",
+      "kind": "chip",
+      "refersTo": "chip-time",
+      "description": "Bordered pill for a time slot; selected is solid cream.",
+      "html": "<div class=\"ds-times\"><button class=\"ds-time\">19:30</button><button class=\"ds-time is-on\" aria-pressed=\"true\">20:00</button><button class=\"ds-time\">20:30</button></div>",
+      "css": ".ds-times { display: flex; flex-wrap: wrap; gap: 6px; } .ds-time { border: 1px solid color-mix(in oklab, var(--color-cream) 20%, transparent); background: transparent; color: var(--color-cream); font-family: var(--font-sans); font-size: 0.875rem; font-variant-numeric: tabular-nums lining-nums; padding: 8px 12px; border-radius: 9999px; cursor: pointer; transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-time:hover { border-color: color-mix(in oklab, var(--color-cream) 50%, transparent); } .ds-time.is-on { background: var(--color-cream); border-color: var(--color-cream); color: var(--color-ink); } .ds-time:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 3px; }"
+    },
+    {
+      "name": "Booking Panel",
+      "kind": "card",
+      "refersTo": "booking-panel",
+      "description": "The single 16px panel: the booking composer, the only element with the panel shadow.",
+      "html": "<form class=\"ds-panel\"><p class=\"ds-panel__legend\">Persone</p><div class=\"ds-panel__count\">2</div><button type=\"button\" class=\"ds-panel__cta\"><svg aria-hidden=\"true\" width=\"18\" height=\"18\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z\"/></svg>Prenota su WhatsApp</button></form>",
+      "css": ".ds-panel { max-width: 560px; padding: 20px; border-radius: 16px; border: 1px solid color-mix(in oklab, var(--color-cream) 10%, transparent); background: color-mix(in oklab, var(--color-char) 95%, transparent); color: var(--color-cream); box-shadow: 0 30px 70px -30px rgba(0,0,0,0.75); font-family: var(--font-sans); } .ds-panel__legend { margin: 0 0 8px; font-size: 0.75rem; font-weight: 600; color: var(--color-muted); } .ds-panel__count { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; font-variant-numeric: tabular-nums lining-nums; } .ds-panel__cta { margin-top: 16px; width: 100%; display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 14px 24px; border: none; border-radius: 9999px; background: var(--color-saffron); color: var(--color-ink); font: inherit; font-weight: 600; cursor: pointer; transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-panel__cta:hover { background: var(--color-cream); } .ds-panel__cta:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 3px; }"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": "nav-bar",
+      "description": "68px bar; shown in its scrolled state (coal 85%, blur, nav lift).",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"ds-nav__brand\">Trattoria Ressi<span>Pavia</span></a><ul class=\"ds-nav__links\"><li><a href=\"#\">La trattoria</a></li><li><a href=\"#\">Cucina</a></li><li><a href=\"#\" aria-current=\"page\">Menu</a></li></ul><a href=\"#\" class=\"ds-nav__cta\">Prenota</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 68px; padding: 0 24px; background: color-mix(in oklab, var(--color-coal) 85%, transparent); backdrop-filter: blur(12px); box-shadow: 0 10px 30px -12px rgba(0,0,0,0.6); color: var(--color-cream); font-family: var(--font-sans); } .ds-nav__brand { display: flex; flex-direction: column; color: var(--color-cream); text-decoration: none; font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1; } .ds-nav__brand span { margin-top: 4px; font-family: var(--font-sans); font-size: 0.75rem; font-weight: 400; letter-spacing: normal; color: var(--color-muted); } .ds-nav__links { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; } .ds-nav__links a { display: block; padding: 8px 14px; border-radius: 9999px; font-size: 0.95rem; color: color-mix(in oklab, var(--color-cream) 85%, transparent); text-decoration: none; transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav__links a:hover { background: color-mix(in oklab, var(--color-cream) 10%, transparent); color: var(--color-cream); } .ds-nav__links a[aria-current] { color: var(--color-cream); text-decoration: underline; text-decoration-color: color-mix(in oklab, var(--color-cream) 60%, transparent); text-underline-offset: 0.22em; } .ds-nav__links a:focus-visible, .ds-nav__cta:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 3px; } .ds-nav__cta { padding: 10px 20px; border-radius: 9999px; background: var(--color-saffron); color: var(--color-ink); font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav__cta:hover { background: var(--color-cream); }"
+    },
+    {
+      "name": "Dish Row",
+      "kind": "custom",
+      "refersTo": "title-dish",
+      "description": "Menu row: dish name, dotted cream leader, tabular price, description below.",
+      "html": "<div class=\"ds-dish\"><div class=\"ds-dish__line\"><h3 class=\"ds-dish__name\">Risotto alla milanese</h3><span class=\"ds-dish__dots\" aria-hidden=\"true\"></span><span class=\"ds-dish__price\">€14</span></div><p class=\"ds-dish__desc\">Carnaroli della Cascina Alberona, zafferano.</p></div>",
+      "css": ".ds-dish { padding: 20px 0; color: var(--color-cream); } .ds-dish__line { display: flex; align-items: baseline; gap: 16px; } .ds-dish__name { margin: 0; font-family: var(--font-display); font-size: clamp(1.3rem, 2.1vw, 1.75rem); font-weight: 500; line-height: 1.25; letter-spacing: -0.02em; } .ds-dish__dots { flex: 1; min-width: 24px; margin-bottom: 6px; border-bottom: 1px dotted color-mix(in oklab, var(--color-cream) 30%, transparent); transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-dish:hover .ds-dish__dots { border-color: color-mix(in oklab, var(--color-cream) 50%, transparent); } .ds-dish__price { flex-shrink: 0; font-family: var(--font-display); font-size: clamp(1.2rem, 1.9vw, 1.5rem); font-weight: 500; font-variant-numeric: tabular-nums lining-nums; } .ds-dish__desc { margin: 6px 0 0; max-width: 56ch; font-family: var(--font-sans); color: color-mix(in oklab, var(--color-cream) 80%, transparent); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Scuro e caldo",
+    "overview": "The site is the room after dark. Every ground is a warm near-black with a brown cast, so the real photographs of the room, the street and the plates carry all the colour and the interface steps back like a waiter between courses. Cream type sits on those grounds with very high contrast, a single saffron fill marks the one thing to do (book), and nothing else competes. It replaces both the cream-and-serif rustic trattoria template and the earlier brick-and-arch world: there are no arches, no domes, no paper textures, no serif display face.\n\nDensity is low and confident: one 1400px container, a 12-column grid used asymmetrically (7/5, 5/7, 4/8), large sections with 96 to 144px of vertical air, full-bleed photography where the story needs the room. Type is a tight, optically sized grotesque for display (Bricolage Grotesque, semibold, negative tracking) over a neutral grotesque for reading (Geist). Shapes are plain rectangles with a barely softened 6px corner for photos, one 16px panel for booking, and full pills for every control.\n\nMotion is quiet and physical. Every spring arrives with zero bounce and settles without oscillating; reveals fade and rise, and headings also come into focus from a slight blur; scroll-linked values pass through a smoothing spring so parallax never jitters. The signature moment is the room photo opening from an inset rectangle to full bleed as the visitor scrolls.",
+    "keyCharacteristics": [
+      "Warm near-black grounds in four steps (ink, coal, char, ember); never a light page.",
+      "Cream text at very high contrast; muted warm grey for secondary text.",
+      "Saffron is the only accent and fills only the booking actions.",
+      "Real photography leads every section; the UI is scrims, type and hairlines.",
+      "Bricolage Grotesque display, semibold, tracked tight (-0.02em to -0.04em); Geist body.",
+      "Rectangles (6px photos, 16px booking panel) and pills; no cards, no arches.",
+      "Zero-bounce duration springs (0.5s, 0.8s, 1.1s, 1.6s); fade-and-rise reveals, blur-to-focus on headings only; spring-smoothed scroll."
+    ],
+    "rules": [
+      {
+        "name": "The One Saffron Rule",
+        "body": "Saffron fills only booking actions. If an element does not start a reservation, it is not saffron. The one built exception is the footer contact and link list, whose links warm to saffron on hover; do not extend that to any other surface.",
+        "section": "colors"
+      },
+      {
+        "name": "The Warm Black Rule",
+        "body": "Grounds are never neutral grey or pure black. Every dark step carries the brown cast of the existing four (hue around 56-59 in OKLCH); new surfaces reuse ink, coal, char or ember, never a new hex.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cream Ladder Rule",
+        "body": "Structure is drawn with cream at fixed opacities (10, 12, 15, 20, 25, 30%), not with new border colours.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tight Display Rule",
+        "body": "Display and headline steps are always Bricolage at 600 with line height at or below 1.02 and tracking between -0.03em and -0.04em; titles below 2rem relax to 500 and -0.02em. Never track display type positively.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Facts Rule",
+        "body": "Every number a guest compares (prices, hours, dates, the phone number, guest count) is set with tabular lining figures.",
+        "section": "typography"
+      },
+      {
+        "name": "The No Kicker Rule",
+        "body": "Headlines stand alone; there are no small uppercase labels above them. Uppercase exists only in the day-chip weekday and the language switch.",
+        "section": "typography"
+      },
+      {
+        "name": "The Light Not Lift Rule",
+        "body": "The two shadows belong to the scrolled nav and the booking panel (which keeps its shadow wherever it is placed); nothing else gets one. Separate everything else with a ground step or a cream hairline.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Scrim Rule",
+        "body": "Text over a photograph always gets a scrim in the page's own black (coal or ink), never a coloured overlay or a text shadow. Inactive photos dim with brightness 0.55 and saturation 0.8 rather than an overlay.",
+        "section": "elevation"
+      },
+      {
+        "name": "The No Arch Rule",
+        "body": "No arches, domes, vaults or curved-top frames anywhere: the client rejected them. A photograph that happens to show the arched window is content, not a frame.",
+        "section": "shapes"
+      },
+      {
+        "name": "The No Card Rule",
+        "body": "Content is never boxed in bordered or filled cards. Lists are rows divided by hairlines; the booking composer is the only panel.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do build every new surface on coal, with char for a banded section and cream text; reuse the seven colour tokens only.",
+      "Do reserve saffron fills for actions that start a booking, with ink text on them.",
+      "Do lead sections with a real photograph of the room, street or plates, behind a coal or ink scrim when text sits on it.",
+      "Do set display type in Bricolage Grotesque semibold with tracking between -0.03em and -0.04em, choosing an existing step from the hierarchy table.",
+      "Do use full pills for controls, 6px corners for photographs, and the sliding cream pill for any selected state.",
+      "Do animate with the zero-bounce springs (0.5s, 0.8s, 1.1s, 1.6s) and pass scroll-linked values through the smoothing spring.",
+      "Do set prices, hours, dates and the phone number in tabular figures."
+    ],
+    "donts": [
+      "Don't use arches, domes, vaults or curved-top frames; the arch-framed brick world was rejected.",
+      "Don't introduce a light or cream page ground, paper textures or a serif display face; that is the rustic trattoria template this world refuses.",
+      "Don't use saffron for decoration, headings, icons or non-booking links.",
+      "Don't box content in cards; divide rows with cream hairlines and keep the booking composer as the only panel.",
+      "Don't add shadows beyond the nav lift and the booking panel, or use bouncing springs.",
+      "Don't add small uppercase kickers or eyebrows above headlines.",
+      "Don't add a smooth-scroll library; scrolling stays native."
+    ]
+  }
+}
