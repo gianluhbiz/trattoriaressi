@@ -140,26 +140,17 @@ export default function Menu() {
           </section>
         ))}
 
-        <section id="ticinum" className="-mx-4 bg-[var(--band)] px-4 sm:-mx-6 sm:px-6 lg:-mx-10 lg:px-10">
-          <div className="grid grid-cols-1 gap-6 py-16 md:grid-cols-12 md:gap-10 md:py-24">
-            <div className="md:col-span-4">
-              <Reveal focus>
-                <h2 className="font-display text-[clamp(2.2rem,4vw,3.5rem)] leading-none font-semibold tracking-[-0.035em]">
-                  {t({ it: 'Menu Ticinum', en: 'Ticinum menu' })}
-                </h2>
-                <p className="mt-3 text-muted">
-                  {t({ it: 'Quattro portate, anche in versione vegetariana', en: 'Four courses, also in a vegetarian version' })}
-                </p>
-                <p className="mt-8 font-display text-6xl font-semibold tracking-[-0.04em] tabular">{euro(TICINUM.price)}</p>
-                <p className="mt-3 max-w-[30ch] text-sm text-muted">
-                  {t({
-                    it: 'A persona. Per tutto il tavolo, non cumulabile con altre offerte.',
-                    en: 'Per person. For the whole table, not combinable with other offers.',
-                  })}
-                </p>
-              </Reveal>
-            </div>
-            <Reveal as="ul" delay={0.08} className="md:col-span-8">
+        <section id="ticinum" className="relative left-1/2 w-screen -translate-x-1/2 bg-[var(--band)]">
+          <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-6 px-4 py-16 sm:px-6 md:grid-cols-12 md:gap-x-10 md:py-24 lg:px-10">
+            <Reveal focus className="md:col-span-4 md:col-start-1 md:row-start-1">
+              <h2 className="font-display text-[clamp(2.2rem,4vw,3.5rem)] leading-none font-semibold tracking-[-0.035em]">
+                {t({ it: 'Menu Ticinum', en: 'Ticinum menu' })}
+              </h2>
+              <p className="mt-3 text-muted">
+                {t({ it: 'Quattro portate, anche in versione vegetariana', en: 'Four courses, also in a vegetarian version' })}
+              </p>
+            </Reveal>
+            <Reveal as="ul" delay={0.08} className="md:col-span-8 md:col-start-5 md:row-span-2 md:row-start-1">
               {TICINUM.courses.map((c) => (
                 <li
                   key={c.name}
@@ -169,6 +160,15 @@ export default function Menu() {
                   <span className="font-display text-[clamp(1.3rem,2.1vw,1.75rem)] leading-snug font-medium tracking-[-0.02em]">{c.name}</span>
                 </li>
               ))}
+            </Reveal>
+            <Reveal delay={0.12} className="mt-4 md:col-span-4 md:col-start-1 md:row-start-2 md:mt-0">
+              <p className="font-display text-6xl font-semibold tracking-[-0.04em] tabular">{euro(TICINUM.price)}</p>
+              <p className="mt-3 max-w-[30ch] text-sm text-muted">
+                {t({
+                  it: 'A persona. Per tutto il tavolo, non cumulabile con altre offerte.',
+                  en: 'Per person. For the whole table, not combinable with other offers.',
+                })}
+              </p>
             </Reveal>
           </div>
         </section>

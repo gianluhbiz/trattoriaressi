@@ -1,248 +1,253 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-07T19:31:28+00:00",
+  "generatedAt": "2026-10-07T19:51:40+00:00",
   "title": "Design System: Trattoria Ressi",
   "extensions": {
     "colorMeta": {
-      "brick-950": {
-        "role": "neutral",
-        "displayName": "Soot-Fired Brick",
-        "canonical": "oklch(20.7% 0.051 31.6)",
-        "tonalRamp": [
-          "#2b0d08",
-          "#3d140d",
-          "#5a1e13",
-          "#7a2b1b",
-          "#93371f",
-          "#b04a2b",
-          "#ffb49e",
-          "#ffe9e3"
-        ]
-      },
-      "brick-900": {
-        "role": "neutral",
-        "displayName": "Vault Shadow Brick",
-        "canonical": "oklch(25.5% 0.066 31.7)",
-        "tonalRamp": [
-          "#2b0d08",
-          "#3d140d",
-          "#5a1e13",
-          "#7a2b1b",
-          "#93371f",
-          "#b04a2b",
-          "#ffb49e",
-          "#ffe9e3"
-        ]
-      },
-      "brick-800": {
-        "role": "neutral",
-        "displayName": "Unfired Clay",
-        "canonical": "oklch(32.6% 0.091 32.5)",
-        "tonalRamp": [
-          "#2b0d08",
-          "#3d140d",
-          "#5a1e13",
-          "#7a2b1b",
-          "#93371f",
-          "#b04a2b",
-          "#ffb49e",
-          "#ffe9e3"
-        ]
-      },
-      "brick-700": {
-        "role": "neutral",
-        "displayName": "Vault Brick",
-        "canonical": "oklch(40.3% 0.114 33.3)",
-        "tonalRamp": [
-          "#2b0d08",
-          "#3d140d",
-          "#5a1e13",
-          "#7a2b1b",
-          "#93371f",
-          "#b04a2b",
-          "#ffb49e",
-          "#ffe9e3"
-        ]
-      },
-      "brick-dusk": {
-        "role": "neutral",
-        "displayName": "Dusk Brick",
-        "canonical": "oklch(36.6% 0.102 33.3)",
-        "tonalRamp": [
-          "#210000",
-          "#4a0700",
-          "#6e291b",
-          "#924939",
-          "#b76a5a",
-          "#dd8d7b",
-          "#feb4a3",
-          "#fee9e4"
-        ]
-      },
-      "brick-500": {
-        "role": "neutral",
-        "displayName": "Kiln-Light Brick",
-        "canonical": "oklch(53.8% 0.141 37.3)",
-        "tonalRamp": [
-          "#2b0d08",
-          "#3d140d",
-          "#5a1e13",
-          "#7a2b1b",
-          "#93371f",
-          "#b04a2b",
-          "#ffb49e",
-          "#ffe9e3"
-        ]
-      },
-      "mortar": {
-        "role": "neutral",
-        "displayName": "Lime Mortar",
-        "canonical": "oklch(93.1% 0.025 81.1)",
-        "tonalRamp": [
-          "#110a02",
-          "#2b2417",
-          "#494133",
-          "#696051",
-          "#8a8172",
-          "#ada494",
-          "#d2c8b7",
-          "#f7eddc"
-        ]
-      },
-      "mortar-dim": {
-        "role": "neutral",
-        "displayName": "Weathered Mortar",
-        "canonical": "oklch(82.2% 0.038 55.3)",
-        "tonalRamp": [
-          "#170600",
-          "#332012",
-          "#523d2f",
-          "#735c4d",
-          "#957d6d",
-          "#b89f8f",
-          "#ddc3b2",
-          "#feeadd"
-        ]
-      },
       "saffron": {
         "role": "primary",
-        "displayName": "Saffron Risotto",
+        "displayName": "Saffron",
         "canonical": "oklch(80.4% 0.156 82.5)",
         "tonalRamp": [
-          "#130900",
-          "#322200",
-          "#563d00",
-          "#7d5b00",
-          "#a67a05",
-          "#d29a04",
-          "#fbbe38",
+          "#120900",
+          "#302100",
+          "#533b00",
+          "#795702",
+          "#a07504",
+          "#c99412",
+          "#f5b931",
           "#ffeccb"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(14.8% 0.007 57.6)",
+        "tonalRamp": [
+          "#0d0a08",
+          "#272321",
+          "#433f3c",
+          "#615d5a",
+          "#817c79",
+          "#a29d9a",
+          "#c8c3c0",
+          "#f2edea"
+        ]
+      },
+      "coal": {
+        "role": "neutral",
+        "displayName": "Coal",
+        "canonical": "oklch(18.1% 0.009 59.0)",
+        "tonalRamp": [
+          "#0e0a08",
+          "#272320",
+          "#433f3b",
+          "#625c59",
+          "#817c78",
+          "#a39d99",
+          "#c9c3be",
+          "#f3ede9"
+        ]
+      },
+      "char": {
+        "role": "neutral",
+        "displayName": "Char",
+        "canonical": "oklch(21.9% 0.012 55.7)",
+        "tonalRamp": [
+          "#0f0a07",
+          "#29231e",
+          "#453e3a",
+          "#635c57",
+          "#837c76",
+          "#a59d97",
+          "#cbc2bd",
+          "#f5ede7"
+        ]
+      },
+      "ember": {
+        "role": "neutral",
+        "displayName": "Ember",
+        "canonical": "oklch(26.3% 0.016 58.8)",
+        "tonalRamp": [
+          "#100905",
+          "#2a221c",
+          "#473e37",
+          "#655c55",
+          "#857b74",
+          "#a79c95",
+          "#cdc2ba",
+          "#f7ece4"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream",
+        "canonical": "oklch(92.9% 0.019 75.3)",
+        "tonalRamp": [
+          "#100a04",
+          "#29231a",
+          "#463f35",
+          "#645c52",
+          "#847c71",
+          "#a59d92",
+          "#cbc3b7",
+          "#f6ede1"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "canonical": "oklch(69.2% 0.028 67.3)",
+        "tonalRamp": [
+          "#130901",
+          "#2d2115",
+          "#4a3d30",
+          "#695b4d",
+          "#897a6c",
+          "#ab9c8c",
+          "#d1c1b1",
+          "#fcebdb"
         ]
       }
     },
     "typographyMeta": {
-      "display-xl": {
-        "displayName": "Display XL",
-        "purpose": "Menu page title only."
+      "display-menu": {
+        "displayName": "Display, Menu",
+        "purpose": "Menu page h1 only."
       },
-      "display": {
-        "displayName": "Display",
-        "purpose": "Home hero headline; vault and reviews stage headings scale to 6rem."
+      "display-hero": {
+        "displayName": "Display, Hero",
+        "purpose": "Home h1 over the room photo, max 13ch."
+      },
+      "display-room": {
+        "displayName": "Display, Room",
+        "purpose": "Copy over the room-reveal photograph."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Section h2 across Home and the Menu booking block."
+        "purpose": "Home section h2s, including Reviews."
       },
-      "headline-sm": {
-        "displayName": "Headline S",
-        "purpose": "Menu course headings."
+      "headline-booking": {
+        "displayName": "Headline, Booking",
+        "purpose": "Menu page closing booking h2."
       },
-      "lede": {
-        "displayName": "Lede",
-        "purpose": "Story paragraph and wine statement in Bodoni, second clause italic in mortar-dim."
-      },
-      "title": {
-        "displayName": "Title",
-        "purpose": "Dish names, Ticinum courses, plate captions, mobile menu links."
+      "headline-course": {
+        "displayName": "Headline, Course",
+        "purpose": "Menu course, Ticinum and wine h2s."
       },
       "numeral": {
         "displayName": "Numeral",
-        "purpose": "Ticinum price and dish prices, tabular lining figures."
+        "purpose": "Ticinum price, tabular lining figures."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Home story statement."
+      },
+      "lede-sm": {
+        "displayName": "Lede, small",
+        "purpose": "Menu wine statement."
+      },
+      "menu-link": {
+        "displayName": "Menu link",
+        "purpose": "Mobile menu sheet links."
+      },
+      "title-course": {
+        "displayName": "Title, Course",
+        "purpose": "Home Ticinum course names."
+      },
+      "title-dish": {
+        "displayName": "Title, Dish",
+        "purpose": "Menu dish names and Menu Ticinum course names."
+      },
+      "price": {
+        "displayName": "Price",
+        "purpose": "Menu dish prices, tabular."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "Trattoria Ressi beside the sign."
+      },
+      "caption-plate": {
+        "displayName": "Plate caption",
+        "purpose": "Dish names under carousel photos; guest count."
       },
       "body-lg": {
-        "displayName": "Body L",
-        "purpose": "Ledes under headings, measure 40-58ch."
+        "displayName": "Body, large",
+        "purpose": "Section intros and hero subtext."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Descriptions, facts, footer, nav links (0.95rem)."
+        "purpose": "Default text, buttons, dish descriptions."
+      },
+      "body-nav": {
+        "displayName": "Body, nav",
+        "purpose": "Nav links, Menu tabs, status line, footer links."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Course labels, captions, time chips."
+        "purpose": "Captions, course labels, segmented options, time chips."
       },
       "legend": {
         "displayName": "Legend",
-        "purpose": "Booking-form fieldset legends and language switch."
+        "purpose": "Booking-form legends, language switch, badges."
+      },
+      "micro": {
+        "displayName": "Micro",
+        "purpose": "Uppercase weekday inside the day chips only."
       }
     },
     "shadows": [
       {
-        "name": "vault-lift",
-        "value": "0 30px 60px -30px rgba(20,4,2,0.8)",
-        "purpose": "Booking composer panel only."
+        "name": "nav-lift",
+        "value": "0 10px 30px -12px rgba(0,0,0,0.6)",
+        "purpose": "Scrolled nav bar, separating it from photographs."
       },
       {
-        "name": "nav-settle",
-        "value": "0 10px 30px -12px rgba(20,4,2,0.6)",
-        "purpose": "Nav bar once scrolled past 24px, with brick-900/92 fill and 12px backdrop blur."
+        "name": "panel",
+        "value": "0 30px 70px -30px rgba(0,0,0,0.75)",
+        "purpose": "Booking composer only."
       }
     ],
     "motion": [
       {
         "name": "spring",
-        "value": "spring stiffness 140, damping 22, mass 0.9",
-        "purpose": "Entrances, scroll reveals, page transitions, mobile sheet, room accordion layout."
+        "value": "{ type: 'spring', duration: 1.1, bounce: 0 }",
+        "purpose": "Reveals, page transitions, mobile menu."
       },
       {
         "name": "springSoft",
-        "value": "spring stiffness 90, damping 20",
-        "purpose": "Image zoom inside arch frames on hover."
+        "value": "{ type: 'spring', duration: 1.6, bounce: 0 }",
+        "purpose": "Hero photograph fade-in."
+      },
+      {
+        "name": "springSlide",
+        "value": "{ type: 'spring', duration: 0.8, bounce: 0 }",
+        "purpose": "Room accordion panels widening (after a 140ms hover intent)."
       },
       {
         "name": "springSnappy",
-        "value": "spring stiffness 420, damping 32",
-        "purpose": "Sliding layoutId indicators, button lift (y -2) and press (scale 0.97), time chips, link nudge (x 4)."
+        "value": "{ type: 'spring', duration: 0.5, bounce: 0 }",
+        "purpose": "Sliding selected pills, chips, button hover lift and press."
       },
       {
-        "name": "hero-arch-reveal",
-        "value": "spring stiffness 60, damping 18, delay 0.1s; clip-path inset(100% 0 0 0 round 999px 999px 0 0) to inset(0)",
-        "purpose": "Bottom-up reveal of the hero arch."
-      },
-      {
-        "name": "hero-image-settle",
-        "value": "spring stiffness 40, damping 20; scale 1.06 to 1",
-        "purpose": "Hero entrance photo de-zoom."
+        "name": "scrollSmooth",
+        "value": "{ stiffness: 90, damping: 28, mass: 0.6 }",
+        "purpose": "useSpring smoothing for every scroll-linked value (hero parallax, room reveal, photo parallax)."
       },
       {
         "name": "ease-out-expo",
         "value": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "CSS transitions: nav background 500ms, logo lift and nav button 300ms, story image zoom 1.4s."
+        "purpose": "CSS transitions for colour, background, filter and transform at 300 / 500 / 700 / 1200ms."
       },
       {
         "name": "reveal",
-        "value": "opacity 0 to 1, y 28px (up to 60px) to 0 on spring; once, 25% in view; stagger 0.05-0.09s",
-        "purpose": "Scroll entrances via the Reveal component."
+        "value": "from { opacity: 0; y: 16px } on spring, once at 20% in view; headings add filter: blur(6px) to blur(0)",
+        "purpose": "Default entrance; lists, menu rows and the carousel reveal as one block; heading, text and link follow with 0.06-0.18s delays."
       },
       {
-        "name": "vault-opening",
-        "value": "240vh sticky track; inset 12%/22% to 0 over progress 0-0.64; radius half-width until 0.48, flat by 0.64; image scale 1.22 to 1 by 0.7; copy fades and rises 40px over 0.5-0.78",
-        "purpose": "Scroll-linked signature: the arch widens into the full-bleed dining room."
-      },
-      {
-        "name": "reduced-motion",
-        "value": "MotionConfig reducedMotion=user; initial states skipped; vault replaced by static 90dvh image; smooth scroll off",
-        "purpose": "Accessibility path for every animated element."
+        "name": "page-transition",
+        "value": "enter y 24px -> 0 on spring; exit opacity 0, y -12px in 0.18s",
+        "purpose": "Route change between Home and Menu."
       }
     ],
     "breakpoints": [
@@ -262,180 +267,163 @@
         "name": "xl",
         "value": "1280px"
       }
-    ],
-    "texture": {
-      "name": "brick-courses",
-      "value": "fixed body::before SVG tile 72x56px, mortar #f1e7d6 joints 2px, opacity 0.055",
-      "purpose": "Brick-course ground behind all content; never on scrolling containers."
-    },
-    "alphaLadder": {
-      "mortar/10": "hover wash",
-      "mortar/12": "quietest joints",
-      "mortar/15": "section and list rules, panel border",
-      "mortar/20-25": "chip and switch borders, fact rules",
-      "mortar/30-35": "button borders, dotted leaders",
-      "mortar/80-90": "body copy tiers"
-    }
+    ]
   },
   "components": [
     {
-      "name": "Primary Button (booking)",
+      "name": "Primary Booking Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Saffron pill for the booking action; turns mortar on hover, lifts 2px, presses to 0.97.",
-      "html": "<button class=\"ds-btn-primary\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 256 256\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M128 24a104 104 0 0 0-91.2 154l-11.3 39.6a8 8 0 0 0 9.9 9.9l39.6-11.3A104 104 0 1 0 128 24Zm0 192a87.9 87.9 0 0 1-44.6-12.1 8 8 0 0 0-4-1.1 8.6 8.6 0 0 0-2.2.3l-31.9 9.1 9.1-31.9a8 8 0 0 0-.8-6.2A88 88 0 1 1 128 216Z\"/></svg>Prenota su WhatsApp</button>",
-      "css": ":host{--color-brick-950:#2b0d08;--color-brick-900:#3d140d;--color-brick-800:#5a1e13;--color-brick-700:#7a2b1b;--color-mortar:#f1e7d6;--color-mortar-dim:#d9bfae;--color-saffron:#f0b429;}.ds-btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--color-saffron);color:var(--color-brick-900);font-family:'Schibsted Grotesk Variable',ui-sans-serif,system-ui,sans-serif;font-weight:600;font-size:1rem;padding:14px 24px;border:0;border-radius:9999px;cursor:pointer;transition:background-color .2s,transform .35s cubic-bezier(0.16,1,0.3,1);}.ds-btn-primary:hover{background:var(--color-mortar);transform:translateY(-2px);}.ds-btn-primary:active{transform:scale(0.97);}.ds-btn-primary:focus-visible{outline:2px solid var(--color-saffron);outline-offset:3px;}"
+      "description": "Saffron pill that starts a reservation; the only saffron fill in the system.",
+      "html": "<button class=\"ds-btn-primary\"><svg aria-hidden=\"true\" width=\"18\" height=\"18\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z\"/></svg>Prenota su WhatsApp</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--color-saffron); color: var(--color-ink); font-family: var(--font-sans); font-weight: 600; font-size: 1rem; padding: 14px 24px; border: none; border-radius: 9999px; cursor: pointer; transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-primary:hover { background: var(--color-cream); transform: translateY(-2px); } .ds-btn-primary:active { transform: scale(0.97); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 3px; }"
     },
     {
-      "name": "Secondary Button (call)",
+      "name": "Outline Pill Button",
       "kind": "button",
-      "refersTo": "button-secondary",
-      "description": "Mortar-outlined pill for the phone call beside the primary action.",
-      "html": "<a class=\"ds-btn-secondary\" href=\"#\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 256 256\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m222 158.4-46.9-21a16 16 0 0 0-15.1 1.4l-25.1 16.7a76.5 76.5 0 0 1-35.2-35l16.4-25.5a16 16 0 0 0 1.3-15.1L97.6 33a16 16 0 0 0-16.6-9.5A56.2 56.2 0 0 0 32 79c0 79.4 64.6 144 144 144a56.2 56.2 0 0 0 55.5-49 16 16 0 0 0-9.5-15.6ZM176 207A128.1 128.1 0 0 1 48 79a40.2 40.2 0 0 1 34.9-39.7l20.8 46.6-16.5 25.6a16 16 0 0 0-1 15.5 92.9 92.9 0 0 0 42.9 42.7 16 16 0 0 0 15.6-1.2l25.2-16.8 46.6 20.9A40.2 40.2 0 0 1 176 207Z\"/></svg><span>320 188 3636</span></a>",
-      "css": ":host{--color-brick-950:#2b0d08;--color-brick-900:#3d140d;--color-brick-800:#5a1e13;--color-brick-700:#7a2b1b;--color-mortar:#f1e7d6;--color-mortar-dim:#d9bfae;--color-saffron:#f0b429;}.ds-btn-secondary{display:inline-flex;align-items:center;gap:8px;color:var(--color-mortar);background:transparent;font-family:'Schibsted Grotesk Variable',ui-sans-serif,system-ui,sans-serif;font-weight:600;font-size:1rem;font-variant-numeric:tabular-nums lining-nums;padding:14px 20px;border:1px solid rgba(241,231,214,.3);border-radius:9999px;text-decoration:none;transition:border-color .2s,background-color .2s,transform .35s cubic-bezier(0.16,1,0.3,1);}.ds-btn-secondary:hover{border-color:var(--color-mortar);background:rgba(241,231,214,.1);transform:translateY(-2px);}.ds-btn-secondary:active{transform:scale(0.97);}.ds-btn-secondary:focus-visible{outline:2px solid var(--color-saffron);outline-offset:3px;}"
+      "refersTo": "button-outline",
+      "description": "Secondary action (see the menu, directions, phone); fills cream on hover, arrow nudges right.",
+      "html": "<a href=\"#\" class=\"ds-btn-outline\">Vedi il menu<span class=\"ds-btn-outline__icon\"><svg aria-hidden=\"true\" width=\"17\" height=\"17\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z\"/></svg></span></a>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 8px; color: var(--color-cream); background: transparent; border: 1px solid color-mix(in oklab, var(--color-cream) 25%, transparent); border-radius: 9999px; padding: 12px 24px; font-family: var(--font-sans); font-weight: 500; font-size: 1rem; text-decoration: none; transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-outline__icon { display: inline-flex; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-outline:hover { background: var(--color-cream); border-color: var(--color-cream); color: var(--color-ink); } .ds-btn-outline:hover .ds-btn-outline__icon { transform: translateX(4px); } .ds-btn-outline:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 3px; border-radius: 9999px; }"
     },
     {
-      "name": "Outline Link Button",
+      "name": "Round Icon Button",
       "kind": "button",
-      "refersTo": "button-outline-link",
-      "description": "Navigational pill (See the menu, Get directions); border and text go saffron on hover.",
-      "html": "<a class=\"ds-btn-outline\" href=\"#\">Vedi il menu<svg width=\"18\" height=\"18\" viewBox=\"0 0 256 256\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"m221.7 133.7-72 72a8 8 0 0 1-11.4-11.4l58.4-58.3H40a8 8 0 0 1 0-16h156.7l-58.4-58.3a8 8 0 0 1 11.4-11.4l72 72a8 8 0 0 1 0 11.4Z\"/></svg></a>",
-      "css": ":host{--color-brick-950:#2b0d08;--color-brick-900:#3d140d;--color-brick-800:#5a1e13;--color-brick-700:#7a2b1b;--color-mortar:#f1e7d6;--color-mortar-dim:#d9bfae;--color-saffron:#f0b429;}.ds-btn-outline{display:inline-flex;align-items:center;gap:8px;color:var(--color-mortar);font-family:'Schibsted Grotesk Variable',ui-sans-serif,system-ui,sans-serif;font-weight:600;padding:12px 24px;border:1px solid rgba(241,231,214,.35);border-radius:9999px;text-decoration:none;transition:color .2s,border-color .2s,transform .3s cubic-bezier(0.16,1,0.3,1);}.ds-btn-outline:hover{color:var(--color-saffron);border-color:var(--color-saffron);transform:translateX(4px);}.ds-btn-outline:focus-visible{outline:2px solid var(--color-saffron);outline-offset:3px;}"
+      "refersTo": "button-icon-round",
+      "description": "Carousel arrows and the mobile menu toggle.",
+      "html": "<button class=\"ds-btn-round\" aria-label=\"Piatti successivi\"><svg aria-hidden=\"true\" width=\"18\" height=\"18\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z\"/></svg></button>",
+      "css": ".ds-btn-round { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 9999px; border: 1px solid color-mix(in oklab, var(--color-cream) 20%, transparent); background: transparent; color: var(--color-cream); cursor: pointer; transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1); } .ds-btn-round:hover { border-color: color-mix(in oklab, var(--color-cream) 60%, transparent); background: color-mix(in oklab, var(--color-cream) 5%, transparent); } .ds-btn-round:active { transform: scale(0.95); } .ds-btn-round:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 3px; }"
     },
     {
-      "name": "Menu Tabs",
-      "kind": "nav",
-      "refersTo": "tab-active",
-      "description": "Sticky section tabs; one mortar pill slides to the active section.",
-      "html": "<nav class=\"ds-tabs\" aria-label=\"Sezioni del menu\"><a href=\"#\" class=\"ds-tab is-active\" aria-current=\"true\">Antipasti</a><a href=\"#\" class=\"ds-tab\">Primi</a><a href=\"#\" class=\"ds-tab\">Secondi</a><a href=\"#\" class=\"ds-tab\">Dolci</a><a href=\"#\" class=\"ds-tab\">Vini</a></nav>",
-      "css": ":host{--color-brick-950:#2b0d08;--color-brick-900:#3d140d;--color-brick-800:#5a1e13;--color-brick-700:#7a2b1b;--color-mortar:#f1e7d6;--color-mortar-dim:#d9bfae;--color-saffron:#f0b429;}.ds-tabs{display:flex;gap:4px;padding:12px 16px;background:rgba(122,43,27,.95);backdrop-filter:blur(12px);}.ds-tab{border-radius:9999px;padding:8px 16px;font-family:'Schibsted Grotesk Variable',ui-sans-serif,system-ui,sans-serif;font-size:.95rem;font-weight:500;color:rgba(241,231,214,.8);text-decoration:none;transition:color .2s,background-color .3s cubic-bezier(0.16,1,0.3,1);}.ds-tab:hover{color:var(--color-mortar);}.ds-tab.is-active{background:var(--color-mortar);color:var(--color-brick-900);}.ds-tab:focus-visible{outline:2px solid var(--color-saffron);outline-offset:3px;}"
-    },
-    {
-      "name": "Language Switch",
+      "name": "Segmented Control",
       "kind": "chip",
-      "refersTo": "tab-active",
-      "description": "IT/EN segmented pill with a sliding mortar indicator.",
-      "html": "<div class=\"ds-lang\" role=\"group\" aria-label=\"Lingua / Language\"><button class=\"ds-lang-opt is-active\" aria-pressed=\"true\">it</button><button class=\"ds-lang-opt\" aria-pressed=\"false\">en</button></div>",
-      "css": ":host{--color-brick-950:#2b0d08;--color-brick-900:#3d140d;--color-brick-800:#5a1e13;--color-brick-700:#7a2b1b;--color-mortar:#f1e7d6;--color-mortar-dim:#d9bfae;--color-saffron:#f0b429;}.ds-lang{display:inline-flex;padding:2px;border:1px solid rgba(241,231,214,.25);border-radius:9999px;font-family:'Schibsted Grotesk Variable',ui-sans-serif,system-ui,sans-serif;font-size:.75rem;font-weight:600;}.ds-lang-opt{border:0;background:transparent;border-radius:9999px;padding:4px 10px;text-transform:uppercase;color:var(--color-mortar-dim);cursor:pointer;font:inherit;transition:color .2s,background-color .3s cubic-bezier(0.16,1,0.3,1);}.ds-lang-opt:hover{color:var(--color-mortar);}.ds-lang-opt.is-active{background:var(--color-mortar);color:var(--color-brick-900);}.ds-lang-opt:focus-visible{outline:2px solid var(--color-saffron);outline-offset:3px;}"
+      "refersTo": "segmented-selected",
+      "description": "Pill trough with a sliding cream pill for the selected option (service, language, Menu tabs).",
+      "html": "<div class=\"ds-seg\" role=\"group\"><button class=\"ds-seg__opt is-on\" aria-pressed=\"true\">Cena</button><button class=\"ds-seg__opt\" aria-pressed=\"false\">Pranzo</button></div>",
+      "css": ".ds-seg { display: inline-flex; padding: 4px; border-radius: 9999px; background: color-mix(in oklab, var(--color-ink) 60%, transparent); } .ds-seg__opt { border: none; background: transparent; color: var(--color-cream); font-family: var(--font-sans); font-size: 0.875rem; font-weight: 500; padding: 8px 14px; border-radius: 9999px; cursor: pointer; transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1), color 0.5s cubic-bezier(0.16, 1, 0.3, 1); } .ds-seg__opt.is-on { background: var(--color-cream); color: var(--color-ink); } .ds-seg__opt:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 3px; }"
     },
     {
-      "name": "Time Chips",
+      "name": "Day Chip",
       "kind": "chip",
-      "refersTo": "time-chip",
-      "description": "Bordered tabular pills for the service time; selected fills with mortar.",
-      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\">19:30</button><button class=\"ds-chip is-active\" aria-pressed=\"true\">20:00</button><button class=\"ds-chip\">20:30</button><button class=\"ds-chip\">21:00</button></div>",
-      "css": ":host{--color-brick-950:#2b0d08;--color-brick-900:#3d140d;--color-brick-800:#5a1e13;--color-brick-700:#7a2b1b;--color-mortar:#f1e7d6;--color-mortar-dim:#d9bfae;--color-saffron:#f0b429;}.ds-chips{display:flex;flex-wrap:wrap;gap:6px;}.ds-chip{border:1px solid rgba(241,231,214,.2);background:transparent;color:var(--color-mortar);border-radius:9999px;padding:8px 12px;font-family:'Schibsted Grotesk Variable',ui-sans-serif,system-ui,sans-serif;font-size:.875rem;font-variant-numeric:tabular-nums lining-nums;cursor:pointer;transition:border-color .2s,background-color .2s;}.ds-chip:hover{border-color:rgba(241,231,214,.5);}.ds-chip.is-active{background:var(--color-mortar);border-color:var(--color-mortar);color:var(--color-brick-900);}.ds-chip:focus-visible{outline:2px solid var(--color-saffron);outline-offset:3px;}"
+      "refersTo": "chip-day",
+      "description": "Booking-composer day picker: uppercase weekday over a tabular date; closed days struck through.",
+      "html": "<div class=\"ds-days\"><button class=\"ds-day is-on\" aria-pressed=\"true\"><span class=\"ds-day__w\">Oggi</span><span class=\"ds-day__d\">7 ott</span></button><button class=\"ds-day\" disabled><span class=\"ds-day__w\">Mer</span><span class=\"ds-day__d\">8 ott</span></button><button class=\"ds-day\"><span class=\"ds-day__w\">Gio</span><span class=\"ds-day__d\">9 ott</span></button></div>",
+      "css": ".ds-days { display: flex; gap: 6px; } .ds-day { display: flex; flex-direction: column; align-items: center; min-width: 64px; padding: 8px 10px; border: none; border-radius: 16px; background: transparent; color: var(--color-cream); font-family: var(--font-sans); cursor: pointer; transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-day__w { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; } .ds-day__d { font-size: 0.875rem; font-variant-numeric: tabular-nums lining-nums; } .ds-day:hover { background: color-mix(in oklab, var(--color-cream) 10%, transparent); } .ds-day.is-on { background: var(--color-cream); color: var(--color-ink); } .ds-day:disabled { color: color-mix(in oklab, var(--color-cream) 35%, transparent); cursor: not-allowed; background: transparent; } .ds-day:disabled .ds-day__d { text-decoration: line-through; } .ds-day:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 3px; }"
     },
     {
-      "name": "Booking Composer",
-      "kind": "custom",
-      "refersTo": "booking-panel",
-      "description": "The single rounded panel: day tiles, service toggle in a brick trough, guest stepper, and the booking actions.",
-      "html": "<form class=\"ds-composer\" onsubmit=\"return false\"><p class=\"ds-legend\">Giorno</p><div class=\"ds-days\"><button type=\"button\" class=\"ds-day is-active\"><b>Oggi</b><span>7 ott</span></button><button type=\"button\" class=\"ds-day\" disabled><b>Mer</b><span class=\"ds-struck\">8 ott</span></button><button type=\"button\" class=\"ds-day\"><b>Gio</b><span>9 ott</span></button></div><div class=\"ds-row\"><div><p class=\"ds-legend\">Servizio</p><div class=\"ds-trough\"><button type=\"button\" class=\"ds-seg\">Pranzo</button><button type=\"button\" class=\"ds-seg is-on\">Cena</button></div></div><div><p class=\"ds-legend\">Persone</p><div class=\"ds-trough\"><button type=\"button\" class=\"ds-step\" aria-label=\"Una persona in meno\">&minus;</button><output class=\"ds-count\">2</output><button type=\"button\" class=\"ds-step\" aria-label=\"Una persona in più\">+</button></div></div></div><button type=\"submit\" class=\"ds-cta\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 256 256\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M128 24a104 104 0 0 0-91.2 154l-11.3 39.6a8 8 0 0 0 9.9 9.9l39.6-11.3A104 104 0 1 0 128 24Zm0 192a87.9 87.9 0 0 1-44.6-12.1 8 8 0 0 0-4-1.1 8.6 8.6 0 0 0-2.2.3l-31.9 9.1 9.1-31.9a8 8 0 0 0-.8-6.2A88 88 0 1 1 128 216Z\"/></svg>Prenota su WhatsApp</button></form>",
-      "css": ":host{--color-brick-950:#2b0d08;--color-brick-900:#3d140d;--color-brick-800:#5a1e13;--color-brick-700:#7a2b1b;--color-mortar:#f1e7d6;--color-mortar-dim:#d9bfae;--color-saffron:#f0b429;}.ds-composer{max-width:560px;padding:20px;border-radius:28px;border:1px solid rgba(241,231,214,.15);background:rgba(61,20,13,.7);box-shadow:0 30px 60px -30px rgba(20,4,2,.8);color:var(--color-mortar);font-family:'Schibsted Grotesk Variable',ui-sans-serif,system-ui,sans-serif;}.ds-legend{margin:0 0 8px;font-size:.75rem;font-weight:600;color:var(--color-mortar-dim);}.ds-days{display:flex;gap:6px;}.ds-day{min-width:64px;display:flex;flex-direction:column;align-items:center;padding:8px 10px;border:0;border-radius:16px;background:transparent;color:var(--color-mortar);font:inherit;cursor:pointer;transition:background-color .2s;}.ds-day b{font-size:.7rem;font-weight:600;text-transform:uppercase;}.ds-day span{font-size:.875rem;font-variant-numeric:tabular-nums;}.ds-day:hover:not(:disabled){background:rgba(241,231,214,.1);}.ds-day.is-active{background:var(--color-mortar);color:var(--color-brick-900);}.ds-day:disabled{color:rgba(241,231,214,.35);cursor:not-allowed;}.ds-struck{text-decoration:line-through;}.ds-row{margin-top:12px;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:end;}.ds-trough{display:inline-flex;align-items:center;gap:4px;padding:4px;border-radius:9999px;background:rgba(43,13,8,.5);}.ds-seg{border:0;background:transparent;color:var(--color-mortar);border-radius:9999px;padding:8px 14px;font:inherit;font-size:.875rem;font-weight:500;cursor:pointer;}.ds-seg.is-on{background:var(--color-mortar);color:var(--color-brick-900);}.ds-step{width:36px;height:36px;border:0;border-radius:9999px;background:transparent;color:var(--color-mortar);font-size:1.1rem;cursor:pointer;}.ds-step:hover{background:rgba(241,231,214,.1);}.ds-count{width:28px;text-align:center;font-family:'Bodoni Moda Variable','Bodoni 72',Didot,serif;font-size:1.25rem;font-weight:600;}.ds-cta{margin-top:16px;width:100%;display:inline-flex;justify-content:center;align-items:center;gap:8px;border:0;border-radius:9999px;padding:14px 24px;background:var(--color-saffron);color:var(--color-brick-900);font:inherit;font-weight:600;cursor:pointer;transition:background-color .2s,transform .35s cubic-bezier(0.16,1,0.3,1);}.ds-cta:hover{background:var(--color-mortar);transform:translateY(-2px);}.ds-composer button:focus-visible{outline:2px solid var(--color-saffron);outline-offset:3px;}"
+      "name": "Time Chip",
+      "kind": "chip",
+      "refersTo": "chip-time",
+      "description": "Bordered pill for a time slot; selected is solid cream.",
+      "html": "<div class=\"ds-times\"><button class=\"ds-time\">19:30</button><button class=\"ds-time is-on\" aria-pressed=\"true\">20:00</button><button class=\"ds-time\">20:30</button></div>",
+      "css": ".ds-times { display: flex; flex-wrap: wrap; gap: 6px; } .ds-time { border: 1px solid color-mix(in oklab, var(--color-cream) 20%, transparent); background: transparent; color: var(--color-cream); font-family: var(--font-sans); font-size: 0.875rem; font-variant-numeric: tabular-nums lining-nums; padding: 8px 12px; border-radius: 9999px; cursor: pointer; transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-time:hover { border-color: color-mix(in oklab, var(--color-cream) 50%, transparent); } .ds-time.is-on { background: var(--color-cream); border-color: var(--color-cream); color: var(--color-ink); } .ds-time:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 3px; }"
     },
     {
-      "name": "Arch Frame",
+      "name": "Booking Panel",
       "kind": "card",
-      "refersTo": "arch-frame",
-      "description": "The only photo shape: semicircular top, straight sides, flat base; image zooms inside on hover.",
-      "html": "<figure class=\"ds-arch-fig\"><div class=\"ds-arch\"><div class=\"ds-arch-img\" role=\"img\" aria-label=\"Risotto allo zafferano\"></div></div><figcaption class=\"ds-arch-cap\">Risotto allo zafferano</figcaption></figure>",
-      "css": ":host{--color-brick-950:#2b0d08;--color-brick-900:#3d140d;--color-brick-800:#5a1e13;--color-brick-700:#7a2b1b;--color-mortar:#f1e7d6;--color-mortar-dim:#d9bfae;--color-saffron:#f0b429;}.ds-arch-fig{margin:0;width:240px;}.ds-arch{aspect-ratio:3/4;border-radius:999px 999px 0 0;overflow:hidden;background:var(--color-brick-800);}.ds-arch-img{width:100%;height:100%;background:radial-gradient(circle at 50% 55%,#f0b429 0 18%,#d99a12 19% 26%,#5a1e13 27%);transition:transform .9s cubic-bezier(0.16,1,0.3,1);}.ds-arch:hover .ds-arch-img{transform:scale(1.06);}.ds-arch-cap{margin-top:12px;font-family:'Bodoni Moda Variable','Bodoni 72',Didot,serif;font-size:1.25rem;color:var(--color-mortar);}"
+      "refersTo": "booking-panel",
+      "description": "The single 16px panel: the booking composer, the only element with the panel shadow.",
+      "html": "<form class=\"ds-panel\"><p class=\"ds-panel__legend\">Persone</p><div class=\"ds-panel__count\">2</div><button type=\"button\" class=\"ds-panel__cta\"><svg aria-hidden=\"true\" width=\"18\" height=\"18\" viewBox=\"0 0 256 256\" fill=\"currentColor\"><path d=\"M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z\"/></svg>Prenota su WhatsApp</button></form>",
+      "css": ".ds-panel { max-width: 560px; padding: 20px; border-radius: 16px; border: 1px solid color-mix(in oklab, var(--color-cream) 10%, transparent); background: color-mix(in oklab, var(--color-char) 95%, transparent); color: var(--color-cream); box-shadow: 0 30px 70px -30px rgba(0,0,0,0.75); font-family: var(--font-sans); } .ds-panel__legend { margin: 0 0 8px; font-size: 0.75rem; font-weight: 600; color: var(--color-muted); } .ds-panel__count { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; font-variant-numeric: tabular-nums lining-nums; } .ds-panel__cta { margin-top: 16px; width: 100%; display: inline-flex; justify-content: center; align-items: center; gap: 8px; padding: 14px 24px; border: none; border-radius: 9999px; background: var(--color-saffron); color: var(--color-ink); font: inherit; font-weight: 600; cursor: pointer; transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-panel__cta:hover { background: var(--color-cream); } .ds-panel__cta:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 3px; }"
     },
     {
-      "name": "Navigation Bar (scrolled)",
+      "name": "Navigation Bar",
       "kind": "nav",
-      "refersTo": "nav-bar-solid",
-      "description": "68px fixed bar: arch logo plaque, pill links, language switch and saffron Prenota; goes solid brick-900 with blur after 24px scroll.",
-      "html": "<header class=\"ds-nav\"><a class=\"ds-logo\" href=\"#\"><span class=\"ds-plaque\"></span><span class=\"ds-wordmark\"><b>Trattoria Ressi</b><small>Pavia</small></span></a><ul class=\"ds-links\"><li><a href=\"#\">La trattoria</a></li><li><a href=\"#\">Cucina</a></li><li><a href=\"#\">La sala</a></li><li><a href=\"#\" class=\"is-current\">Menu</a></li></ul><a class=\"ds-nav-cta\" href=\"#\">Prenota</a></header>",
-      "css": ":host{--color-brick-950:#2b0d08;--color-brick-900:#3d140d;--color-brick-800:#5a1e13;--color-brick-700:#7a2b1b;--color-mortar:#f1e7d6;--color-mortar-dim:#d9bfae;--color-saffron:#f0b429;}.ds-nav{height:68px;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 40px;background:rgba(61,20,13,.92);backdrop-filter:blur(12px);box-shadow:0 10px 30px -12px rgba(20,4,2,.6);font-family:'Schibsted Grotesk Variable',ui-sans-serif,system-ui,sans-serif;color:var(--color-mortar);}.ds-logo{display:flex;align-items:center;gap:12px;color:inherit;text-decoration:none;}.ds-plaque{width:40px;height:48px;border-radius:999px 999px 0 0;background:var(--color-mortar);transition:transform .3s cubic-bezier(0.16,1,0.3,1);}.ds-logo:hover .ds-plaque{transform:translateY(-2px);}.ds-wordmark{display:flex;flex-direction:column;line-height:1;}.ds-wordmark b{font-family:'Bodoni Moda Variable','Bodoni 72',Didot,serif;font-size:1.45rem;font-weight:600;letter-spacing:-0.025em;}.ds-wordmark small{margin-top:4px;font-size:.72rem;color:var(--color-mortar-dim);}.ds-links{display:flex;gap:4px;list-style:none;margin:0;padding:0;}.ds-links a{display:block;border-radius:9999px;padding:8px 14px;font-size:.95rem;color:rgba(241,231,214,.85);text-decoration:none;transition:background-color .2s,color .2s;}.ds-links a:hover{background:rgba(241,231,214,.1);color:var(--color-mortar);}.ds-nav-cta{border-radius:9999px;padding:10px 20px;background:var(--color-saffron);color:var(--color-brick-900);font-size:.875rem;font-weight:600;text-decoration:none;transition:background-color .3s cubic-bezier(0.16,1,0.3,1),transform .3s cubic-bezier(0.16,1,0.3,1);}.ds-nav-cta:hover{background:var(--color-mortar);}.ds-nav-cta:active{transform:scale(.97);}.ds-nav a:focus-visible{outline:2px solid var(--color-saffron);outline-offset:3px;}"
+      "refersTo": "nav-bar",
+      "description": "68px bar; shown in its scrolled state (coal 85%, blur, nav lift).",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"ds-nav__brand\">Trattoria Ressi<span>Pavia</span></a><ul class=\"ds-nav__links\"><li><a href=\"#\">La trattoria</a></li><li><a href=\"#\">Cucina</a></li><li><a href=\"#\" aria-current=\"page\">Menu</a></li></ul><a href=\"#\" class=\"ds-nav__cta\">Prenota</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 68px; padding: 0 24px; background: color-mix(in oklab, var(--color-coal) 85%, transparent); backdrop-filter: blur(12px); box-shadow: 0 10px 30px -12px rgba(0,0,0,0.6); color: var(--color-cream); font-family: var(--font-sans); } .ds-nav__brand { display: flex; flex-direction: column; color: var(--color-cream); text-decoration: none; font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1; } .ds-nav__brand span { margin-top: 4px; font-family: var(--font-sans); font-size: 0.75rem; font-weight: 400; letter-spacing: normal; color: var(--color-muted); } .ds-nav__links { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; } .ds-nav__links a { display: block; padding: 8px 14px; border-radius: 9999px; font-size: 0.95rem; color: color-mix(in oklab, var(--color-cream) 85%, transparent); text-decoration: none; transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav__links a:hover { background: color-mix(in oklab, var(--color-cream) 10%, transparent); color: var(--color-cream); } .ds-nav__links a[aria-current] { color: var(--color-cream); text-decoration: underline; text-decoration-color: color-mix(in oklab, var(--color-cream) 60%, transparent); text-underline-offset: 0.22em; } .ds-nav__links a:focus-visible, .ds-nav__cta:focus-visible { outline: 2px solid var(--color-saffron); outline-offset: 3px; } .ds-nav__cta { padding: 10px 20px; border-radius: 9999px; background: var(--color-saffron); color: var(--color-ink); font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-nav__cta:hover { background: var(--color-cream); }"
     },
     {
-      "name": "Menu Dish Row",
+      "name": "Dish Row",
       "kind": "custom",
-      "description": "Bodoni dish name, dotted mortar leader, tabular Bodoni price, grotesk description.",
-      "html": "<div class=\"ds-dish\"><div class=\"ds-dish-line\"><h3>Risotto allo zafferano</h3><span class=\"ds-leader\" aria-hidden=\"true\"></span><span class=\"ds-price\">€18</span></div><p>Carnaroli della Cascina Alberona</p></div>",
-      "css": ":host{--color-brick-950:#2b0d08;--color-brick-900:#3d140d;--color-brick-800:#5a1e13;--color-brick-700:#7a2b1b;--color-mortar:#f1e7d6;--color-mortar-dim:#d9bfae;--color-saffron:#f0b429;}.ds-dish{padding:20px 0;max-width:640px;color:var(--color-mortar);}.ds-dish-line{display:flex;align-items:baseline;gap:16px;}.ds-dish h3{margin:0;font-family:'Bodoni Moda Variable','Bodoni 72',Didot,serif;font-weight:400;font-size:1.6rem;line-height:1.25;}.ds-leader{flex:1;min-width:24px;margin-bottom:6px;border-bottom:1px dotted rgba(241,231,214,.3);}.ds-price{font-family:'Bodoni Moda Variable','Bodoni 72',Didot,serif;font-size:1.45rem;font-variant-numeric:tabular-nums lining-nums;}.ds-dish p{margin:6px 0 0;max-width:56ch;font-family:'Schibsted Grotesk Variable',ui-sans-serif,system-ui,sans-serif;color:rgba(241,231,214,.8);}"
+      "refersTo": "title-dish",
+      "description": "Menu row: dish name, dotted cream leader, tabular price, description below.",
+      "html": "<div class=\"ds-dish\"><div class=\"ds-dish__line\"><h3 class=\"ds-dish__name\">Risotto alla milanese</h3><span class=\"ds-dish__dots\" aria-hidden=\"true\"></span><span class=\"ds-dish__price\">€14</span></div><p class=\"ds-dish__desc\">Carnaroli della Cascina Alberona, zafferano.</p></div>",
+      "css": ".ds-dish { padding: 20px 0; color: var(--color-cream); } .ds-dish__line { display: flex; align-items: baseline; gap: 16px; } .ds-dish__name { margin: 0; font-family: var(--font-display); font-size: clamp(1.3rem, 2.1vw, 1.75rem); font-weight: 500; line-height: 1.25; letter-spacing: -0.02em; } .ds-dish__dots { flex: 1; min-width: 24px; margin-bottom: 6px; border-bottom: 1px dotted color-mix(in oklab, var(--color-cream) 30%, transparent); transition: border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1); } .ds-dish:hover .ds-dish__dots { border-color: color-mix(in oklab, var(--color-cream) 50%, transparent); } .ds-dish__price { flex-shrink: 0; font-family: var(--font-display); font-size: clamp(1.2rem, 1.9vw, 1.5rem); font-weight: 500; font-variant-numeric: tabular-nums lining-nums; } .ds-dish__desc { margin: 6px 0 0; max-width: 56ch; font-family: var(--font-sans); color: color-mix(in oklab, var(--color-cream) 80%, transparent); }"
     }
   ],
   "narrative": {
-    "northStar": "La volta in mattoni",
-    "overview": "The page is the room. Trattoria Ressi is one 40-seat room under an exposed red-brick barrel vault, and the site is built from that room's materials, not from a trattoria template: fired brick is the whole ground, never an accent; lime mortar is the text and the hairline joints; one warm saffron (the colour of risotto allo zafferano) marks the act of booking. A fixed, barely-there brick-course texture (mortar joints at 5.5% opacity) sits behind everything, so every section reads as more of the same wall.\n\nThe vault's geometry is the shape language. Every photograph stands inside an arch-topped frame, every control is a full pill, and there are no cards. Bodoni Moda, a Didone with roots in Po-valley Italian printing, carries every headline, dish name and price; Schibsted Grotesk carries everything a visitor reads to act. Depth comes from brick tones (ground, darker soot-fired bands, troughs) rather than from shadows.\n\nMotion is physical and springy: content settles into place on spring curves, selection indicators slide between options, and the signature moment is scroll-linked: the arch onto the dining room widens until it becomes the full-bleed room (\"Entrate dall'arco\"). Everything degrades to static, fully visible content under reduced motion.",
+    "northStar": "Scuro e caldo",
+    "overview": "The site is the room after dark. Every ground is a warm near-black with a brown cast, so the real photographs of the room, the street and the plates carry all the colour and the interface steps back like a waiter between courses. Cream type sits on those grounds with very high contrast, a single saffron fill marks the one thing to do (book), and nothing else competes. It replaces both the cream-and-serif rustic trattoria template and the earlier brick-and-arch world: there are no arches, no domes, no paper textures, no serif display face.\n\nDensity is low and confident: one 1400px container, a 12-column grid used asymmetrically (7/5, 5/7, 4/8), large sections with 96 to 144px of vertical air, full-bleed photography where the story needs the room. Type is a tight, optically sized grotesque for display (Bricolage Grotesque, semibold, negative tracking) over a neutral grotesque for reading (Geist). Shapes are plain rectangles with a barely softened 6px corner for photos, one 16px panel for booking, and full pills for every control.\n\nMotion is quiet and physical. Every spring arrives with zero bounce and settles without oscillating; reveals fade and rise, and headings also come into focus from a slight blur; scroll-linked values pass through a smoothing spring so parallax never jitters. The signature moment is the room photo opening from an inset rectangle to full bleed as the visitor scrolls.",
     "keyCharacteristics": [
-      "Drenched brick ground (`brick-700`), darker brick bands (`brick-900`) for alternating sections, footer included",
-      "Mortar (`mortar`, `mortar-dim`) for all text and every hairline; mortar alpha ladder for joints and washes",
-      "Saffron is the one accent: primary actions, their hover and focus, text selection",
-      "Arch-topped frame (`999px 999px 0 0`) is the only photo shape; pills for every control",
-      "Bodoni Moda display (weight 500, negative tracking, optical sizing auto) over Schibsted Grotesk body (`ss01`)",
-      "Tonal depth; only two soft shadows exist, both dark-brick tinted",
-      "Three named springs from `src/lib/motion.ts`; layout-animated indicators; one scroll-linked vault opening",
-      "Bilingual IT/EN at every string; booking within one tap on every screen (sticky mobile bar)"
+      "Warm near-black grounds in four steps (ink, coal, char, ember); never a light page.",
+      "Cream text at very high contrast; muted warm grey for secondary text.",
+      "Saffron is the only accent and fills only the booking actions.",
+      "Real photography leads every section; the UI is scrims, type and hairlines.",
+      "Bricolage Grotesque display, semibold, tracked tight (-0.02em to -0.04em); Geist body.",
+      "Rectangles (6px photos, 16px booking panel) and pills; no cards, no arches.",
+      "Zero-bounce duration springs (0.5s, 0.8s, 1.1s, 1.6s); fade-and-rise reveals, blur-to-focus on headings only; spring-smoothed scroll."
     ],
     "rules": [
       {
-        "name": "The Brick Is The Ground Rule",
-        "body": "Brick is never an accent on a light page. Every surface is a brick tone; contrast between sections comes from moving one course darker (`brick-700` → `brick-900` → `brick-950`), never from introducing a new hue.",
-        "section": "colors"
-      },
-      {
         "name": "The One Saffron Rule",
-        "body": "Saffron belongs to booking and to the interaction states of actions (hover, focus ring) plus the text-selection highlight. It is never a fill for decoration, a heading colour or a background.",
+        "body": "Saffron fills only booking actions. If an element does not start a reservation, it is not saffron. The one built exception is the footer contact and link list, whose links warm to saffron on hover; do not extend that to any other surface.",
         "section": "colors"
       },
       {
-        "name": "The Mortar Joint Rule",
-        "body": "Every divider is a 1px mortar hairline at 12-35% alpha. No other line colour exists.",
+        "name": "The Warm Black Rule",
+        "body": "Grounds are never neutral grey or pure black. Every dark step carries the brown cast of the existing four (hue around 56-59 in OKLCH); new surfaces reuse ink, coal, char or ember, never a new hex.",
         "section": "colors"
       },
       {
-        "name": "The Named-Things-In-Bodoni Rule",
-        "body": "If it is a name (the trattoria, a room, a dish, a course, a price), it is set in Bodoni. If it is an instruction, a label or a fact, it is Schibsted Grotesk.",
+        "name": "The Cream Ladder Rule",
+        "body": "Structure is drawn with cream at fixed opacities (10, 12, 15, 20, 25, 30%), not with new border colours.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tight Display Rule",
+        "body": "Display and headline steps are always Bricolage at 600 with line height at or below 1.02 and tracking between -0.03em and -0.04em; titles below 2rem relax to 500 and -0.02em. Never track display type positively.",
         "section": "typography"
       },
       {
-        "name": "The Balanced Headline Rule",
-        "body": "Display and headline text uses `text-wrap: balance` or a `max-width` of 16-18ch so headlines break into two or three even lines, never one long line with a widow.",
+        "name": "The Tabular Facts Rule",
+        "body": "Every number a guest compares (prices, hours, dates, the phone number, guest count) is set with tabular lining figures.",
         "section": "typography"
       },
       {
-        "name": "The Darker Course Rule",
-        "body": "To separate or recess, go one brick tone darker. Shadows are reserved for the booking panel and the scrolled nav; both are tinted brick-black (`rgba(20,4,2,…)`), never grey.",
+        "name": "The No Kicker Rule",
+        "body": "Headlines stand alone; there are no small uppercase labels above them. Uppercase exists only in the day-chip weekday and the language switch.",
+        "section": "typography"
+      },
+      {
+        "name": "The Light Not Lift Rule",
+        "body": "The two shadows belong to the scrolled nav and the booking panel (which keeps its shadow wherever it is placed); nothing else gets one. Separate everything else with a ground step or a cream hairline.",
         "section": "elevation"
       },
       {
-        "name": "The Scrim-Only Gradient Rule",
-        "body": "The only gradient is a bottom-up `brick-950` scrim (`/90` → `/25-30` → transparent) that lets mortar type sit on a full-bleed photograph.",
+        "name": "The Scrim Rule",
+        "body": "Text over a photograph always gets a scrim in the page's own black (coal or ink), never a coloured overlay or a text shadow. Inactive photos dim with brightness 0.55 and saturation 0.8 rather than an overlay.",
         "section": "elevation"
       },
       {
-        "name": "The Arch Rule",
-        "body": "A photograph is never shown in a rectangle, circle or card. It stands in an arch, or (only in the vault opening, at full scroll) fills the viewport edge to edge.",
+        "name": "The No Arch Rule",
+        "body": "No arches, domes, vaults or curved-top frames anywhere: the client rejected them. A photograph that happens to show the arched window is content, not a frame.",
         "section": "shapes"
       },
       {
-        "name": "The No-Card Rule",
-        "body": "Content groups are separated by space and mortar hairlines, not by boxed containers. The booking panel is the one exception because it is a working instrument.",
+        "name": "The No Card Rule",
+        "body": "Content is never boxed in bordered or filled cards. Lists are rows divided by hairlines; the booking composer is the only panel.",
         "section": "shapes"
       }
     ],
     "dos": [
-      "**Do** set every surface in a brick tone: ground `brick-700` (`brick-dusk` under dark preference), bands `brick-900` (`brick-950` under dark preference).",
-      "**Do** use saffron for the booking action and for the hover/focus state of actions; set `brick-900` text on it.",
-      "**Do** frame every photograph in the arch (`999px 999px 0 0`) with a `brick-800` loading fill, and keep hover motion inside the frame.",
-      "**Do** make every button, tab, toggle and chip a full pill, and move a single-choice indicator between options with a shared `layoutId` on `springSnappy`.",
-      "**Do** set names, dishes and prices in Bodoni Moda 500 with negative tracking; set instructions and facts in Schibsted Grotesk; use tabular lining numerals for any number in a column.",
-      "**Do** divide with 1px mortar hairlines at 12-35% alpha and with space; recess with a darker brick course.",
-      "**Do** keep booking one tap away: nav \"Prenota\", hero composer and the mobile bar on every route.",
-      "**Do** ship a reduced-motion path for every animated element that leaves content visible and in place."
+      "Do build every new surface on coal, with char for a banded section and cream text; reuse the seven colour tokens only.",
+      "Do reserve saffron fills for actions that start a booking, with ink text on them.",
+      "Do lead sections with a real photograph of the room, street or plates, behind a coal or ink scrim when text sits on it.",
+      "Do set display type in Bricolage Grotesque semibold with tracking between -0.03em and -0.04em, choosing an existing step from the hierarchy table.",
+      "Do use full pills for controls, 6px corners for photographs, and the sliding cream pill for any selected state.",
+      "Do animate with the zero-bounce springs (0.5s, 0.8s, 1.1s, 1.6s) and pass scroll-linked values through the smoothing spring.",
+      "Do set prices, hours, dates and the phone number in tabular figures."
     ],
     "donts": [
-      "**Don't** put brick on a cream or white page, or add a second accent hue; the contrast comes from brick courses.",
-      "**Don't** show a photograph in a rectangle, rounded card or circle.",
-      "**Don't** wrap content groups in cards; the 28px booking panel is the one container.",
-      "**Don't** use grey or black shadows; the two shadows are brick-black and belong to the booking panel and the scrolled nav.",
-      "**Don't** use gradients except the bottom-up `brick-950` scrim under type on a full-bleed photo.",
-      "**Don't** set Bodoni in all caps or as body copy.",
-      "**Don't** introduce tween easings for entrances; entrances use the named springs."
+      "Don't use arches, domes, vaults or curved-top frames; the arch-framed brick world was rejected.",
+      "Don't introduce a light or cream page ground, paper textures or a serif display face; that is the rustic trattoria template this world refuses.",
+      "Don't use saffron for decoration, headings, icons or non-booking links.",
+      "Don't box content in cards; divide rows with cream hairlines and keep the booking composer as the only panel.",
+      "Don't add shadows beyond the nav lift and the booking panel, or use bouncing springs.",
+      "Don't add small uppercase kickers or eyebrows above headlines.",
+      "Don't add a smooth-scroll library; scrolling stays native."
     ]
   }
 }

@@ -28,18 +28,6 @@ typography:
     fontWeight: 600
     lineHeight: 1
     letterSpacing: "-0.035em"
-  display-reviews:
-    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(2.6rem, 6vw, 5.5rem)"
-    fontWeight: 600
-    lineHeight: 1
-    letterSpacing: "-0.035em"
-  display-band:
-    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(2.6rem, 6vw, 5rem)"
-    fontWeight: 600
-    lineHeight: 1
-    letterSpacing: "-0.035em"
   headline:
     fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
     fontSize: "clamp(2.4rem, 5vw, 4.5rem)"
@@ -86,12 +74,6 @@ typography:
   title-course:
     fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
     fontSize: "clamp(1.35rem, 2.3vw, 1.9rem)"
-    fontWeight: 500
-    lineHeight: 1.375
-    letterSpacing: "-0.02em"
-  title-course-menu:
-    fontFamily: "'Bricolage Grotesque Variable', ui-sans-serif, system-ui, sans-serif"
-    fontSize: "clamp(1.35rem, 2.4vw, 1.85rem)"
     fontWeight: 500
     lineHeight: 1.375
     letterSpacing: "-0.02em"
@@ -258,7 +240,7 @@ The site is the room after dark. Every ground is a warm near-black with a brown 
 
 Density is low and confident: one 1400px container, a 12-column grid used asymmetrically (7/5, 5/7, 4/8), large sections with 96 to 144px of vertical air, full-bleed photography where the story needs the room. Type is a tight, optically sized grotesque for display (Bricolage Grotesque, semibold, negative tracking) over a neutral grotesque for reading (Geist). Shapes are plain rectangles with a barely softened 6px corner for photos, one 16px panel for booking, and full pills for every control.
 
-Motion is quiet and physical. Every spring arrives with zero bounce and settles without oscillating; reveals fade, rise and come into focus from a slight blur; scroll-linked values pass through a smoothing spring so parallax never jitters. The signature moment is the room photo opening from an inset rectangle to full bleed as the visitor scrolls.
+Motion is quiet and physical. Every spring arrives with zero bounce and settles without oscillating; reveals fade and rise, and headings also come into focus from a slight blur; scroll-linked values pass through a smoothing spring so parallax never jitters. The signature moment is the room photo opening from an inset rectangle to full bleed as the visitor scrolls.
 
 **Key Characteristics:**
 - Warm near-black grounds in four steps (ink, coal, char, ember); never a light page.
@@ -267,7 +249,7 @@ Motion is quiet and physical. Every spring arrives with zero bounce and settles 
 - Real photography leads every section; the UI is scrims, type and hairlines.
 - Bricolage Grotesque display, semibold, tracked tight (-0.02em to -0.04em); Geist body.
 - Rectangles (6px photos, 16px booking panel) and pills; no cards, no arches.
-- Zero-bounce duration springs (0.5s, 1.1s, 1.6s); blur-to-focus reveals; spring-smoothed scroll.
+- Zero-bounce duration springs (0.5s, 0.8s, 1.1s, 1.6s); fade-and-rise reveals, blur-to-focus on headings only; spring-smoothed scroll.
 
 ## Colors
 
@@ -307,18 +289,15 @@ Every literal size used in the code is a step below; there is no size outside th
 | Display, Menu | `display-menu` | clamp(3.6rem, 9vw, 6rem) | 600 | 0.95 | -0.04em | Menu page h1 "Il menu" |
 | Display, Hero | `display-hero` | clamp(2.9rem, 6.2vw, 5.75rem) | 600 | 0.98 | -0.03em | Home h1, max 13ch, two lines |
 | Display, Room | `display-room` | clamp(2.6rem, 7vw, 6rem) | 600 | 1 | -0.035em | "Accomodatevi." over the room reveal |
-| Display, Reviews | `display-reviews` | clamp(2.6rem, 6vw, 5.5rem) | 600 | 1 | -0.035em | Centred reviews statement |
-| Display, Band | `display-band` | clamp(2.6rem, 6vw, 5rem) | 600 | 1 | -0.035em | Menu page Ticinum band title |
-| Headline | `headline` | clamp(2.4rem, 5vw, 4.5rem) | 600 | 1.02 | -0.035em | Home section h2 (Kitchen, Ticinum, Room, Hours), balanced |
+| Headline | `headline` | clamp(2.4rem, 5vw, 4.5rem) | 600 | 1.02 | -0.035em | Home section h2 (Kitchen, Ticinum, Room, Reviews, Hours), balanced |
 | Headline, Booking | `headline-booking` | clamp(2.4rem, 5vw, 4.25rem) | 600 | 1.02 | -0.035em | Menu page closing booking h2 |
-| Headline, Course | `headline-course` | clamp(2.2rem, 4vw, 3.5rem) | 600 | 1 | -0.035em | Menu course and wine h2 |
+| Headline, Course | `headline-course` | clamp(2.2rem, 4vw, 3.5rem) | 600 | 1 | -0.035em | Menu course, Ticinum and wine h2 |
 | Numeral | `numeral` | 3.75rem | 600 | 1 | -0.035em (-0.04em on Menu) | Ticinum price, tabular lining figures |
 | Lede | `lede` | clamp(1.9rem, 3.4vw, 3.1rem) | 500 | 1.14 | -0.03em | Home story statement, second clause in muted |
 | Lede, small | `lede-sm` | clamp(1.6rem, 2.8vw, 2.4rem) | 500 | 1.18 | -0.03em | Menu wine statement |
 | Menu link | `menu-link` | 1.875rem | 600 | 1.2 | -0.03em | Mobile menu sheet links |
 | Title, Course | `title-course` | clamp(1.35rem, 2.3vw, 1.9rem) | 500 | 1.375 | -0.02em | Home Ticinum course names |
-| Title, Course (Menu) | `title-course-menu` | clamp(1.35rem, 2.4vw, 1.85rem) | 500 | 1.375 | -0.02em | Menu Ticinum course names |
-| Title, Dish | `title-dish` | clamp(1.3rem, 2.1vw, 1.75rem) | 500 | 1.25 | -0.02em | Menu dish names (h3) |
+| Title, Dish | `title-dish` | clamp(1.3rem, 2.1vw, 1.75rem) | 500 | 1.25 | -0.02em | Menu dish names (h3) and Menu Ticinum course names |
 | Price | `price` | clamp(1.2rem, 1.9vw, 1.5rem) | 500 | 1.33 | normal | Menu dish prices, tabular |
 | Wordmark | `wordmark` | 1.3rem | 600 | 1 | -0.03em | "Trattoria Ressi" beside the sign |
 | Plate caption | `caption-plate` | 1.25rem | 500 | 1.4 | -0.02em | Dish names under carousel photos; guest count |
@@ -338,7 +317,7 @@ Every literal size used in the code is a step below; there is no size outside th
 
 ## Layout
 
-One centred container, max 1400px, with gutters of 16px (mobile), 24px (from 640px) and 40px (from 1024px). Content lives on a 12-column grid used asymmetrically: hero 7/5, story 7/5 with the photo starting at column 8, Ticinum 5/6, hours 5/7, Menu courses 4/8. The Reviews section narrows to 1100px and centres; the Menu Ticinum band narrows its content to 760px.
+One centred container, max 1400px, with gutters of 16px (mobile), 24px (from 640px) and 40px (from 1024px). Content lives on a 12-column grid used asymmetrically: hero 7/5, story 7/5 with the photo starting at column 8, Ticinum 5/6, reviews 5/6 (photo left, text from column 7), hours 5/7, Menu courses 4/8. The Menu Ticinum band is a char strip that runs the full viewport width, with the 1400px container and the 4/8 course grid inside it (title and price stacked on the left, courses on the right).
 
 Vertical rhythm is generous: open sections take 96px top and bottom, 144px from 768px; banded (char) sections take 96px, 128px from 768px. Inside sections, gaps run 24, 40, 56 and 64px. Reading measures are capped in ch (13ch display, 16-18ch headlines, 38-58ch body).
 
@@ -369,7 +348,7 @@ Depth comes from light, not lift. The page is flat; layers are told apart by ste
 
 ## Shapes
 
-Plain rectangles and pills. Photographs and the map sit in rectangles with a barely softened 6px corner; the booking composer is the single 16px-rounded panel (the day chips inside it share that radius, and the Menu Ticinum band takes it from 1024px). Every control (buttons, segmented options, time chips, the language switch, icon buttons, tabs) is a full pill. The logo is the existing shop sign in a cream circle with a cream 20% ring. Lines are 1px cream hairlines; the only patterned line is the dotted leader between a dish and its price.
+Plain rectangles and pills. Photographs and the map sit in rectangles with a barely softened 6px corner; the booking composer is the single 16px-rounded panel (the day chips inside it share that radius). Banded sections are square-cornered strips. Every control (buttons, segmented options, time chips, the language switch, icon buttons, tabs) is a full pill. The logo is the existing shop sign in a cream circle with a cream 20% ring. Lines are 1px cream hairlines; the only patterned line is the dotted leader between a dish and its price.
 
 During the room reveal the photo's clip-path animates from an inset of 14% vertical and 16% horizontal with a 10px corner to a full-bleed, square-cornered frame.
 
@@ -408,20 +387,21 @@ The working reservation panel: it composes a WhatsApp message from day, service,
 
 ### Menu Rows
 - **Dish row:** dish name in display medium, a dotted cream 30% leader that grows to fill the gap (50% on row hover), then the price in display medium tabular; description below in cream 80%, max 56ch. A missing price reads "di stagione" in muted label size.
-- **Course row (Ticinum):** a two-column row, muted label on the left (5.5-8rem column), course name in display medium on the right, divided by cream 10-15% hairlines.
+- **Course row (Ticinum):** a two-column row, muted label on the left (5.5-8rem column), course name in display medium on the right, divided by cream 10% hairlines. On the Menu page the Ticinum price sits under the band title as the numeral.
 - **Section tabs:** sticky under the nav on a ground-coloured, blurred strip; the active tab is the sliding cream pill and auto-centres in the scroller.
 
 ### Photography
 - **Hero:** full-bleed daylight room, slow 1.6s fade-in, gentle spring-smoothed parallax (moves 18% and scales from 1.04 to 1.14 over the hero's exit), coal scrims from the left and bottom on desktop and from the bottom on mobile.
 - **Room reveal (signature):** a sticky full-viewport stage where the room photo opens from an inset rounded rectangle to full bleed while scaling from 1.25 to 1; the "Accomodatevi." copy fades and rises in over the last part of the scroll.
 - **Plates carousel:** 4:5 photos at 78vw / 44vw / 30vw / 400px, snap-start, 20px gap; photos scale to 1.05 over 1.2s on hover.
-- **Room accordion (from 768px):** five photos in a row at 64vh; the hovered or focused one grows to five shares on a 1.1s spring while the others dim. On mobile it becomes a snap-centred 3:4 gallery with captions.
+- **Story and Reviews photos:** 4:5 frames (the street, the saffron risotto) with spring-smoothed parallax of 8% each way at scale 1.18.
+- **Room accordion (from 768px):** five photos in a row at 64vh; the focused one, or the hovered one after a 140ms pause of the pointer, grows to five shares on the 0.8s slide spring while the others dim. On mobile it becomes a snap-centred 3:4 gallery with captions.
 - **Map:** the Google embed is inverted and warmed (invert 0.9, hue-rotate 180deg, saturate 0.55, brightness 0.95, sepia 0.15) to sit in the dark world, in a 6px ember frame.
 
 ### Motion
-- **Springs:** `spring` (duration 1.1s, bounce 0) for reveals, page transitions and layout; `springSoft` (1.6s, bounce 0) for the hero photo fade; `springSnappy` (0.5s, bounce 0) for pills, chips and button press; `scrollSmooth` (stiffness 90, damping 28, mass 0.6) smoothing every scroll-linked value.
+- **Springs:** `spring` (duration 1.1s, bounce 0) for reveals, page transitions and the mobile menu; `springSoft` (1.6s, bounce 0) for the hero photo fade; `springSlide` (0.8s, bounce 0) for the room accordion's widening panels; `springSnappy` (0.5s, bounce 0) for pills, chips and button press; `scrollSmooth` (stiffness 90, damping 28, mass 0.6) smoothing every scroll-linked value.
 - **CSS transitions:** colour, background and filter changes use the expo ease `cubic-bezier(0.16, 1, 0.3, 1)` at 300, 500, 700 or 1200ms.
-- **Reveal:** opacity 0, 24px down (18-40px by context) and 6px blur, to rest on entering view (once, at 20% visible); siblings stagger 0.05-0.1s.
+- **Reveal:** opacity 0 and 16px down (24-40px for photos and the carousel), to rest on entering view (once, at 20% visible). Only headings add the 6px blur-to-focus (the hero h1 uses 8px). Lists, menu rows and the plates carousel reveal as one block, not item by item; a section's heading, text and link follow in sequence with 0.06-0.18s delays.
 - **Reduced motion:** honoured globally; parallax, room reveal and reveals fall back to static frames.
 
 ## Do's and Don'ts
@@ -432,7 +412,7 @@ The working reservation panel: it composes a WhatsApp message from day, service,
 - **Do** lead sections with a real photograph of the room, street or plates, behind a coal or ink scrim when text sits on it.
 - **Do** set display type in Bricolage Grotesque semibold with tracking between -0.03em and -0.04em, choosing an existing step from the hierarchy table.
 - **Do** use full pills for controls, 6px corners for photographs, and the sliding cream pill for any selected state.
-- **Do** animate with the zero-bounce springs (0.5s, 1.1s, 1.6s) and pass scroll-linked values through the smoothing spring.
+- **Do** animate with the zero-bounce springs (0.5s, 0.8s, 1.1s, 1.6s) and pass scroll-linked values through the smoothing spring.
 - **Do** set prices, hours, dates and the phone number in tabular figures.
 
 ### Don't:

@@ -36,6 +36,7 @@ html {
 body {
   background-color: var(--ground);
   color: var(--color-cream);
+  overflow-x: clip;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;

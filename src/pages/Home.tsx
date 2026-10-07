@@ -204,8 +204,8 @@ function Story() {
           <Reveal focus>
             <p className="font-display text-[clamp(1.9rem,3.4vw,3.1rem)] leading-[1.14] font-medium tracking-[-0.03em] text-balance">
               {t({
-                it: 'Una trattoria di famiglia, una sala sola, la stessa cucina di stagione. ',
-                en: 'A family trattoria, a single room, the same seasonal cooking. ',
+                it: 'Una trattoria pavese di famiglia, nel centro storico. ',
+                en: 'A family-run Pavese trattoria in the old town. ',
               })}
               <span className="text-muted">
                 {t({
@@ -393,7 +393,7 @@ function Room() {
   return (
     <section id="sala" className="mx-auto max-w-[1400px] px-4 py-24 sm:px-6 md:py-36 lg:px-10">
       <Reveal focus>
-        <h2 className={`max-w-[18ch] ${H2}`}>{t({ it: 'Quaranta coperti, una sala sola.', en: 'Forty seats, a single room.' })}</h2>
+        <h2 className={`max-w-[18ch] ${H2}`}>{t({ it: 'Di giorno e di sera.', en: 'By day and by night.' })}</h2>
       </Reveal>
 
       <div className="mt-14 hidden h-[64vh] min-h-[440px] gap-3 md:flex">
