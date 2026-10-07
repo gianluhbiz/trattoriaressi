@@ -12,14 +12,12 @@
   --color-brick-900: #3d140d;
   --color-brick-800: #5a1e13;
   --color-brick-700: #7a2b1b;
-  --color-brick-600: #93371f;
   --color-brick-500: #b04a2b;
   /* Malta di calce (testo e giunti) */
   --color-mortar: #f1e7d6;
   --color-mortar-dim: #d9bfae;
   /* Zafferano: unico accento, solo per le azioni */
   --color-saffron: #f0b429;
-  --color-saffron-deep: #d99a12;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }

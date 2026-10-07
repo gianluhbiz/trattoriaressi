@@ -110,7 +110,7 @@ export function BookingComposer({ compact = false }: { compact?: boolean }) {
                   aria-pressed={service === s}
                   className={`${pill} ${service === s ? 'text-brick-900' : 'text-mortar hover:text-mortar'}`}
                 >
-                  {service === s && <motion.span layoutId="svc-pill" transition={springSnappy} className="absolute inset-0 rounded-full bg-saffron" />}
+                  {service === s && <motion.span layoutId="svc-pill" transition={springSnappy} className="absolute inset-0 rounded-full bg-mortar" />}
                   <span className="relative">{t(SERVICES[s].label)}</span>
                 </button>
               )

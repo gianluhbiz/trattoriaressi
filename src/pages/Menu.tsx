@@ -116,7 +116,7 @@ export default function Menu() {
                 <Reveal as="li" key={d.name} delay={i * 0.05} y={18} className="group py-5 first:pt-0">
                   <div className="flex items-baseline gap-4">
                     <h3 className="font-display text-[clamp(1.35rem,2.2vw,1.85rem)] leading-tight">{d.name}</h3>
-                    <span aria-hidden className="mb-1.5 min-w-6 flex-1 border-b border-dotted border-mortar/30 transition-colors group-hover:border-saffron/70" />
+                    <span aria-hidden className="mb-1.5 min-w-6 flex-1 border-b border-dotted border-mortar/30 transition-colors group-hover:border-mortar/60" />
                     <span className="shrink-0 font-display text-[clamp(1.25rem,2vw,1.6rem)] tabular">
                       {d.price ? euro(d.price) : <span className="font-sans text-sm text-mortar-dim">{t({ it: 'di stagione', en: 'seasonal' })}</span>}
                     </span>

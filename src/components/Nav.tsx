@@ -74,7 +74,7 @@ export function Nav() {
               <NavLink
                 to="/menu"
                 className={({ isActive }) =>
-                  `rounded-full px-3.5 py-2 text-[0.95rem] transition-colors hover:bg-mortar/10 ${isActive ? 'text-saffron' : 'text-mortar/85 hover:text-mortar'}`
+                  `rounded-full px-3.5 py-2 text-[0.95rem] transition-colors hover:bg-mortar/10 ${isActive ? 'text-mortar underline decoration-mortar/60' : 'text-mortar/85 hover:text-mortar'}`
                 }
               >
                 Menu
