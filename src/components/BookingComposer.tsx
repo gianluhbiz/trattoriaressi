@@ -24,8 +24,7 @@ function nextDays(lang: 'it' | 'en', count = 10): Day[] {
   })
 }
 
-const pill =
-  'relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-35'
+const pill = 'relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-35'
 
 /**
  * Prenotazione reale: compone un messaggio WhatsApp con giorno, servizio, orario e coperti
@@ -65,12 +64,12 @@ export function BookingComposer({ compact = false }: { compact?: boolean }) {
         e.preventDefault()
         window.open(waHref, '_blank', 'noopener')
       }}
-      className={`rounded-[28px] border border-mortar/15 bg-brick-900/70 p-4 shadow-[0_30px_60px_-30px_rgba(20,4,2,0.8)] sm:p-5 ${compact ? '' : 'max-w-[560px]'}`}
+      className={`rounded-2xl border border-cream/10 bg-char/95 p-4 shadow-[0_30px_70px_-30px_rgba(0,0,0,0.75)] sm:p-5 ${compact ? '' : 'max-w-[560px]'}`}
       aria-label={t({ it: 'Prenota un tavolo', en: 'Book a table' })}
     >
       <fieldset className="min-w-0">
-        <legend className="mb-2 text-xs font-semibold text-mortar-dim">{t({ it: 'Giorno', en: 'Day' })}</legend>
-        <div className="no-scrollbar -mx-1 flex gap-1.5 overflow-x-auto px-1 pb-1">
+        <legend className="mb-2 text-xs font-semibold text-muted">{t({ it: 'Giorno', en: 'Day' })}</legend>
+        <motion.div layoutScroll className="no-scrollbar -mx-1 flex gap-1.5 overflow-x-auto px-1 pb-1">
           {days.map((d, i) => {
             const closed = d.services.length === 0
             const active = i === dayIdx
@@ -83,22 +82,22 @@ export function BookingComposer({ compact = false }: { compact?: boolean }) {
                 aria-pressed={active}
                 title={closed ? t({ it: 'Mercoledì chiuso', en: 'Closed on Wednesdays' }) : undefined}
                 className={`relative flex min-w-[64px] shrink-0 flex-col items-center rounded-2xl px-2.5 py-2 transition-colors disabled:cursor-not-allowed ${
-                  active ? 'text-brick-900' : closed ? 'text-mortar/35' : 'text-mortar hover:bg-mortar/10'
+                  active ? 'text-ink' : closed ? 'text-cream/35' : 'text-cream hover:bg-cream/10'
                 }`}
               >
-                {active && <motion.span layoutId="day-pill" transition={springSnappy} className="absolute inset-0 rounded-2xl bg-mortar" />}
+                {active && <motion.span layoutId="day-pill" transition={springSnappy} className="absolute inset-0 rounded-2xl bg-cream" />}
                 <span className="relative text-[0.7rem] font-semibold uppercase">{d.label}</span>
                 <span className={`relative text-sm tabular ${closed ? 'line-through' : ''}`}>{d.num}</span>
               </button>
             )
           })}
-        </div>
+        </motion.div>
       </fieldset>
 
       <div className="mt-3 grid grid-cols-[1fr_auto] items-end gap-3">
         <fieldset className="min-w-0">
-          <legend className="mb-2 text-xs font-semibold text-mortar-dim">{t({ it: 'Servizio', en: 'Service' })}</legend>
-          <div className="flex rounded-full bg-brick-950/50 p-1">
+          <legend className="mb-2 text-xs font-semibold text-muted">{t({ it: 'Servizio', en: 'Service' })}</legend>
+          <div className="flex rounded-full bg-ink/60 p-1">
             {(['pranzo', 'cena'] as const).map((s) => {
               const enabled = day.services.includes(s)
               return (
@@ -108,9 +107,9 @@ export function BookingComposer({ compact = false }: { compact?: boolean }) {
                   disabled={!enabled}
                   onClick={() => setService(s)}
                   aria-pressed={service === s}
-                  className={`${pill} ${service === s ? 'text-brick-900' : 'text-mortar hover:text-mortar'}`}
+                  className={`${pill} ${service === s ? 'text-ink' : 'text-cream hover:text-cream'}`}
                 >
-                  {service === s && <motion.span layoutId="svc-pill" transition={springSnappy} className="absolute inset-0 rounded-full bg-mortar" />}
+                  {service === s && <motion.span layoutId="svc-pill" transition={springSnappy} className="absolute inset-0 rounded-full bg-cream" />}
                   <span className="relative">{t(SERVICES[s].label)}</span>
                 </button>
               )
@@ -118,16 +117,15 @@ export function BookingComposer({ compact = false }: { compact?: boolean }) {
           </div>
         </fieldset>
 
-
         <fieldset className="min-w-0">
-          <legend className="mb-2 text-xs font-semibold text-mortar-dim">{t({ it: 'Persone', en: 'Guests' })}</legend>
-          <div className="flex items-center gap-1 rounded-full bg-brick-950/50 p-1">
+          <legend className="mb-2 text-xs font-semibold text-muted">{t({ it: 'Persone', en: 'Guests' })}</legend>
+          <div className="flex items-center gap-1 rounded-full bg-ink/60 p-1">
             <button
               type="button"
               onClick={() => setPeople((p) => Math.max(1, p - 1))}
               disabled={people <= 1}
               aria-label={t({ it: 'Una persona in meno', en: 'One guest less' })}
-              className="grid h-9 w-9 place-items-center rounded-full text-lg hover:bg-mortar/10 disabled:opacity-35"
+              className="grid h-9 w-9 place-items-center rounded-full text-lg hover:bg-cream/10 disabled:opacity-35"
             >
               <Minus aria-hidden size="1.15em" weight="regular" />
             </button>
@@ -138,7 +136,7 @@ export function BookingComposer({ compact = false }: { compact?: boolean }) {
               type="button"
               onClick={() => setPeople((p) => Math.min(40, p + 1))}
               aria-label={t({ it: 'Una persona in più', en: 'One more guest' })}
-              className="grid h-9 w-9 place-items-center rounded-full text-lg hover:bg-mortar/10"
+              className="grid h-9 w-9 place-items-center rounded-full text-lg hover:bg-cream/10"
             >
               <Plus aria-hidden size="1.15em" weight="regular" />
             </button>
@@ -147,8 +145,8 @@ export function BookingComposer({ compact = false }: { compact?: boolean }) {
       </div>
 
       <div className="mt-3">
-      <fieldset className="min-w-0">
-          <legend className="mb-2 text-xs font-semibold text-mortar-dim">{t({ it: 'Orario', en: 'Time' })}</legend>
+        <fieldset className="min-w-0">
+          <legend className="mb-2 text-xs font-semibold text-muted">{t({ it: 'Orario', en: 'Time' })}</legend>
           <div className="flex flex-wrap gap-1.5">
             <AnimatePresence mode="popLayout" initial={false}>
               {SERVICES[service].slots.map((s) => (
@@ -163,7 +161,7 @@ export function BookingComposer({ compact = false }: { compact?: boolean }) {
                   onClick={() => setTime(s)}
                   aria-pressed={time === s}
                   className={`shrink-0 rounded-full border px-3 py-2 text-sm tabular transition-colors ${
-                    time === s ? 'border-mortar bg-mortar text-brick-900' : 'border-mortar/20 text-mortar hover:border-mortar/50'
+                    time === s ? 'border-cream bg-cream text-ink' : 'border-cream/20 text-cream hover:border-cream/50'
                   }`}
                 >
                   {s}
@@ -180,7 +178,7 @@ export function BookingComposer({ compact = false }: { compact?: boolean }) {
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.97 }}
           transition={springSnappy}
-          className="inline-flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-saffron px-6 py-3.5 font-semibold text-brick-900 transition-colors hover:bg-mortar"
+          className="inline-flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-full bg-saffron px-6 py-3.5 font-semibold text-ink transition-colors hover:bg-cream"
         >
           <WhatsappLogo aria-hidden size="1.15em" weight="regular" className="text-lg" />
           {t({ it: 'Prenota su WhatsApp', en: 'Book on WhatsApp' })}
@@ -190,7 +188,7 @@ export function BookingComposer({ compact = false }: { compact?: boolean }) {
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.97 }}
           transition={springSnappy}
-          className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-mortar/30 px-5 py-3.5 font-semibold text-mortar transition-colors hover:border-mortar hover:bg-mortar/10"
+          className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-cream/30 px-5 py-3.5 font-semibold text-cream transition-colors hover:border-cream hover:bg-cream/10"
         >
           <Phone aria-hidden size="1.15em" weight="regular" className="text-lg" />
           <span className="tabular">{PHONE_DISPLAY}</span>
