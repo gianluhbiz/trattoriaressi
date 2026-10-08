@@ -142,7 +142,7 @@ function RoomReveal() {
       <section className="relative h-[90dvh] overflow-hidden">
         <img src="/img/sala.webp" alt="" className="h-full w-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 mx-auto max-w-[1400px] px-4 pb-14 sm:px-6 lg:px-10">{copy}</div>
+        <div className="absolute inset-x-0 bottom-0 mx-auto max-w-[1400px] px-4 pb-28 sm:px-6 lg:px-10 lg:pb-20">{copy}</div>
       </section>
     )
   }
@@ -162,7 +162,7 @@ function RoomReveal() {
         </motion.div>
         <motion.div
           style={{ opacity: textOpacity, y: textY }}
-          className="absolute inset-x-0 bottom-0 mx-auto max-w-[1400px] px-4 pb-14 sm:px-6 lg:px-10 lg:pb-20"
+          className="absolute inset-x-0 bottom-0 mx-auto max-w-[1400px] px-4 pb-28 sm:px-6 lg:px-10 lg:pb-20"
         >
           {copy}
         </motion.div>
@@ -200,7 +200,7 @@ function Story() {
   return (
     <section id="storia" className="mx-auto max-w-[1400px] px-4 py-24 sm:px-6 md:py-36 lg:px-10">
       <div className="grid grid-cols-1 gap-14 md:grid-cols-12 md:gap-10">
-        <div className="md:col-span-7 lg:col-span-7">
+        <div className="md:col-span-7 md:flex md:flex-col md:justify-between">
           <Reveal focus>
             <p className="font-display text-[clamp(1.9rem,3.4vw,3.1rem)] leading-[1.14] font-medium tracking-[-0.03em] text-balance">
               {t({
@@ -215,7 +215,7 @@ function Story() {
               </span>
             </p>
           </Reveal>
-          <Reveal as="ul" delay={0.1} className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6">
+          <Reveal as="ul" delay={0.1} className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6 md:mb-10">
             {facts.map((f) => (
               <li key={f.it} className="border-t border-cream/15 pt-5 leading-relaxed text-cream/85">
                 {t(f)}
@@ -249,7 +249,7 @@ function Kitchen() {
   }
 
   return (
-    <section id="cucina" className="pb-24 md:pb-36">
+    <section id="cucina" className="pt-24 pb-24 md:pt-36 md:pb-36">
       <div className="mx-auto flex max-w-[1400px] flex-col gap-6 px-4 sm:px-6 md:flex-row md:items-end md:justify-between lg:px-10">
         <div>
           <Reveal focus>
@@ -464,7 +464,20 @@ function Reviews() {
             })}
           </p>
         </Reveal>
-        <Reveal delay={0.14} className="mt-8">
+        <Reveal as="ul" delay={0.12} className="mt-10 flex gap-12">
+          {[
+            { score: '4,2', label: 'TripAdvisor', count: { it: '~340 recensioni', en: '~340 reviews' } },
+            { score: '4,2', label: 'Google', count: { it: '473 recensioni', en: '473 reviews' } },
+          ].map((r) => (
+            <li key={r.label}>
+              <p className="font-display text-5xl font-semibold tracking-[-0.035em] tabular">{r.score}</p>
+              <p className="mt-2 text-sm text-muted">
+                {r.label} · {t(r.count)}
+              </p>
+            </li>
+          ))}
+        </Reveal>
+        <Reveal delay={0.16} className="mt-10">
           <a
             href={TRIPADVISOR_URL}
             target="_blank"

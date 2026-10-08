@@ -30,9 +30,12 @@ export function Footer() {
           <a href="https://www.facebook.com/TrattoriaRessi/" target="_blank" rel="noreferrer" className="hover:text-cream hover:underline">Facebook</a>
         </div>
       </div>
-      <div className="mx-auto mt-14 flex max-w-[1400px] flex-col gap-2 border-t border-cream/12 px-4 pt-6 text-sm text-muted sm:flex-row sm:justify-between sm:px-6 lg:px-10">
-        <span>© {new Date().getFullYear()} Trattoria Ressi, Pavia</span>
-        <span>{t({ it: 'Mercoledì chiuso. Domenica solo pranzo.', en: 'Closed Wednesdays. Sunday lunch only.' })}</span>
+      <div className="mx-auto mt-14 max-w-[1400px] px-4 sm:px-6 lg:px-10">
+        <div className="flex flex-col gap-2 border-t border-cream/12 pt-6 text-sm text-muted sm:flex-row sm:justify-between">
+          <span>© {new Date().getFullYear()} Trattoria Ressi, Pavia</span>
+          <span><a href="https://gianluh.dev" target="_blank" rel="noreferrrer">Developed and Designed by Gianluca De Maio</a></span>
+          <span>{t({ it: 'Mercoledì chiuso. Domenica solo pranzo.', en: 'Closed Wednesdays. Sunday lunch only.' })}</span>
+        </div>
       </div>
     </footer>
   )

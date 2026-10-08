@@ -30,7 +30,7 @@ A Pavese trattoria with over 80 years of tradition, in a single 40-seat room und
 - Two routes: Home and Menu (`/menu`).
 - Tasting menu "Ticinum" €50 per person, whole table, not combinable.
 - Vegetarian and gluten-free options are listed by directories.
-- Undecided / not available: online booking engine, Google rating figure (not retrievable), exact founding year (sources conflict: "over 80 years" vs "the 50s"; use the restaurant's own "oltre 80 anni").
+- Undecided / not available: online booking engine, exact founding year (sources conflict: "over 80 years" vs "the 50s"; use the restaurant's own "oltre 80 anni").
 
 ## Brand Commitments
 - Name "Trattoria Ressi". Existing logo/sign: `public/images/insegna.png`, `public/images/insegna-trasparente.png`.
@@ -40,7 +40,8 @@ A Pavese trattoria with over 80 years of tradition, in a single 40-seat room und
 - Real photos from the official site in `public/images/` (room, vault, entrance, street, dishes: risotto, ravioli, polpo, black cod, agnello, Carthusia amaro).
 - TripAdvisor: 4.2/5, ~340 reviews, top 30 of 400+ restaurants in Pavia; Lonely Planet recommendation noted on the listing.
 - Review themes (paraphrase only, no fabricated quotes): risotto praised as the best in Pavia, house bread and desserts, brick-vaulted room, courteous staff.
-- Absent: Google rating, verbatim review texts with author names. Do not fabricate.
+- Google: 4.2/5, 473 reviews (shown on the Maps embed, Oct 2026).
+- Absent: verbatim review texts with author names. Do not fabricate.
 
 ## Product Principles
 1. Booking is one tap away on every screen.
