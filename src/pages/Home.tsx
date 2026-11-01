@@ -192,31 +192,30 @@ function Story() {
       <div className="grid grid-cols-1 gap-14 md:grid-cols-12 md:gap-10">
         <div className="md:col-span-7 lg:col-span-7">
           <Reveal focus>
-            <p className="text-sm font-medium tracking-[0.12em] text-leaf uppercase">{t({ it: 'Post-trattoria sostenibile', en: 'A sustainable post-trattoria' })}</p>
+            <p className="text-sm font-medium tracking-[0.12em] text-leaf uppercase">{t({ it: 'Post-trattoria sostenibile', en: 'Sustainable post-trattoria' })}</p>
             <h2 className="mt-5 font-display text-[clamp(1.9rem,3.4vw,3.1rem)] leading-[1.14] font-medium tracking-[-0.03em] text-balance">
               {t({
-                it: 'Ogni scelta a tavola ha un impatto sul mondo. ',
-                en: 'Every choice at the table has an impact on the world. ',
+                it: 'Ogni scelta che facciamo a tavola ha un impatto sul mondo che ci circonda. ',
+                en: 'Every choice we make at the table has an impact on the world around us. ',
               })}
               <span className="text-muted">
                 {t({
-                  it: 'Così la tradizione della nostra trattoria è diventata una dichiarazione d’intenti etica, d’avanguardia e inclusiva.',
-                  en: 'So we turned our trattoria’s tradition into a statement of intent: ethical, forward-looking and inclusive.',
+                  it: 'Abbiamo deciso di trasformare la tradizione della nostra trattoria in una dichiarazione d’intenti etica, d’avanguardia e inclusiva.',
+                  en: 'We decided to turn the tradition of our trattoria into a statement of intent that is ethical, forward-looking and inclusive.',
                 })}
               </span>
             </h2>
           </Reveal>
-          <Reveal delay={0.1} className="mt-12 max-w-[58ch] space-y-5 text-lg leading-relaxed text-cream/85">
+          <Reveal delay={0.1} className="mt-12 max-w-[58ch] text-lg leading-relaxed text-cream/85">
             <p>
               {t({
-                it: 'Per noi cucinare significa unire la responsabilità ambientale alla concretezza della grande qualità.',
-                en: 'To us, cooking means pairing environmental responsibility with the substance of real quality.',
+                it: 'Per noi, cucinare significa abbinare la responsabilità ambientale alla concretezza della grande qualità. Per questo motivo, ',
+                en: 'For us, cooking means pairing environmental responsibility with the substance of great quality. For this reason, ',
               })}
-            </p>
-            <p>
+              <strong className="font-semibold text-cream">{t({ it: 'abbracciamo il valore del tempo', en: 'we embrace the value of time' })}</strong>
               {t({
-                it: 'Per questo abbracciamo il valore del tempo: la cucina non corre dietro alle urgenze, rispetta i ritmi di preparazione che servono a dare a ogni ospite, senza distinzioni, la massima cura. Vi accogliamo per un’esperienza consapevole.',
-                en: 'That is why we embrace the value of time: the kitchen does not chase urgency, it keeps the preparation times needed to give every guest, without distinction, our full care. We welcome you to a mindful meal.',
+                it: ': non gestiamo la cucina sulle urgenze estemporanee, ma sul rispetto dei ritmi di preparazione necessari a garantire a ogni ospite, senza distinzioni, la massima cura e attenzione. Accogliamo ognuno di voi per offrirvi un’esperienza consapevole.',
+                en: ': we do not run the kitchen on last-minute urgency, but on respect for the preparation times needed to give every guest, without distinction, the utmost care and attention. We welcome each of you to offer you a mindful experience.',
               })}
             </p>
           </Reveal>
@@ -327,31 +326,31 @@ function MenuLink() {
 
 const PILLARS = [
   {
-    title: { it: 'Identità artigianale e genuinità', en: 'Craft and honesty' },
+    title: { it: 'Identità Artigianale & Genuinità', en: 'Artisan Identity & Genuineness' },
     text: {
-      it: 'Crediamo nella manualità. Scegliamo materie prime eccellenti e produciamo in casa i nostri panificati a lievitazione naturale. Quando usiamo ingredienti o semilavorati esterni, scegliamo solo partner con standard altissimi di sostenibilità e purezza.',
-      en: 'We believe in handwork. We choose excellent produce and bake our own naturally leavened bread. When we buy ingredients or prepared items, we choose only partners with the highest standards of sustainability and purity.',
+      it: 'Crediamo nel valore della manualità. Selezioniamo materie prime eccellenti per creare i nostri piatti e produciamo internamente i nostri panificati a lievitazione naturale. Quando utilizziamo ingredienti o semilavorati esterni, lo facciamo scegliendo esclusivamente partner che garantiscono standard altissimi di sostenibilità e purezza.',
+      en: 'We believe in the value of handcraft. We select excellent raw ingredients to create our dishes and bake our own naturally leavened bread in house. When we use outside ingredients or prepared products, we choose only partners who guarantee the highest standards of sustainability and purity.',
     },
   },
   {
-    title: { it: 'Filiere consapevoli, locali e globali', en: 'Mindful supply chains, local and global' },
+    title: { it: 'Filiere Consapevoli (Locali e Globali)', en: 'Mindful Supply Chains (Local and Global)' },
     text: {
-      it: 'Lavoriamo con piccoli artigiani del territorio e con realtà più strutturate. L’unico criterio è la loro visione: scegliamo solo chi investe davvero nella riduzione dell’impatto ambientale e nella tracciabilità.',
-      en: 'We work with small local artisans and larger producers alike. Our only criterion is their vision: we choose only those who truly invest in lower environmental impact and traceability.',
+      it: 'Collaboriamo sia con piccoli artigiani del territorio che con realtà produttive più strutturate. Il nostro unico criterio di scelta è la loro visione: sposiamo solo partner che investono concretamente nella riduzione dell’impatto ambientale e nella tracciabilità.',
+      en: 'We work both with small local artisans and with larger producers. Our only criterion is their vision: we partner only with those who invest concretely in reducing environmental impact and in traceability.',
     },
   },
   {
-    title: { it: 'La salvaguardia animale', en: 'Animal welfare' },
+    title: { it: 'La Salvaguardia Animale', en: 'Animal Welfare' },
     text: {
-      it: 'Abbiamo eliminato qualsiasi prodotto da allevamenti intensivi. Sosteniamo solo filiere trasparenti che mettono al primo posto il benessere animale e la rigenerazione della terra.',
-      en: 'We have removed every product from intensive farming. We support only transparent supply chains that put animal welfare and land regeneration first.',
+      it: 'Abbiamo eliminato drasticamente qualsiasi prodotto proveniente da allevamenti intensivi. Sosteniamo solo filiere trasparenti che mettono al primo posto il benessere animale e la rigenerazione della terra.',
+      en: 'We have drastically eliminated any product from intensive farming. We support only transparent supply chains that put animal welfare and the regeneration of the land first.',
     },
   },
   {
-    title: { it: 'Inclusività e stagionalità vegetale', en: 'Inclusive, seasonal plant cooking' },
+    title: { it: 'Inclusività & Stagionalità Vegetale', en: 'Inclusivity & Plant Seasonality' },
     text: {
-      it: 'La cucina vegetale e vegana non è un’alternativa né una sottrazione: è il cuore del menu. Segue il ritmo delle stagioni, valorizza la biodiversità e accoglie tutti attorno alla stessa tavola.',
-      en: 'Plant-based and vegan cooking is neither an alternative nor a subtraction: it is the heart of the menu. It follows the seasons, celebrates biodiversity and brings everyone to the same table.',
+      it: 'Per noi la cucina vegetale e vegana non è una semplice alternativa o una sottrazione. È il cuore pulsante del nostro menù: una proposta che segue rigorosamente il ritmo delle stagioni e valorizza la biodiversità, studiata per accogliere tutti attorno alla stessa tavola con i giusti tempi di condivisione.',
+      en: 'For us, plant-based and vegan cooking is not a mere alternative or a subtraction. It is the beating heart of our menu: an offer that strictly follows the rhythm of the seasons and celebrates biodiversity, designed to welcome everyone around the same table with the right time for sharing.',
     },
   },
 ]
@@ -363,8 +362,8 @@ const PARTNERS = [
   'Caseificio Vailati',
   'Lo Psicologo delle Api',
   'Altromercato',
-  'METRO (filiere certificate)',
-  'MSC (pesca sostenibile)',
+  'METRO (Filiere Certificate)',
+  'MSC (Pesca Sostenibile)',
   'Cascina Alberona',
   'Pastificio Amadio',
   'Cascina Speziana',
@@ -378,7 +377,7 @@ function Pillars() {
     <section id="filosofia" className="bg-[var(--band)]">
       <div className="mx-auto max-w-[1400px] px-4 py-24 sm:px-6 md:py-32 lg:px-10">
         <Reveal focus>
-          <h2 className={`max-w-[18ch] ${H2}`}>{t({ it: 'I nostri quattro pilastri.', en: 'Our four pillars.' })}</h2>
+          <h2 className={`max-w-[18ch] ${H2}`}>{t({ it: 'I nostri quattro pilastri operativi', en: 'Our four operating pillars' })}</h2>
         </Reveal>
         <Reveal as="ul" delay={0.08} className="mt-14 grid grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-2">
           {PILLARS.map((p, i) => (
@@ -390,7 +389,7 @@ function Pillars() {
           ))}
         </Reveal>
         <Reveal delay={0.12} className="mt-16 border-t border-cream/15 pt-8">
-          <h3 className="text-sm text-muted">{t({ it: 'Filiere sostenibili e partner etici', en: 'Sustainable supply chains and ethical partners' })}</h3>
+          <h3 className="text-sm text-muted">{t({ it: 'Filiere Sostenibili e Partner Etici', en: 'Sustainable Supply Chains and Ethical Partners' })}</h3>
           <ul className="mt-4 flex flex-wrap gap-2">
             {PARTNERS.map((name) => (
               <li key={name} className="rounded-full border border-cream/15 px-3.5 py-1.5 text-sm text-cream/85">

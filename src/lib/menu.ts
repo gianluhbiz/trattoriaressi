@@ -219,26 +219,26 @@ export const COURSES: Course[] = [
 /** Il manifesto dell'orto: le verdure di questa stagione. */
 export const VEGETABLES: { group: L; items: L }[] = [
   {
-    group: { it: 'I bulbi e le basi tradizionali', en: 'Bulbs and traditional bases' },
+    group: { it: 'I Bulbi e le Basi Tradizionali', en: 'Bulbs and Traditional Bases' },
     items: { it: 'Cipolle dorate, cipolle rosse, porri, sedano, aglio.', en: 'Golden onions, red onions, leeks, celery, garlic.' },
   },
   {
-    group: { it: 'Le radici e i tuberi del territorio', en: 'Local roots and tubers' },
+    group: { it: 'Le Radici e i Tuberi del Territorio', en: 'Local Roots and Tubers' },
     items: { it: 'Patate a pasta gialla, carote.', en: 'Yellow-fleshed potatoes, carrots.' },
   },
   {
-    group: { it: 'Gli ortaggi della tradizione rurale', en: 'Rural classics' },
+    group: { it: 'Gli Ortaggi della Tradizione Rurale', en: 'Vegetables of the Rural Tradition' },
     items: { it: 'Zucca, verze, broccoli e cavolfiori.', en: 'Pumpkin, savoy cabbage, broccoli and cauliflower.' },
   },
   {
-    group: { it: 'La selezione dei boschi e dei prati', en: 'From woods and meadows' },
+    group: { it: 'La Selezione dei Boschi e dei Prati', en: 'From the Woods and Meadows' },
     items: {
-      it: 'Funghi Porcini dell’Oltrepò Pavese, Shitake, Cardoncelli, Pleurotus, Portobello e Finferli.',
+      it: 'Funghi Porcini dell’Oltrepò Pavese, funghi Shitake, funghi Cardoncelli, funghi Pleurotus, funghi Portobello e funghi Finferli.',
       en: 'Oltrepò Pavese porcini, shiitake, king oyster, oyster, Portobello and chanterelle mushrooms.',
     },
   },
   {
-    group: { it: 'Le foglie e gli ortaggi da campo', en: 'Leaves and field vegetables' },
+    group: { it: 'Le Foglie e gli Ortaggi da Campo', en: 'Leaves and Field Vegetables' },
     items: { it: 'Scarola fresca, finocchi e piattoni.', en: 'Fresh escarole, fennel and flat beans.' },
   },
 ]

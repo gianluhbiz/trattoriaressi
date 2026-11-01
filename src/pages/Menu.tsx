@@ -190,8 +190,14 @@ export default function Menu() {
               <Reveal>
                 <p className="max-w-[60ch] text-lg leading-relaxed text-cream/85">
                   {t({
-                    it: 'La terra detta il nostro ritmo. Le verdure dei piatti vengono raccolte e cucinate seguendo solo la reale disponibilità del mercato e dei nostri produttori locali. Ecco quelle di questa stagione.',
-                    en: 'The land sets our pace. The vegetables in our dishes are picked and cooked only as the market and our local growers have them. These are this season’s.',
+                    it: 'La terra detta il nostro ritmo. Per garantire la massima genuinità e ridurre l’impatto ambientale, le verdure che compongono i nostri piatti vengono raccolte e cucinate seguendo esclusivamente la reale disponibilità del mercato e dei nostri produttori locali.',
+                    en: 'The land sets our rhythm. To ensure the utmost genuineness and reduce environmental impact, the vegetables in our dishes are harvested and cooked strictly according to what the market and our local producers actually have.',
+                  })}
+                </p>
+                <p className="mt-4 max-w-[60ch] text-lg leading-relaxed text-cream/85">
+                  {t({
+                    it: 'Qui di seguito l’elenco completo dei vegetali di questa stagione che integrano e arricchiscono ogni singola portata:',
+                    en: 'Below is the full list of this season’s vegetables, which complete and enrich every single course:',
                   })}
                 </p>
               </Reveal>
@@ -210,8 +216,8 @@ export default function Menu() {
               </Reveal>
               <p className="mt-6 text-sm text-muted">
                 {t({
-                  it: 'L’elenco cambia con i cicli naturali della terra.',
-                  en: 'The list changes with the natural cycles of the land.',
+                  it: 'Questo elenco viene costantemente aggiornato in base ai cicli naturali della terra.',
+                  en: 'This list is constantly updated according to the natural cycles of the land.',
                 })}
               </p>
             </div>
