@@ -5,8 +5,16 @@ import { Footer } from './components/Footer'
 import { MobileBar } from './components/MobileBar'
 import { Nav } from './components/Nav'
 import { spring } from './lib/motion'
+import Cookie from './pages/Cookie'
 import Home from './pages/Home'
 import Menu from './pages/Menu'
+import Privacy from './pages/Privacy'
+
+const TITLES: Record<string, string> = {
+  '/menu': 'Menu · Trattoria Ressi, Pavia',
+  '/privacy': 'Informativa privacy · Trattoria Ressi',
+  '/cookie': 'Cookie policy · Trattoria Ressi',
+}
 
 /** Ancore (#prenota, #orari...) anche tra una pagina e l'altra; in cima al cambio pagina. */
 function ScrollManager() {
@@ -31,7 +39,7 @@ export default function App() {
   const location = useLocation()
   const reduce = useReducedMotion()
   useEffect(() => {
-    document.title = location.pathname === '/menu' ? 'Menu · Trattoria Ressi, Pavia' : 'Trattoria Ressi · Pavia'
+    document.title = TITLES[location.pathname] ?? 'Trattoria Ressi · Pavia'
   }, [location.pathname])
 
   return (
@@ -53,6 +61,8 @@ export default function App() {
           <Routes location={location}>
             <Route path="/" element={<Home />} />
             <Route path="/menu" element={<Menu />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/cookie" element={<Cookie />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </motion.main>

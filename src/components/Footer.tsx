@@ -1,6 +1,7 @@
 import { Link } from 'react-router'
 import { useLang } from '../lib/i18n'
 import { ADDRESS, EMAIL, MAPS_URL, PHONE_DISPLAY, PHONE_TEL, TRIPADVISOR_URL, WHATSAPP } from '../lib/info'
+import { OWNER } from '../lib/legal'
 import { Logo } from './Logo'
 
 export function Footer() {
@@ -34,6 +35,17 @@ export function Footer() {
         <span>© {new Date().getFullYear()} Trattoria Ressi, Pavia</span>
         <span><a href="https://gianluh.dev" target="_blank" rel="noreferrer">Developed and Designed by Gianluca De Maio</a></span>
         <span>{t({ it: 'Mercoledì chiuso. Domenica solo pranzo.', en: 'Closed Wednesdays. Sunday lunch only.' })}</span>
+      </div>
+      <div className="mx-auto mt-4 flex max-w-[1400px] flex-col gap-3 px-4 text-sm text-muted sm:px-6 lg:flex-row lg:justify-between lg:px-10">
+        <p>
+          {t(OWNER.name)} · {t({ it: 'Sede legale', en: 'Registered office' })} {t(OWNER.office)} · {t({ it: 'P.IVA', en: 'VAT' })} {t(OWNER.vat)} · REA{' '}
+          {t(OWNER.rea)}
+        </p>
+        <nav aria-label={t({ it: 'Note legali', en: 'Legal' })} className="flex flex-wrap gap-x-5 gap-y-2">
+          <Link to="/privacy" className="hover:text-cream hover:underline">{t({ it: 'Privacy', en: 'Privacy' })}</Link>
+          <Link to="/cookie" className="hover:text-cream hover:underline">Cookie policy</Link>
+          <Link to="/cookie#preferenze" className="hover:text-cream hover:underline">{t({ it: 'Preferenze cookie', en: 'Cookie preferences' })}</Link>
+        </nav>
       </div>
     </footer>
   )

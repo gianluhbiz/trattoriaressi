@@ -7,7 +7,7 @@ import { spring, springSnappy } from '../lib/motion'
 import { Logo } from './Logo'
 
 const LINKS: { to: string; label: L }[] = [
-  { to: '/#storia', label: { it: 'La trattoria', en: 'Our story' } },
+  { to: '/#storia', label: { it: 'Filosofia', en: 'Philosophy' } },
   { to: '/#cucina', label: { it: 'Cucina', en: 'Kitchen' } },
   { to: '/#sala', label: { it: 'La sala', en: 'The room' } },
   { to: '/#orari', label: { it: 'Orari e dove', en: 'Hours & map' } },
@@ -51,6 +51,10 @@ export function Nav() {
   }
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
+    if (!open) return
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false)
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
   }, [open])
 
   return (
@@ -84,7 +88,7 @@ export function Nav() {
           <div className="flex items-center gap-3">
             <LangSwitch className="hidden sm:flex" />
             <Link
-              to="#prenota"
+              to={location.pathname === '/menu' ? '#prenota' : '/#prenota'}
               className="hidden rounded-full bg-saffron px-5 py-2.5 text-sm font-semibold text-ink transition-[transform,background-color] duration-300 ease-out-expo hover:bg-cream active:scale-[0.97] sm:inline-flex"
             >
               {t({ it: 'Prenota', en: 'Book' })}

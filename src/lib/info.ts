@@ -11,6 +11,9 @@ export const MAPS_EMBED = 'https://www.google.com/maps?q=Trattoria+Ressi,+Via+Ad
 export const TRIPADVISOR_URL =
   'https://www.tripadvisor.it/Restaurant_Review-g187850-d2084689-Reviews-Trattoria_Ressi-Pavia_Province_of_Pavia_Lombardy.html'
 
+/** Quando sono stati rilevati voto e numero di recensioni TripAdvisor citati in home: da aggiornare a ogni verifica. */
+export const REVIEWS_CHECKED: L = { it: 'ottobre 2026', en: 'October 2026' }
+
 export type Service = 'pranzo' | 'cena'
 
 /** Orari dalla pagina Contatti ufficiale. 0 = domenica. */

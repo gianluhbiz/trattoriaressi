@@ -16,6 +16,8 @@
   --color-muted: #a8998a;
   /* Zafferano: unico accento, solo per le azioni */
   --color-saffron: #f0b429;
+  /* Foglia: solo per i segni vegetariano/vegano del menu, dal verde del logo */
+  --color-leaf: #9cc77a;
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -71,6 +73,44 @@ a {
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none;
+}
+
+/* Testi legali: elenchi, link e tabelle leggibili senza classi su ogni elemento */
+.legal h3 {
+  margin-top: 1.75rem;
+  font-weight: 600;
+  color: var(--color-cream);
+}
+.legal ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.legal li + li {
+  margin-top: 0.4rem;
+}
+.legal a {
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, var(--color-cream) 45%, transparent);
+}
+.legal a:hover {
+  text-decoration-color: var(--color-cream);
+}
+.legal table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+.legal th,
+.legal td {
+  border-bottom: 1px solid color-mix(in oklab, var(--color-cream) 12%, transparent);
+  padding: 0.75rem 1rem 0.75rem 0;
+  text-align: left;
+  vertical-align: top;
+}
+.legal th {
+  color: var(--color-cream);
+  font-weight: 600;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -10,7 +10,7 @@ export function MobileBar() {
   return (
     <div className="fixed inset-x-0 bottom-0 z-30 border-t border-cream/12 bg-char/95 px-4 pt-3 pb-[max(12px,env(safe-area-inset-bottom))] backdrop-blur-md sm:hidden">
       <div className="flex gap-2">
-        <Link to="#prenota" className="flex flex-1 items-center justify-center gap-2 rounded-full bg-saffron py-3 font-semibold text-ink active:scale-[0.98]">
+        <Link to={onMenu ? '#prenota' : '/#prenota'} className="flex flex-1 items-center justify-center gap-2 rounded-full bg-saffron py-3 font-semibold text-ink active:scale-[0.98]">
           {t({ it: 'Prenota', en: 'Book' })}
         </Link>
         <a href={`tel:${PHONE_TEL}`} aria-label={t({ it: 'Chiama la trattoria', en: 'Call the trattoria' })} className="grid w-14 place-items-center rounded-full border border-cream/30 text-xl">

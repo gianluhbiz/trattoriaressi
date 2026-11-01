@@ -1,16 +1,38 @@
+import { Leaf } from '@phosphor-icons/react'
 import { motion, useReducedMotion } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 import { BookingComposer } from '../components/BookingComposer'
 import { Reveal } from '../components/Reveal'
 import { useLang, type L } from '../lib/i18n'
-import { COURSES, TICINUM } from '../lib/menu'
+import { COVER_CHARGE } from '../lib/legal'
+import { ALLERGENS, COURSES, VEGETABLES, type Diet } from '../lib/menu'
 import { spring, springSnappy } from '../lib/motion'
 
 const SECTIONS: { id: string; title: L }[] = [
   ...COURSES.map((c) => ({ id: c.id, title: c.title })),
-  { id: 'ticinum', title: { it: 'Ticinum', en: 'Ticinum' } },
+  { id: 'orto', title: { it: 'L’orto', en: 'The garden' } },
   { id: 'vini', title: { it: 'Vini', en: 'Wine' } },
+  { id: 'allergeni', title: { it: 'Allergeni', en: 'Allergens' } },
 ]
+
+const DIET: Record<Diet, L> = {
+  veg: { it: 'Vegetariano', en: 'Vegetarian' },
+  vegan: { it: 'Vegano', en: 'Vegan' },
+}
+
+function DietTag({ diet }: { diet: Diet }) {
+  const { t } = useLang()
+  return (
+    <span
+      className={`inline-flex shrink-0 items-center gap-1 rounded-full px-2 py-0.5 font-sans text-xs font-medium tracking-normal ${
+        diet === 'vegan' ? 'bg-leaf/15 text-leaf' : 'text-leaf ring-1 ring-leaf/40'
+      }`}
+    >
+      <Leaf aria-hidden size="1.05em" weight={diet === 'vegan' ? 'fill' : 'regular'} />
+      {t(DIET[diet])}
+    </span>
+  )
+}
 
 /** Evidenzia la sezione visibile e porta in vista la sua linguetta. */
 function useActiveSection(ids: string[]) {
@@ -103,8 +125,8 @@ export default function Menu() {
           className="max-w-[46ch] text-lg leading-relaxed text-cream/85 md:col-span-5"
         >
           {t({
-            it: 'La carta cambia con le stagioni. Qui trovate i piatti e i prezzi pubblicati più di recente: chiedete in sala quelli del giorno.',
-            en: 'The menu changes with the seasons. These are the most recently published dishes and prices: ask in the room for today’s.',
+            it: 'La carta di novembre. Cambia con le stagioni e segue i tempi della cucina: ogni piatto è preparato con calma, per ogni ospite.',
+            en: 'The November menu. It changes with the seasons and keeps the kitchen’s own pace: every dish is cooked with care, for every guest.',
           })}
         </motion.p>
       </header>
@@ -134,42 +156,65 @@ export default function Menu() {
                     </span>
                   </div>
                   {d.desc && <p className="mt-1.5 max-w-[56ch] text-cream/80">{t(d.desc)}</p>}
+                  {(d.diet || d.allergens) && (
+                    <div className="mt-2.5 flex flex-wrap items-center gap-x-3 gap-y-1.5">
+                      {d.diet && <DietTag diet={d.diet} />}
+                      {d.allergens && (
+                        <a
+                          href="#allergeni"
+                          className="text-xs text-muted tabular no-underline hover:text-cream"
+                          aria-label={`${t({ it: 'Allergeni', en: 'Allergens' })}: ${d.allergens
+                            .map((n) => t(ALLERGENS.find((a) => a.n === n)!.name))
+                            .join(', ')}`}
+                        >
+                          {t({ it: 'Allergeni', en: 'Allergens' })} {d.allergens.join(' · ')}
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </li>
               ))}
             </Reveal>
           </section>
         ))}
 
-        <section id="ticinum" className="relative left-1/2 w-screen -translate-x-1/2 bg-[var(--band)]">
+        <section id="orto" className="relative left-1/2 w-screen -translate-x-1/2 bg-[var(--band)]">
           <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-6 px-4 py-16 sm:px-6 md:grid-cols-12 md:gap-x-10 md:py-24 lg:px-10">
-            <Reveal focus className="md:col-span-4 md:col-start-1 md:row-start-1">
+            <Reveal focus className="md:col-span-4">
               <h2 className="font-display text-[clamp(2.2rem,4vw,3.5rem)] leading-none font-semibold tracking-[-0.035em]">
-                {t({ it: 'Menu Ticinum', en: 'Ticinum menu' })}
+                {t({ it: 'Le verdure di stagione', en: 'Seasonal vegetables' })}
               </h2>
-              <p className="mt-3 text-muted">
-                {t({ it: 'Quattro portate, anche in versione vegetariana', en: 'Four courses, also in a vegetarian version' })}
-              </p>
+              <p className="mt-3 text-muted">{t({ it: 'Il manifesto dell’orto', en: 'The garden manifesto' })}</p>
             </Reveal>
-            <Reveal as="ul" delay={0.08} className="md:col-span-8 md:col-start-5 md:row-span-2 md:row-start-1">
-              {TICINUM.courses.map((c) => (
-                <li
-                  key={c.name}
-                  className="grid grid-cols-[5.5rem_1fr] items-baseline gap-4 border-b border-cream/10 py-5 first:pt-0 sm:grid-cols-[7rem_1fr]"
-                >
-                  <span className="text-sm text-muted">{t(c.course)}</span>
-                  <span className="font-display text-[clamp(1.3rem,2.1vw,1.75rem)] leading-snug font-medium tracking-[-0.02em]">{c.name}</span>
-                </li>
-              ))}
-            </Reveal>
-            <Reveal delay={0.12} className="mt-4 md:col-span-4 md:col-start-1 md:row-start-2 md:mt-0">
-              <p className="font-display text-6xl font-semibold tracking-[-0.04em] tabular">{euro(TICINUM.price)}</p>
-              <p className="mt-3 max-w-[30ch] text-sm text-muted">
+            <div className="md:col-span-8">
+              <Reveal>
+                <p className="max-w-[60ch] text-lg leading-relaxed text-cream/85">
+                  {t({
+                    it: 'La terra detta il nostro ritmo. Le verdure dei piatti vengono raccolte e cucinate seguendo solo la reale disponibilità del mercato e dei nostri produttori locali. Ecco quelle di questa stagione.',
+                    en: 'The land sets our pace. The vegetables in our dishes are picked and cooked only as the market and our local growers have them. These are this season’s.',
+                  })}
+                </p>
+              </Reveal>
+              <Reveal delay={0.08} className="mt-10">
+                <dl>
+                  {VEGETABLES.map((v) => (
+                    <div
+                      key={v.group.it}
+                      className="grid grid-cols-1 gap-1 border-b border-cream/10 py-4 first:pt-0 sm:grid-cols-[minmax(0,15rem)_1fr] sm:gap-6"
+                    >
+                      <dt className="text-sm text-muted">{t(v.group)}</dt>
+                      <dd className="font-display text-[clamp(1.15rem,1.7vw,1.4rem)] leading-snug font-medium tracking-[-0.015em]">{t(v.items)}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </Reveal>
+              <p className="mt-6 text-sm text-muted">
                 {t({
-                  it: 'A persona. Per tutto il tavolo, non cumulabile con altre offerte.',
-                  en: 'Per person. For the whole table, not combinable with other offers.',
+                  it: 'L’elenco cambia con i cicli naturali della terra.',
+                  en: 'The list changes with the natural cycles of the land.',
                 })}
               </p>
-            </Reveal>
+            </div>
           </div>
         </section>
 
@@ -197,17 +242,66 @@ export default function Menu() {
           </Reveal>
         </section>
 
-        <aside className="grid grid-cols-1 gap-4 border-t border-cream/15 pt-8 text-sm text-muted md:grid-cols-2">
+        <section id="allergeni" className="grid grid-cols-1 gap-6 border-t border-cream/15 py-16 md:grid-cols-12 md:gap-10 md:py-24">
+          <div className="md:col-span-4">
+            <Reveal focus>
+              <h2 className="font-display text-[clamp(2.2rem,4vw,3.5rem)] leading-none font-semibold tracking-[-0.035em]">
+                {t({ it: 'Allergeni', en: 'Allergens' })}
+              </h2>
+              <p className="mt-3 text-muted">{t({ it: 'Reg. UE 1169/2011', en: 'EU Reg. 1169/2011' })}</p>
+            </Reveal>
+          </div>
+          <Reveal className="md:col-span-8">
+            <table className="w-full border-collapse text-left">
+              <caption className="sr-only">{t({ it: 'Tabella allergeni del menu attuale', en: 'Allergens in the current menu' })}</caption>
+              <thead className="sr-only">
+                <tr>
+                  <th scope="col">N°</th>
+                  <th scope="col">{t({ it: 'Allergene', en: 'Allergen' })}</th>
+                  <th scope="col">{t({ it: 'Presenza nel menu', en: 'Where in the menu' })}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {ALLERGENS.map((a) => (
+                  <tr key={a.n} className="border-b border-cream/10 align-baseline">
+                    <td className="w-10 py-3 pr-3 text-sm text-muted tabular">{a.n}</td>
+                    <th scope="row" className={`py-3 pr-4 font-medium ${a.where ? '' : 'text-muted'}`}>
+                      {t(a.name)}
+                    </th>
+                    <td className="py-3 text-sm text-cream/80">
+                      {a.where ? t(a.where) : <span className="text-muted">{t({ it: 'Assente', en: 'None' })}</span>}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            <p className="mt-6 max-w-[60ch] text-sm text-muted">
+              {t({
+                it: 'Per qualsiasi allergia o intolleranza, informate il personale di sala prima di ordinare.',
+                en: 'For any allergy or intolerance, please tell our staff before ordering.',
+              })}
+            </p>
+          </Reveal>
+        </section>
+
+        <aside className="grid grid-cols-1 gap-4 border-t border-cream/15 pt-8 text-sm text-muted md:grid-cols-3">
           <p>
             {t({
-              it: 'Opzioni vegetariane e senza glutine: segnalatele al momento della prenotazione.',
-              en: 'Vegetarian and gluten-free options: let us know when you book.',
+              it: 'Prezzi in euro, IVA inclusa.',
+              en: 'Prices in euro, VAT included.',
+            })}{' '}
+            {t({ it: 'Coperto:', en: 'Cover charge:' })} {t(COVER_CHARGE)}
+          </p>
+          <p>
+            {t({
+              it: 'Vegetariano e vegano sono segnati accanto a ogni piatto. Per esigenze senza glutine, segnalatelo alla prenotazione.',
+              en: 'Vegetarian and vegan dishes are marked. For gluten-free needs, let us know when you book.',
             })}
           </p>
           <p>
             {t({
-              it: 'Allergeni: chiedete al personale, che vi indicherà gli ingredienti di ogni piatto.',
-              en: 'Allergens: ask our staff for the ingredients of every dish.',
+              it: 'I numeri accanto ai piatti rimandano alla tabella allergeni. Le verdure variano con il mercato: in caso di dubbi chiedete al personale.',
+              en: 'The numbers by each dish refer to the allergen table. Vegetables vary with the market: if in doubt, ask our staff.',
             })}
           </p>
         </aside>

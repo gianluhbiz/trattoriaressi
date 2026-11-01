@@ -3,14 +3,15 @@ import { motion, useMotionTemplate, useReducedMotion, useScroll, useSpring, useT
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router'
 import { BookingComposer } from '../components/BookingComposer'
+import { MapEmbed } from '../components/MapEmbed'
 import { Reveal } from '../components/Reveal'
 import { useLang } from '../lib/i18n'
 import {
   ADDRESS,
   currentStatus,
   EMAIL,
-  MAPS_EMBED,
   MAPS_URL,
+  REVIEWS_CHECKED,
   romeNow,
   SERVICES,
   servicesOn,
@@ -18,7 +19,7 @@ import {
   TRIPADVISOR_URL,
   WEEKDAYS,
 } from '../lib/info'
-import { PLATES, TICINUM } from '../lib/menu'
+import { PLATES } from '../lib/menu'
 import { scrollSmooth, spring, springSlide, springSnappy, springSoft } from '../lib/motion'
 
 const H2 = 'font-display text-[clamp(2.4rem,5vw,4.5rem)] leading-[1.02] font-semibold tracking-[-0.035em] text-balance'
@@ -186,41 +187,38 @@ function ParallaxImage({ src, alt, className = '' }: { src: string; alt: string;
 
 function Story() {
   const { t } = useLang()
-  const facts = [
-    {
-      it: 'Il riso è Carnaroli della Cascina Alberona, coltivato in provincia.',
-      en: 'The rice is Carnaroli from Cascina Alberona, grown in the province.',
-    },
-    { it: 'Pane, focaccia, pasta e dolci si fanno ogni giorno in casa.', en: 'Bread, focaccia, pasta and desserts are made in house every day.' },
-    {
-      it: 'Più di cento etichette in cantina, quasi tutte dell’Oltrepò Pavese.',
-      en: 'Over a hundred wines in the cellar, mostly from the Oltrepò Pavese.',
-    },
-  ]
   return (
     <section id="storia" className="mx-auto max-w-[1400px] px-4 py-24 sm:px-6 md:py-36 lg:px-10">
       <div className="grid grid-cols-1 gap-14 md:grid-cols-12 md:gap-10">
         <div className="md:col-span-7 lg:col-span-7">
           <Reveal focus>
-            <p className="font-display text-[clamp(1.9rem,3.4vw,3.1rem)] leading-[1.14] font-medium tracking-[-0.03em] text-balance">
+            <p className="text-sm font-medium tracking-[0.12em] text-leaf uppercase">{t({ it: 'Post-trattoria sostenibile', en: 'A sustainable post-trattoria' })}</p>
+            <h2 className="mt-5 font-display text-[clamp(1.9rem,3.4vw,3.1rem)] leading-[1.14] font-medium tracking-[-0.03em] text-balance">
               {t({
-                it: 'Una trattoria pavese di famiglia, nel centro storico. ',
-                en: 'A family-run Pavese trattoria in the old town. ',
+                it: 'Ogni scelta a tavola ha un impatto sul mondo. ',
+                en: 'Every choice at the table has an impact on the world. ',
               })}
               <span className="text-muted">
                 {t({
-                  it: 'In via Adeodato Ressi, la via che costeggia le antiche mura, a pochi passi dal Comune.',
-                  en: 'On via Adeodato Ressi, the lane along the old walls, a few steps from the town hall.',
+                  it: 'Così la tradizione della nostra trattoria è diventata una dichiarazione d’intenti etica, d’avanguardia e inclusiva.',
+                  en: 'So we turned our trattoria’s tradition into a statement of intent: ethical, forward-looking and inclusive.',
                 })}
               </span>
-            </p>
+            </h2>
           </Reveal>
-          <Reveal as="ul" delay={0.1} className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-6">
-            {facts.map((f) => (
-              <li key={f.it} className="border-t border-cream/15 pt-5 leading-relaxed text-cream/85">
-                {t(f)}
-              </li>
-            ))}
+          <Reveal delay={0.1} className="mt-12 max-w-[58ch] space-y-5 text-lg leading-relaxed text-cream/85">
+            <p>
+              {t({
+                it: 'Per noi cucinare significa unire la responsabilità ambientale alla concretezza della grande qualità.',
+                en: 'To us, cooking means pairing environmental responsibility with the substance of real quality.',
+              })}
+            </p>
+            <p>
+              {t({
+                it: 'Per questo abbracciamo il valore del tempo: la cucina non corre dietro alle urgenze, rispetta i ritmi di preparazione che servono a dare a ogni ospite, senza distinzioni, la massima cura. Vi accogliamo per un’esperienza consapevole.',
+                en: 'That is why we embrace the value of time: the kitchen does not chase urgency, it keeps the preparation times needed to give every guest, without distinction, our full care. We welcome you to a mindful meal.',
+              })}
+            </p>
           </Reveal>
         </div>
         <Reveal className="md:col-span-5 md:col-start-8" y={40}>
@@ -284,6 +282,9 @@ function Kitchen() {
       <Reveal y={24}>
         <div
           ref={track}
+          tabIndex={0}
+          role="region"
+          aria-label={t({ it: 'Foto dei piatti, scorrevoli', en: 'Dish photos, scrollable' })}
           className="no-scrollbar mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth px-4 sm:px-6 lg:px-10 scroll-px-4 sm:scroll-px-6 lg:scroll-px-10 xl:px-[max(2.5rem,calc((100vw_-_1400px)/2_+_2.5rem))] xl:scroll-px-[max(2.5rem,calc((100vw_-_1400px)/2_+_2.5rem))]"
         >
           {PLATES.map((p) => (
@@ -324,49 +325,83 @@ function MenuLink() {
   )
 }
 
-function Ticinum() {
+const PILLARS = [
+  {
+    title: { it: 'Identità artigianale e genuinità', en: 'Craft and honesty' },
+    text: {
+      it: 'Crediamo nella manualità. Scegliamo materie prime eccellenti e produciamo in casa i nostri panificati a lievitazione naturale. Quando usiamo ingredienti o semilavorati esterni, scegliamo solo partner con standard altissimi di sostenibilità e purezza.',
+      en: 'We believe in handwork. We choose excellent produce and bake our own naturally leavened bread. When we buy ingredients or prepared items, we choose only partners with the highest standards of sustainability and purity.',
+    },
+  },
+  {
+    title: { it: 'Filiere consapevoli, locali e globali', en: 'Mindful supply chains, local and global' },
+    text: {
+      it: 'Lavoriamo con piccoli artigiani del territorio e con realtà più strutturate. L’unico criterio è la loro visione: scegliamo solo chi investe davvero nella riduzione dell’impatto ambientale e nella tracciabilità.',
+      en: 'We work with small local artisans and larger producers alike. Our only criterion is their vision: we choose only those who truly invest in lower environmental impact and traceability.',
+    },
+  },
+  {
+    title: { it: 'La salvaguardia animale', en: 'Animal welfare' },
+    text: {
+      it: 'Abbiamo eliminato qualsiasi prodotto da allevamenti intensivi. Sosteniamo solo filiere trasparenti che mettono al primo posto il benessere animale e la rigenerazione della terra.',
+      en: 'We have removed every product from intensive farming. We support only transparent supply chains that put animal welfare and land regeneration first.',
+    },
+  },
+  {
+    title: { it: 'Inclusività e stagionalità vegetale', en: 'Inclusive, seasonal plant cooking' },
+    text: {
+      it: 'La cucina vegetale e vegana non è un’alternativa né una sottrazione: è il cuore del menu. Segue il ritmo delle stagioni, valorizza la biodiversità e accoglie tutti attorno alla stessa tavola.',
+      en: 'Plant-based and vegan cooking is neither an alternative nor a subtraction: it is the heart of the menu. It follows the seasons, celebrates biodiversity and brings everyone to the same table.',
+    },
+  },
+]
+
+const PARTNERS = [
+  'GranVarzi',
+  'Fratelli Daturi',
+  'Caseificio Brusati',
+  'Caseificio Vailati',
+  'Lo Psicologo delle Api',
+  'Altromercato',
+  'METRO (filiere certificate)',
+  'MSC (pesca sostenibile)',
+  'Cascina Alberona',
+  'Pastificio Amadio',
+  'Cascina Speziana',
+  'Caffè del Caravaggio',
+  'Acqua Valverde',
+]
+
+function Pillars() {
   const { t } = useLang()
   return (
-    <section className="bg-[var(--band)]">
-      <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-12 px-4 py-24 sm:px-6 md:grid-cols-12 md:py-32 lg:px-10">
-        <div className="md:col-span-5">
-          <Reveal focus>
-            <h2 className={H2}>{t({ it: 'Menu Ticinum', en: 'The Ticinum menu' })}</h2>
-          </Reveal>
-          <Reveal delay={0.08}>
-            <p className="mt-5 max-w-[40ch] text-lg leading-relaxed text-cream/80">
-              {t({
-                it: 'Ticinum era il nome romano di Pavia. Quattro portate della tradizione, anche in versione vegetariana.',
-                en: 'Ticinum was the Roman name of Pavia. Four traditional courses, also in a vegetarian version.',
-              })}
-            </p>
-            <p className="mt-10 font-display text-6xl font-semibold tracking-[-0.035em] tabular">
-              €{TICINUM.price}
-              <span className="ml-3 align-middle font-sans text-base font-normal tracking-normal text-muted">
-                {t({ it: 'a persona', en: 'per person' })}
-              </span>
-            </p>
-            <p className="mt-3 text-sm text-muted">
-              {t({ it: 'Per tutto il tavolo, non cumulabile con altre offerte.', en: 'For the whole table, not combinable with other offers.' })}
-            </p>
-          </Reveal>
-        </div>
-        <Reveal className="md:col-span-7 md:col-start-6 lg:col-span-6 lg:col-start-7">
-          <ol>
-            {TICINUM.courses.map((c) => (
-              <li
-                key={c.name}
-                className="grid grid-cols-[6.5rem_1fr] items-baseline gap-4 border-b border-cream/10 py-6 first:pt-0 sm:grid-cols-[8rem_1fr]"
-              >
-                <span className="text-sm text-muted">{t(c.course)}</span>
-                <span className="font-display text-[clamp(1.35rem,2.3vw,1.9rem)] leading-snug font-medium tracking-[-0.02em]">{c.name}</span>
+    <section id="filosofia" className="bg-[var(--band)]">
+      <div className="mx-auto max-w-[1400px] px-4 py-24 sm:px-6 md:py-32 lg:px-10">
+        <Reveal focus>
+          <h2 className={`max-w-[18ch] ${H2}`}>{t({ it: 'I nostri quattro pilastri.', en: 'Our four pillars.' })}</h2>
+        </Reveal>
+        <Reveal as="ul" delay={0.08} className="mt-14 grid grid-cols-1 gap-x-10 gap-y-12 md:grid-cols-2">
+          {PILLARS.map((p, i) => (
+            <li key={p.title.it} className="border-t border-cream/15 pt-6">
+              <p className="font-display text-sm font-medium text-leaf tabular">0{i + 1}</p>
+              <h3 className="mt-3 font-display text-[clamp(1.4rem,2.2vw,1.85rem)] leading-tight font-medium tracking-[-0.02em]">{t(p.title)}</h3>
+              <p className="mt-3 max-w-[54ch] leading-relaxed text-cream/80">{t(p.text)}</p>
+            </li>
+          ))}
+        </Reveal>
+        <Reveal delay={0.12} className="mt-16 border-t border-cream/15 pt-8">
+          <h3 className="text-sm text-muted">{t({ it: 'Filiere sostenibili e partner etici', en: 'Sustainable supply chains and ethical partners' })}</h3>
+          <ul className="mt-4 flex flex-wrap gap-2">
+            {PARTNERS.map((name) => (
+              <li key={name} className="rounded-full border border-cream/15 px-3.5 py-1.5 text-sm text-cream/85">
+                {name}
               </li>
             ))}
-          </ol>
-          <div className="mt-10">
-            <MenuLink />
-          </div>
+          </ul>
         </Reveal>
+        <div className="mt-12">
+          <MenuLink />
+        </div>
       </div>
     </section>
   )
@@ -427,7 +462,12 @@ function Room() {
         {t(ROOMS[active].alt)}
       </p>
 
-      <div className="no-scrollbar -mx-4 mt-10 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 md:hidden">
+      <div
+        tabIndex={0}
+        role="region"
+        aria-label={t({ it: 'Foto della sala, scorrevoli', en: 'Room photos, scrollable' })}
+        className="no-scrollbar -mx-4 mt-10 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 md:hidden"
+      >
         {ROOMS.map((r) => (
           <figure key={r.src} className="w-[78%] shrink-0 snap-center">
             <div className="aspect-[3/4] overflow-hidden rounded-md">
@@ -474,6 +514,12 @@ function Reviews() {
             {t({ it: 'Leggi le recensioni su TripAdvisor', en: 'Read the reviews on TripAdvisor' })}
             <ArrowUpRight aria-hidden size="1.1em" />
           </a>
+          <p className="mt-5 max-w-[52ch] text-sm text-muted">
+            {t({
+              it: `Voto e numero di recensioni rilevati su TripAdvisor a ${REVIEWS_CHECKED.it}. Le recensioni sono raccolte, pubblicate e moderate da TripAdvisor secondo le sue regole: la trattoria non le seleziona e non ne verifica la provenienza.`,
+              en: `Rating and number of reviews as shown on TripAdvisor in ${REVIEWS_CHECKED.en}. Reviews are collected, published and moderated by TripAdvisor under its own rules: the trattoria does not select them or verify where they come from.`,
+            })}
+          </p>
         </Reveal>
       </div>
     </section>
@@ -539,14 +585,8 @@ function Hours() {
           </Reveal>
         </div>
         <Reveal className="lg:col-span-7" y={40}>
-          <div className="relative aspect-[4/5] overflow-hidden rounded-md bg-ember sm:aspect-[5/4] lg:aspect-auto lg:h-full lg:min-h-[560px]">
-            <iframe
-              title={t({ it: 'Mappa: Trattoria Ressi, via Adeodato Ressi 8, Pavia', en: 'Map: Trattoria Ressi, 8 via Adeodato Ressi, Pavia' })}
-              src={MAPS_EMBED}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              className="absolute inset-0 h-full w-full border-0 [filter:invert(0.9)_hue-rotate(180deg)_saturate(0.55)_brightness(0.95)_sepia(0.15)]"
-            />
+          <div className="relative aspect-[4/5] min-h-[460px] overflow-hidden rounded-md bg-ember sm:aspect-[5/4] sm:min-h-0 lg:aspect-auto lg:h-full lg:min-h-[560px]">
+            <MapEmbed />
           </div>
         </Reveal>
       </div>
@@ -561,7 +601,7 @@ export default function Home() {
       <Story />
       <RoomReveal />
       <Kitchen />
-      <Ticinum />
+      <Pillars />
       <Room />
       <Reviews />
       <Hours />
