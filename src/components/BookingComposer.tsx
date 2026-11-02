@@ -2,7 +2,7 @@ import { Minus, Phone, Plus, WhatsappLogo } from '@phosphor-icons/react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useMemo, useState } from 'react'
 import { useLang } from '../lib/i18n'
-import { PHONE_DISPLAY, PHONE_TEL, romeNow, SERVICES, servicesOn, WEEKDAYS, WHATSAPP, type Service } from '../lib/info'
+import { fmtTime, PHONE_DISPLAY, PHONE_TEL, romeNow, SERVICES, servicesOn, WEEKDAYS, WHATSAPP, type Service } from '../lib/info'
 import { springSnappy } from '../lib/motion'
 
 type Day = { date: Date; weekday: number; label: string; num: string; services: Service[] }
@@ -53,7 +53,7 @@ export function BookingComposer({ compact = false }: { compact?: boolean }) {
 
   const message =
     lang === 'it'
-      ? `Buongiorno, vorrei prenotare un tavolo per ${people} ${people === 1 ? 'persona' : 'persone'} ${dateLong}, ${SERVICES[service].label.it.toLowerCase()} alle ${time}. Grazie!`
+      ? `Buongiorno, vorrei prenotare un tavolo per ${people} ${people === 1 ? 'persona' : 'persone'} ${dateLong}, ${SERVICES[service].label.it.toLowerCase()} alle ${fmtTime(time, 'it')}. Grazie!`
       : `Hello, I would like to book a table for ${people} ${people === 1 ? 'person' : 'people'} on ${dateLong}, ${SERVICES[service].label.en.toLowerCase()} at ${time}. Thank you!`
   const waHref = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(message)}`
 
@@ -146,7 +146,7 @@ export function BookingComposer({ compact = false }: { compact?: boolean }) {
 
       <div className="mt-3">
         <fieldset className="min-w-0">
-          <legend className="mb-2 text-xs font-semibold text-muted">{t({ it: 'Orario', en: 'Time' })}</legend>
+          <legend className="mb-2 text-xs font-semibold text-muted">{t({ it: 'Orario di arrivo', en: 'Arrival time' })}</legend>
           <div className="flex flex-wrap gap-1.5">
             <AnimatePresence mode="popLayout" initial={false}>
               {SERVICES[service].slots.map((s) => (
@@ -164,7 +164,7 @@ export function BookingComposer({ compact = false }: { compact?: boolean }) {
                     time === s ? 'border-cream bg-cream text-ink' : 'border-cream/20 text-cream hover:border-cream/50'
                   }`}
                 >
-                  {s}
+                  {fmtTime(s, lang)}
                 </motion.button>
               ))}
             </AnimatePresence>

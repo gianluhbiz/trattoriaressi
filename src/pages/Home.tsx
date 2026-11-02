@@ -10,6 +10,7 @@ import {
   ADDRESS,
   currentStatus,
   EMAIL,
+  fmtTime,
   MAPS_URL,
   REVIEWS_CHECKED,
   romeNow,
@@ -88,7 +89,7 @@ function Hero() {
             className="mt-6 max-w-[44ch] text-lg leading-relaxed text-cream/85"
           >
             {t({
-              it: 'Trattoria di famiglia a due passi da San Michele. Risotti di Carnaroli, pasta fatta in casa, vini dell’Oltrepò.',
+              it: 'Trattoria di famiglia a due passi da San Michele. Risotto Carnaroli, pasta fatta in casa, vini dell’Oltrepò.',
               en: 'A family trattoria steps from San Michele. Carnaroli risotto, house-made pasta, Oltrepò wines.',
             })}
           </motion.p>
@@ -526,7 +527,7 @@ function Reviews() {
 }
 
 function Hours() {
-  const { t } = useLang()
+  const { lang, t } = useLang()
   const today = romeNow().day
   const order = [1, 2, 3, 4, 5, 6, 0]
   return (
@@ -540,8 +541,15 @@ function Hours() {
             <StatusLine />
           </Reveal>
           <Reveal delay={0.1}>
-            <table className="mt-8 w-full">
-              <caption className="sr-only">{t({ it: 'Orari di apertura', en: 'Opening hours' })}</caption>
+            <h3 className="mt-8 font-display text-xl font-medium tracking-[-0.02em]">{t({ it: 'Orari di prenotazione', en: 'Booking times' })}</h3>
+            <p className="mt-2 max-w-[44ch] text-sm text-muted">
+              {t({
+                it: 'Le fasce in cui potete prenotare il tavolo: pranzi dalle 12.00 alle 13.30, cene dalle 19.00 alle 21.00.',
+                en: 'The times you can book a table for: lunch from 12:00 to 13:30, dinner from 19:00 to 21:00.',
+              })}
+            </p>
+            <table className="mt-4 w-full">
+              <caption className="sr-only">{t({ it: 'Orari di prenotazione', en: 'Booking times' })}</caption>
               <tbody>
                 {order.map((d) => {
                   const svcs = servicesOn(d)
@@ -556,7 +564,14 @@ function Hours() {
                         {svcs.length === 0 ? (
                           <span className="text-muted">{t({ it: 'Chiuso', en: 'Closed' })}</span>
                         ) : (
-                          svcs.map((s) => `${SERVICES[s].from}-${SERVICES[s].to}`).join('  ·  ')
+                          <span className="flex flex-col items-end gap-0.5">
+                            {svcs.map((s) => (
+                              <span key={s} className="whitespace-nowrap">
+                                <span className="text-muted">{t(SERVICES[s].label)}</span>{' '}
+                                {fmtTime(SERVICES[s].from, lang)}-{fmtTime(SERVICES[s].to, lang)}
+                              </span>
+                            ))}
+                          </span>
                         )}
                       </td>
                     </tr>

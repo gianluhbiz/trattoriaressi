@@ -16,21 +16,27 @@ export const REVIEWS_CHECKED: L = { it: 'ottobre 2026', en: 'October 2026' }
 
 export type Service = 'pranzo' | 'cena'
 
-/** Orari dalla pagina Contatti ufficiale. 0 = domenica. */
+/**
+ * Orari di prenotazione (fascia in cui si può prenotare l'arrivo), non di chiusura.
+ * Indicati dal cliente: pranzi 12.00-13.30, cene 19.00-21.00. 0 = domenica.
+ */
 export const SERVICES: Record<Service, { from: string; to: string; label: L; slots: string[] }> = {
   pranzo: {
-    from: '12:30',
-    to: '14:00',
+    from: '12:00',
+    to: '13:30',
     label: { it: 'Pranzo', en: 'Lunch' },
-    slots: ['12:30', '12:45', '13:00', '13:15', '13:30'],
+    slots: ['12:00', '12:15', '12:30', '12:45', '13:00', '13:15', '13:30'],
   },
   cena: {
-    from: '19:30',
-    to: '21:30',
+    from: '19:00',
+    to: '21:00',
     label: { it: 'Cena', en: 'Dinner' },
-    slots: ['19:30', '19:45', '20:00', '20:15', '20:30', '20:45', '21:00'],
+    slots: ['19:00', '19:15', '19:30', '19:45', '20:00', '20:15', '20:30', '20:45', '21:00'],
   },
 }
+
+/** Orario leggibile: 12.30 in italiano, 12:30 in inglese. */
+export const fmtTime = (hhmm: string, lang: 'it' | 'en') => (lang === 'it' ? hhmm.replace(':', '.') : hhmm)
 
 export function servicesOn(day: number): Service[] {
   if (day === 3) return [] // mercoledì chiuso
@@ -74,7 +80,7 @@ export type Status =
 export function currentStatus(date = new Date()): Status {
   const { day, minutes } = romeNow(date)
   for (const s of servicesOn(day)) {
-    if (minutes >= toMin(SERVICES[s].from) && minutes < toMin(SERVICES[s].to)) {
+    if (minutes >= toMin(SERVICES[s].from) && minutes <= toMin(SERVICES[s].to)) {
       return { open: true, service: s, until: SERVICES[s].to }
     }
   }
@@ -85,17 +91,22 @@ export function currentStatus(date = new Date()): Status {
       return { open: false, nextDay: d, nextService: s, at: SERVICES[s].from, sameDay: offset === 0, tomorrow: offset === 1 }
     }
   }
-  return { open: false, nextDay: 4, nextService: 'pranzo', at: '12:30', sameDay: false, tomorrow: false }
+  return { open: false, nextDay: 4, nextService: 'pranzo', at: '12:00', sameDay: false, tomorrow: false }
 }
 
+/** Stato in base agli orari di prenotazione: non dice mai "chiuso" fuori fascia, indica la prossima fascia utile. */
 export function statusText(s: Status, lang: 'it' | 'en') {
   if (s.open) {
     const svc = SERVICES[s.service].label[lang].toLowerCase()
-    return lang === 'it' ? `Aperto ora, ${svc} fino alle ${s.until}` : `Open now, ${svc} until ${s.until}`
+    const until = fmtTime(s.until, lang)
+    return lang === 'it' ? `Prenotazioni a ${svc} fino alle ${until}` : `${SERVICES[s.service].label.en} bookings until ${until}`
   }
   const svc = SERVICES[s.nextService].label[lang].toLowerCase()
-  if (s.sameDay) return lang === 'it' ? `Chiuso ora, si riapre per ${svc} alle ${s.at}` : `Closed now, reopening for ${svc} at ${s.at}`
-  if (s.tomorrow) return lang === 'it' ? `Chiuso ora, domani ${svc} dalle ${s.at}` : `Closed now, ${svc} tomorrow from ${s.at}`
+  const at = fmtTime(s.at, lang)
+  if (s.sameDay) return lang === 'it' ? `Prenotazioni a ${svc} dalle ${at}` : `${SERVICES[s.nextService].label.en} bookings from ${at}`
+  if (s.tomorrow) return lang === 'it' ? `Prossime prenotazioni: domani a ${svc}, dalle ${at}` : `Next bookings: ${svc} tomorrow, from ${at}`
   const day = WEEKDAYS[s.nextDay][lang]
-  return lang === 'it' ? `Chiuso ora, riapre ${day.toLowerCase()} alle ${s.at}` : `Closed now, reopening ${day} at ${s.at}`
+  return lang === 'it'
+    ? `Prossime prenotazioni: ${day.toLowerCase()} a ${svc}, dalle ${at}`
+    : `Next bookings: ${svc} on ${day}, from ${at}`
 }
