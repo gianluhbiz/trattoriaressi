@@ -1,7 +1,7 @@
 import { Link } from 'react-router'
 import { useLang } from '../lib/i18n'
 import { ADDRESS, EMAIL, MAPS_URL, PHONE_DISPLAY, PHONE_TEL, TRIPADVISOR_URL, WHATSAPP } from '../lib/info'
-import { OWNER } from '../lib/legal'
+import { isTodo, OWNER } from '../lib/legal'
 import { Logo } from './Logo'
 
 export function Footer() {
@@ -38,8 +38,8 @@ export function Footer() {
       </div>
       <div className="mx-auto mt-4 flex max-w-[1400px] flex-col gap-3 px-4 text-sm text-muted sm:px-6 lg:flex-row lg:justify-between lg:px-10">
         <p>
-          {t(OWNER.name)} · {t({ it: 'Sede legale', en: 'Registered office' })} {t(OWNER.office)} · {t({ it: 'P.IVA', en: 'VAT' })} {t(OWNER.vat)} · REA{' '}
-          {t(OWNER.rea)}
+          {t(OWNER.name)} · {t({ it: 'Sede legale', en: 'Registered office' })} {t(OWNER.office)} · {t({ it: 'P.IVA', en: 'VAT' })} {t(OWNER.vat)}
+          {!isTodo(OWNER.rea) && <> · REA {t(OWNER.rea)}</>}
         </p>
         <nav aria-label={t({ it: 'Note legali', en: 'Legal' })} className="flex flex-wrap gap-x-5 gap-y-2">
           <Link to="/privacy" className="hover:text-cream hover:underline">{t({ it: 'Privacy', en: 'Privacy' })}</Link>

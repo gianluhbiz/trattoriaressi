@@ -2,7 +2,7 @@ import { Link } from 'react-router'
 import { LegalLayout, LegalSection } from '../components/LegalLayout'
 import { useLang } from '../lib/i18n'
 import { ADDRESS, EMAIL, PHONE_DISPLAY, PHONE_TEL } from '../lib/info'
-import { OWNER, RETENTION } from '../lib/legal'
+import { isTodo, OWNER, RETENTION } from '../lib/legal'
 
 export function OwnerDetails() {
   const { t } = useLang()
@@ -16,7 +16,8 @@ export function OwnerDetails() {
         {t({ it: 'Sede operativa:', en: 'Restaurant:' })} Trattoria Ressi, {ADDRESS}
       </li>
       <li>
-        {t({ it: 'Partita IVA:', en: 'VAT number:' })} {t(OWNER.vat)} · REA {t(OWNER.rea)}
+        {t({ it: 'Partita IVA:', en: 'VAT number:' })} {t(OWNER.vat)}
+        {!isTodo(OWNER.rea) && <> · REA {t(OWNER.rea)}</>}
       </li>
       <li>
         Email: <a href={`mailto:${EMAIL}`}>{EMAIL}</a> · {t({ it: 'Telefono', en: 'Phone' })}: <a href={`tel:${PHONE_TEL}`}>{PHONE_DISPLAY}</a>
