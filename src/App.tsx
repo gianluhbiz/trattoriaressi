@@ -16,7 +16,7 @@ const TITLES: Record<string, string> = {
   '/cookie': 'Cookie policy · Trattoria Ressi',
 }
 
-/** Ancore (#prenota, #orari...) anche tra una pagina e l'altra; in cima al cambio pagina */
+/** Ancore (#prenota, #orari...) anche tra una pagina e l'altra. in cima al cambio pagina */
 function ScrollManager() {
   const { pathname, hash, key } = useLocation()
   useEffect(() => {
