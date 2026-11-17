@@ -31,5 +31,9 @@ export const COVER_CHARGE = todo('coperto per persona, oppure "nessun coperto"')
 /** Tempi di conservazione da stabilire con il cliente (art. 13.2.a GDPR). */
 export const RETENTION = {
   bookings: todo('per quanto tempo si conservano messaggi, chiamate ed email delle prenotazioni'),
-  logs: todo('periodo di conservazione dei log del fornitore di hosting'),
+  /** Vercel piano Hobby: log di runtime consultabili per 1 ora (vercel.com/docs/logs/runtime, verificato nov. 2026). */
+  logs: {
+    it: 'i log sono gestiti da Vercel e cancellati automaticamente. Quelli che possiamo consultare restano disponibili per 1 ora; Vercel conserva i dati per il tempo minimo necessario a erogare il servizio e a garantirne la sicurezza, poi li cancella o li rende anonimi.',
+    en: 'logs are managed by Vercel and deleted automatically. Those we can access remain available for 1 hour; Vercel keeps data for the minimum period needed to provide and secure the service, then deletes or anonymises it.',
+  },
 }
